@@ -14,10 +14,20 @@ def get_unique_items(data, key):
     # Extract unique items from a list of dictionaries based on a specific key
     return sorted(set(item[key] for item in data))
 
+def print_numbered_options(options):
+    # Print options in a numbered list
+    for idx, option in enumerate(options, start=1):
+        print(f"[{idx}] {option}")
+
 def main():
     # Load directory of knowledge bases
     directory = 'directory.json'
-    knowledge_bases = load_directory(directory)['Knowledge_Bases']
+    try:
+        knowledge_data = load_directory(directory)
+        knowledge_bases = knowledge_data["Knowledge_Bases"]
+    except KeyError:
+        print(f"Error: 'Knowledge_Bases' key not found in {directory}.")
+        return
 
     # Get unique options for domain, subject, topic, and section
     domains = get_unique_items(knowledge_bases, 'Knowledge_Domain')
@@ -25,45 +35,81 @@ def main():
     topics = get_unique_items(knowledge_bases, 'Knowledge_Topic')
     sections = get_unique_items(knowledge_bases, 'Knowledge_Section')
 
-    # Print available options for domain
-    print("Available Knowledge Domains:")
-    for domain in domains:
-        print(f"[-] {domain}")
+    # Print numbered options for domain
+    print("\nAvailable Knowledge Domains:")
+    print_numbered_options(domains)
 
-    # Prompt user for domain (case insensitive)
-    domain = input("\nEnter Knowledge Domain: ").strip().lower()
+    # Prompt user to select domain by number
+    domain_choice = int(input("\nEnter Domain Number: "))
+    selected_domain = domains[domain_choice - 1] if 1 <= domain_choice <= len(domains) else None
 
-    # Print available options for subject
+    # Filter knowledge bases based on selected domain
+    filtered_bases = [kb for kb in knowledge_bases if kb['Knowledge_Domain'] == selected_domain]
+
+    # If no bases match the selected domain, return
+    if not filtered_bases:
+        print("No matching knowledge bases found for the selected domain.")
+        return
+
+    # Get unique subjects, topics, and sections for the selected domain
+    subjects = get_unique_items(filtered_bases, 'Knowledge_Subject')
+    topics = get_unique_items(filtered_bases, 'Knowledge_Topic')
+    sections = get_unique_items(filtered_bases, 'Knowledge_Section')
+
+    # Print numbered options for subject
     print("\nAvailable Knowledge Subjects:")
-    for subject in subjects:
-        print(f"[-] {subject}")
+    print_numbered_options(subjects)
 
-    # Prompt user for subject (case insensitive)
-    subject = input("\nEnter Knowledge Subject: ").strip().lower()
+    # Prompt user to select subject by number
+    subject_choice = int(input("\nEnter Subject Number: "))
+    selected_subject = subjects[subject_choice - 1] if 1 <= subject_choice <= len(subjects) else None
 
-    # Print available options for topic
+    # Filter knowledge bases based on selected subject
+    filtered_bases = [kb for kb in filtered_bases if kb['Knowledge_Subject'] == selected_subject]
+
+    # If no bases match the selected subject, return
+    if not filtered_bases:
+        print("No matching knowledge bases found for the selected subject.")
+        return
+
+    # Get unique topics and sections for the selected subject
+    topics = get_unique_items(filtered_bases, 'Knowledge_Topic')
+    sections = get_unique_items(filtered_bases, 'Knowledge_Section')
+
+    # Print numbered options for topic
     print("\nAvailable Knowledge Topics:")
-    for topic in topics:
-        print(f"[-] {topic}")
+    print_numbered_options(topics)
 
-    # Prompt user for topic (case insensitive)
-    topic = input("\nEnter Knowledge Topic: ").strip().lower()
+    # Prompt user to select topic by number
+    topic_choice = int(input("\nEnter Topic Number: "))
+    selected_topic = topics[topic_choice - 1] if 1 <= topic_choice <= len(topics) else None
 
-    # Print available options for section
+    # Filter knowledge bases based on selected topic
+    filtered_bases = [kb for kb in filtered_bases if kb['Knowledge_Topic'] == selected_topic]
+
+    # If no bases match the selected topic, return
+    if not filtered_bases:
+        print("No matching knowledge bases found for the selected topic.")
+        return
+
+    # Get unique sections for the selected topic
+    sections = get_unique_items(filtered_bases, 'Knowledge_Section')
+
+    # Print numbered options for section
     print("\nAvailable Knowledge Sections:")
-    for section in sections:
-        print(f"[-] {section}")
+    print_numbered_options(sections)
 
-    # Prompt user for section (case insensitive)
-    section = input("\nEnter Knowledge Section: ").strip().lower()
+    # Prompt user to select section by number
+    section_choice = int(input("\nEnter Section Number: "))
+    selected_section = sections[section_choice - 1] if 1 <= section_choice <= len(sections) else None
 
-    # Search for the matching knowledge base (case insensitive comparison)
+    # Find the matching knowledge base
     matching_kb = None
-    for kb in knowledge_bases:
-        if (domain == kb['Knowledge_Domain'].lower() and
-            subject == kb['Knowledge_Subject'].lower() and
-            topic == kb['Knowledge_Topic'].lower() and
-            section == kb['Knowledge_Section'].lower()):
+    for kb in filtered_bases:
+        if (kb['Knowledge_Domain'] == selected_domain and
+            kb['Knowledge_Subject'] == selected_subject and
+            kb['Knowledge_Topic'] == selected_topic and
+            kb['Knowledge_Section'] == selected_section):
             matching_kb = kb
             break
 
@@ -72,7 +118,7 @@ def main():
         print(f"\nLoading questions from {filename}...")
 
         # Load questions from the matching JSON file
-        questions = load_questions(filename)
+        questions = load_questions(filename)["Questions"]
         # Process questions further as needed
         print(f"Loaded {len(questions)} questions.")
     else:
@@ -81,36 +127,47 @@ def main():
     # Collect amount of questions that user wants to review
     question_count = len(questions)
     question_amount = 0
-    print(f"\nWelcome to the {section} Section. It has {question_count} Questions total. How many questions do you want to review?")
-    if question_count >= 10:
-        print("[-] 5")
-    
-    if question_count >= 15:
-        print("[-] 10")
+    print(f"\nWelcome to the {selected_section} Section. It has {question_count} questions total.")
+    print("Select the number of questions you want to review:")
 
-    if question_count >= 20:
-        print("[-] 15")
+    # List of predefined options
+    options = []
 
-    if question_count >= 25:
-        print("[-] 20")
-    
-    print("[-] All Questions")  
+    # Generate options from 5 up to the maximum of question_count
+    for i in range(5, question_count + 1, 5):
+        options.append((i, f"[-] {i}"))
+
+    # Always include question_count as the last option
+    if question_count >= 5:
+        options.append((question_count, f"[-] {question_count}"))
+
+    # Display options to the user
+    for option, description in options:
+        print(description)
+
     answer = input("\nEnter Answer: ")
 
-    if answer == 5:
-        question_amount = answer
-    elif answer == 10:
-        question_amount = answer
-    elif answer == 15:
-        question_amount = answer
-    elif answer == 20:
-        question_amount = answer
-    else:
+    try:
+        question_amount = int(answer)
+    except ValueError:
+        print("Invalid input. Defaulting to review all questions.")
+        question_amount = question_count
+
+    if question_amount > question_count:
         question_amount = question_count
 
     # Begin the review exercise
-    for question in questions:
-        
+    print(f"\nStarting review of {question_amount} questions...\n")
+
+    # Iterate over the range of question_amount (1 to question_amount + 1)
+    for index in range(1, question_amount + 1):
+        question_key = f"Question_{index}"  # Construct the question key
+        question = questions[0][question_key]  # Access the question dictionary
+        print(f"Question {index}: {question['Question']}")
+        answer = input("Your Answer: ")
+        # Process user's answer as needed
+
+    print("\nReview complete. Thank you!")
 
 if __name__ == "__main__":
-    main()
+    main()  
