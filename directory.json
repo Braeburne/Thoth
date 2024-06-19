@@ -1,0 +1,11 @@
+{
+    "Knowledge_Bases": [
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "Filename": "cloud_and_storage_options.json"
+        }
+    ]
+}

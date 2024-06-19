@@ -1,0 +1,82 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Google Cloud Fundamentals",
+    "Knowledge_Section": "Storage and Database Options",
+    "Questions": [
+        {
+            "Question_1" : 
+            {
+                "Question" : "What are the names of the three storage options on Google Cloud Platform?",
+                "Has Graphic?" : false,
+                "Answers": 
+                [
+                "Cloud Storage",
+                "Filestore",
+                "Persistent Disks"
+                ]
+            }, 
+
+            "Question_2" : 
+            {
+                "Question" : "What are the names of the six database options on Google Cloud Platform?",
+                "Has Graphic?" : false,
+                "Graphic" : null,
+                "Answers": 
+                [
+                "Cloud SQL",
+                "Cloud Spanner",
+                "BigTable",
+                "Datastore",
+                "Firestore",
+                "Memorystore"
+                ]
+            },
+
+            "Question_3" : 
+            {
+                "Question" : "Of the six database options on Google Cloud Platform, which four are NoSQL?",
+                "Has Graphic?" : false,
+                "Graphic" : null,
+                "Answers": 
+                [
+                "BigTable",
+                "Datastore",
+                "Firestore",
+                "Memorystore"
+                ]
+            },
+
+            "Question_4" : 
+            {
+                "Question" : "Of the six database options on Google Cloud Platform, which option is SQL-based and which is relational (in that respective order)?",
+                "Has Graphic?" : false,
+                "Graphic" : null,
+                "Answers": 
+                [
+                    "Cloud SQL",
+                    "Cloud Spanner"
+                ]
+            },
+
+            "Question_5" : 
+            {
+                "Question" : "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform. Type your answers according in the order of top to bottom, left to right.",
+                "Has Graphic?" : true,
+                "Graphic" : "[Insert URL]",
+                "Answers": 
+                [
+                    "Cloud Storage",
+                    "Filestore",
+                    "Persistent Disks",
+                    "Cloud SQL",
+                    "Cloud Spanner",
+                    "BigTable",
+                    "Datastore",
+                    "Firestore",
+                    "Memorystore"
+                ]
+            }
+        }
+    ]
+}
