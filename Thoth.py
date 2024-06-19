@@ -7,7 +7,8 @@ def load_directory(filename):
 
 def load_questions(filename):
     with open(filename, 'r') as file:
-        questions = json.load(file)
+        data = json.load(file)
+        questions = data.get("Questions", [])
     return questions
 
 def get_unique_items(data, key):
@@ -34,6 +35,10 @@ def main():
     subjects = get_unique_items(knowledge_bases, 'Knowledge_Subject')
     topics = get_unique_items(knowledge_bases, 'Knowledge_Topic')
     sections = get_unique_items(knowledge_bases, 'Knowledge_Section')
+
+    print("Welcome to the Thoth program. The only note you'll have to make is this. " +
+        "For questions that have multiple answers, separate them with commas and no spaces. " +  
+        "Example: 'Cloud Storage,Filestore,Persistent Disks.' Thank you. Enjoy.")
 
     # Print numbered options for domain
     print("\nAvailable Knowledge Domains:")
@@ -112,17 +117,22 @@ def main():
             kb['Knowledge_Section'] == selected_section):
             matching_kb = kb
             break
+        else:
+            print("\nNo matching knowledge base found.")
+            return
 
     if matching_kb:
         filename = matching_kb['Filename']
         print(f"\nLoading questions from {filename}...")
 
-        # Load questions from the matching JSON file
-        questions = load_questions(filename)["Questions"]
-        # Process questions further as needed
-        print(f"Loaded {len(questions)} questions.")
+    # Load questions from the matching JSON file
+    questions = load_questions(filename)
+
+    if not questions:
+        print("No questions found in the selected knowledge base.")
+        return
     else:
-        print("\nNo matching knowledge base found.")
+        print(f"Loaded {len(questions)} questions.")
 
     # Collect amount of questions that user wants to review
     question_count = len(questions)
@@ -130,16 +140,8 @@ def main():
     print(f"\nWelcome to the {selected_section} Section. It has {question_count} questions total.")
     print("Select the number of questions you want to review:")
 
-    # List of predefined options
-    options = []
-
-    # Generate options from 5 up to the maximum of question_count
-    for i in range(5, question_count + 1, 5):
-        options.append((i, f"[-] {i}"))
-
-    # Always include question_count as the last option
-    if question_count >= 5:
-        options.append((question_count, f"[-] {question_count}"))
+    # Generate options based on the number of questions available
+    options = [(i, f"[-] {i}") for i in range(1, question_count + 1)]
 
     # Display options to the user
     for option, description in options:
@@ -162,12 +164,19 @@ def main():
     # Iterate over the range of question_amount (1 to question_amount + 1)
     for index in range(1, question_amount + 1):
         question_key = f"Question_{index}"  # Construct the question key
-        question = questions[0][question_key]  # Access the question dictionary
-        print(f"Question {index}: {question['Question']}")
-        answer = input("Your Answer: ")
-        # Process user's answer as needed
+        if index <= len(questions):
+            question_data = questions[index - 1]  # Access the question dictionary
+            question = question_data.get(question_key)
+            if question:
+                print(f"Question {index}: {question['Question']}")
+                answer = input("Your Answer: ")
+                # Process user's answer as needed
+            else:
+                print(f"Error: Question '{question_key}' not found in the knowledge base.")
+        else:
+            print(f"Error: Question index '{index}' out of range.")
 
     print("\nReview complete. Thank you!")
 
 if __name__ == "__main__":
-    main()  
+    main()
