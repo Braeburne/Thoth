@@ -174,10 +174,10 @@ def main():
                 user_answer = input("Your Answer: ")
 
                 # Get correct answers and split user answer by commas
-                correct_answers = question.get('Answers', [])
-                user_answers = [ans.strip() for ans in user_answer.split(',')]
+                correct_answers = [ans.lower() for ans in question.get('Answers', [])]
+                user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
 
-                # Check if all user answers are in correct answers
+                # Check if all user answers (lowercase) are in correct answers (lowercase)
                 if all(ans in correct_answers for ans in user_answers):
                     print("Correct!")
                     correct_count += 1
