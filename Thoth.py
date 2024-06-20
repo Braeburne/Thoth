@@ -161,6 +161,8 @@ def main():
     # Begin the review exercise
     print(f"\nStarting review of {question_amount} questions...\n")
 
+    correct_count = 0
+
     # Iterate over the range of question_amount (1 to question_amount + 1)
     for index in range(1, question_amount + 1):
         question_key = f"Question_{index}"  # Construct the question key
@@ -169,14 +171,30 @@ def main():
             question = question_data.get(question_key)
             if question:
                 print(f"Question {index}: {question['Question']}")
-                answer = input("Your Answer: ")
-                # Process user's answer as needed
+                user_answer = input("Your Answer: ")
+
+                # Get correct answers and split user answer by commas
+                correct_answers = question.get('Answers', [])
+                user_answers = [ans.strip() for ans in user_answer.split(',')]
+
+                # Check if all user answers are in correct answers
+                if all(ans in correct_answers for ans in user_answers):
+                    print("Correct!")
+                    correct_count += 1
+                else:
+                    print("Incorrect.")
             else:
                 print(f"Error: Question '{question_key}' not found in the knowledge base.")
         else:
             print(f"Error: Question index '{index}' out of range.")
 
-    print("\nReview complete. Thank you!")
+    # Calculate and display score
+    if question_amount > 0:
+        score = correct_count / question_amount * 100
+        print(f"\nReview complete. You answered {correct_count} out of {question_amount} questions correctly.")
+        print(f"Score: {score:.2f}%")
+
+    print("\nThank you for using Thoth!")
 
 if __name__ == "__main__":
     main()
