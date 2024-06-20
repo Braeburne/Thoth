@@ -160,7 +160,6 @@ def main():
 
     # Begin the review exercise
     print(f"\nStarting review of {question_amount} questions...\n")
-
     correct_count = 0
 
     # Iterate over the range of question_amount (1 to question_amount + 1)
@@ -174,10 +173,10 @@ def main():
                 user_answer = input("Your Answer: ")
 
                 # Get correct answers and split user answer by commas
-                correct_answers = [ans.lower() for ans in question.get('Answers', [])]
-                user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
+                correct_answers = [ans.lower().replace(" ", "") for ans in question.get('Answers', [])]
+                user_answers = [ans.strip().lower().replace(" ", "") for ans in user_answer.split(',')]
 
-                # Check if all user answers (lowercase) are in correct answers (lowercase)
+                # Check if all user answers (lowercase, no spaces) are in correct answers (lowercase, no spaces)
                 if all(ans in correct_answers for ans in user_answers):
                     print("Correct!")
                     correct_count += 1
