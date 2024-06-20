@@ -71,6 +71,42 @@ def review_questions(questions, question_amount):
 
     return correct_count, question_amount
 
+def calculate_grade_percentage(correct_count, question_amount):
+    """Calculate the grade percentage based on correct answers."""
+    if question_amount > 0:
+        return (correct_count / question_amount) * 100
+    else:
+        return 0.0
+
+def assign_letter_grade(grade_percent):
+    """Assign letter grade based on the grade percentage."""
+    if 96.5 <= grade_percent <= 100:
+        return "A+"
+    elif 93.5 <= grade_percent < 96.5:
+        return "A"
+    elif 89.5 <= grade_percent < 93.5:
+        return "A-"
+    elif 86.5 <= grade_percent < 89.5:
+        return "B+"
+    elif 83.5 <= grade_percent < 86.5:
+        return "B"
+    elif 79.5 <= grade_percent < 83.5:
+        return "B-"
+    elif 76.5 <= grade_percent < 79.5:
+        return "C+"
+    elif 73.5 <= grade_percent < 76.5:
+        return "C"
+    elif 69.5 <= grade_percent < 73.5:
+        return "C-"
+    elif 66.5 <= grade_percent < 69.5:
+        return "D+"
+    elif 63.5 <= grade_percent < 66.5:
+        return "D"
+    elif 59.5 <= grade_percent < 63.5:
+        return "D-"
+    else:
+        return "F"
+
 def main():
     # Load directory of knowledge bases
     directory = 'directory.json'
@@ -81,11 +117,11 @@ def main():
         print(f"Error: 'Knowledge_Bases' key not found in {directory}.")
         return
 
-    while True:
-        print("Welcome to the Thoth program.")
-        print("For questions that have multiple answers, separate them with commas and no spaces.")
-        print("Example: 'Cloud Storage,Filestore,Persistent Disks.'")
-        print("Thank you. Enjoy.")
+    while True: 
+        print("\n")
+        print("|||||||||")
+        print("T.H.O.T.H")
+        print("|||||||||")
 
         # Get unique options for domain
         domains = get_unique_items(knowledge_bases, 'Knowledge_Domain')
@@ -165,9 +201,11 @@ def main():
 
             # Calculate and display score
             if question_amount > 0:
-                score = correct_count / question_amount * 100
+                grade_percent = calculate_grade_percentage(correct_count, question_amount)
+                letter_grade = assign_letter_grade(grade_percent)
                 print(f"\nReview complete. You answered {correct_count} out of {question_amount} questions correctly.")
-                print(f"Score: {score:.2f}%")
+                print(f"Grade Percentage: {grade_percent:.2f}%")
+                print(f"Letter Grade: {letter_grade}")
 
             # Prompt for next action
             print("\nWhat would you like to do next?")
@@ -175,7 +213,7 @@ def main():
             print("[2] Practice Different Section")
             print("[3] Exit")
 
-            choice = input("\nEnter your choice: ")
+            choice = input("\nEnter your choice (1-3): ")
 
             if choice == '1':
                 continue  # Retry the same section
