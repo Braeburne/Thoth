@@ -21,7 +21,6 @@ def load_section_file(filename):
         section_data = {key: value for key, value in data.items() if key != 'Questions'}
     return section_data
 
-
 def get_unique_items(data, key):
     """Extract unique items from a list of dictionaries based on a specific key."""
     return sorted(set(item[key] for item in data))
