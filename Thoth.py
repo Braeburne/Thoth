@@ -65,16 +65,28 @@ def review_questions(questions, question_amount):
             print(f"Question {index}: {question['Question']}")
             user_answer = input("Your Answer: ")
 
-            # Get correct answers and split user answer by commas
-            correct_answers = [ans.lower().replace(" ", "") for ans in question.get('Answers', [])]
-            user_answers = [ans.strip().lower().replace(" ", "") for ans in user_answer.split(',')]
+            # Get correct answers and order-agnostic flag
+            correct_answers = question.get('Answers', [])
+            order_agnostic = question.get('OrderAgnostic', False)
 
-            # Check if all user answers (lowercase, no spaces) are in correct answers (lowercase, no spaces)
-            if all(ans in correct_answers for ans in user_answers):
-                print("Correct!")
-                correct_count += 1
+            # Process answers based on order-agnostic flag
+            if order_agnostic:
+                correct_answers_set = set(ans.lower().replace(" ", "") for ans in correct_answers)
+                user_answers_set = set(ans.strip().lower().replace(" ", "") for ans in user_answer.split(','))
+                if correct_answers_set == user_answers_set:
+                    print("Correct!")
+                    correct_count += 1
+                else:
+                    print("Incorrect.")
             else:
-                print("Incorrect.")
+                # Check if user answer matches correct answers in the same order, case insensitive
+                user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
+                correct_answers_lower = [ans.lower() for ans in correct_answers]
+                if user_answers == correct_answers_lower:
+                    print("Correct!")
+                    correct_count += 1
+                else:
+                    print("Incorrect.")
         else:
             print(f"Error: Question '{question_key}' not found in the knowledge base.")
 
@@ -137,9 +149,9 @@ def main():
 
     while True:
         print("\n")
-        print("|||||||||")
-        print("T.H.O.T.H")
-        print("|||||||||")
+        print("|||||||||||||||")
+        print("|| T.H.O.T.H ||")
+        print("|||||||||||||||")
 
         # Get unique options for domain
         domains = get_unique_items(knowledge_bases, 'Knowledge_Domain')

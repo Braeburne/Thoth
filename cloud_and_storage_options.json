@@ -9,7 +9,9 @@
             "Question_1": 
             {
                 "Question": "What are the names of the three storage options on Google Cloud Platform?",
-                "Has Graphic?": false,
+                "HasGraphic?": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Cloud Storage",
                     "Filestore",
@@ -21,8 +23,9 @@
             "Question_2": 
             {
                 "Question": "What are the names of the six database options on Google Cloud Platform?",
-                "Has Graphic?": false,
+                "HasGraphic?": false,
                 "Graphic": null,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Cloud SQL",
                     "Cloud Spanner",
@@ -37,8 +40,9 @@
             "Question_3": 
             {
                 "Question": "Of the six database options on Google Cloud Platform, which four are NoSQL?",
-                "Has Graphic?": false,
+                "HasGraphic?": false,
                 "Graphic": null,
+                "OrderAgnostic": true,
                 "Answers": [
                     "BigTable",
                     "Datastore",
@@ -51,8 +55,9 @@
             "Question_4": 
             {
                 "Question": "Of the six database options on Google Cloud Platform, which option is SQL-based and which is relational (in that respective order)?",
-                "Has Graphic?": false,
+                "HasGraphic?": false,
                 "Graphic": null,
+                "OrderAgnostic": false,
                 "Answers": [
                     "Cloud SQL",
                     "Cloud Spanner"
@@ -63,8 +68,9 @@
             "Question_5": 
             {
                 "Question": "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform. Type your answers according in the order of top to bottom, left to right.",
-                "Has Graphic?": true,
+                "HasGraphic?": true,
                 "Graphic": "[Insert URL]",
+                "OrderAgnostic": true,
                 "Answers": [
                     "Cloud Storage",
                     "Filestore",
