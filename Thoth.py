@@ -51,6 +51,7 @@ def review_questions(questions, question_amount):
     """Review questions interactively."""
     question_count = len(questions)
     correct_count = 0
+    incorrect_answers = []
 
     print(f"\nStarting review of {question_amount} questions...\n")
 
@@ -65,7 +66,8 @@ def review_questions(questions, question_amount):
             print(f"Question {index}: {question['Question']}")
             user_answer = input("Your Answer: ")
 
-            # Get correct answers and order-agnostic flag
+            # Get correct answers and split user answer by commas
+            # Get order-agnostic flag
             correct_answers = question.get('Answers', [])
             order_agnostic = question.get('OrderAgnostic', False)
 
@@ -78,6 +80,11 @@ def review_questions(questions, question_amount):
                     correct_count += 1
                 else:
                     print("Incorrect.")
+                    incorrect_answers.append({
+                        'Question': question['Question'],
+                        'Your Answer': user_answer,
+                        'Correct Answer(s)': ', '.join(correct_answers)
+                    })
             else:
                 # Check if user answer matches correct answers in the same order, case insensitive
                 user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
@@ -87,10 +94,15 @@ def review_questions(questions, question_amount):
                     correct_count += 1
                 else:
                     print("Incorrect.")
+                    incorrect_answers.append({
+                        'Question': question['Question'],
+                        'Your Answer': user_answer,
+                        'Correct Answer(s)': ', '.join(correct_answers)
+                    })
         else:
             print(f"Error: Question '{question_key}' not found in the knowledge base.")
 
-    return correct_count, question_amount
+    return correct_count, question_amount, incorrect_answers
 
 def calculate_grade_percentage(correct_count, question_amount):
     """Calculate the grade percentage based on correct answers."""
@@ -149,9 +161,9 @@ def main():
 
     while True:
         print("\n")
-        print("|||||||||||||||")
-        print("|| T.H.O.T.H ||")
-        print("|||||||||||||||")
+        print("|||||||||")
+        print("T.H.O.T.H")
+        print("|||||||||")
 
         # Get unique options for domain
         domains = get_unique_items(knowledge_bases, 'Knowledge_Domain')
@@ -232,7 +244,7 @@ def main():
                 print("Invalid input. Please enter a number.")
                 continue
 
-            correct_count, _ = review_questions(questions, question_amount)
+            correct_count, _, incorrect_answers = review_questions(questions, question_amount)
 
             # Calculate and display score
             if question_amount > 0:
@@ -249,6 +261,14 @@ def main():
                 # Display priority section status
                 priority_section_status = "Yes" if is_priority_section == True else "No"
                 print(f"Priority Section: {priority_section_status}")
+
+                # Display incorrect answers with correct answers
+                if incorrect_answers:
+                    print("\nPost Review Learning Session (based on the questions you got incorrect)")
+                    for answer in incorrect_answers:
+                        print(f"\nQuestion: {answer['Question']}")
+                        print(f"Your Answer: {answer['Your Answer']}")
+                        print(f"Correct Answer(s): {answer['Correct Answer(s)']}")
 
             # Prompt for next action
             print("\nWhat would you like to do next?")

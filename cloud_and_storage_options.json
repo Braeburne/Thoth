@@ -67,7 +67,7 @@
         {
             "Question_5": 
             {
-                "Question": "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform. Type your answers according in the order of top to bottom, left to right.",
+                "Question": "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform.",
                 "HasGraphic?": true,
                 "Graphic": "[Insert URL]",
                 "OrderAgnostic": true,
