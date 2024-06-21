@@ -3,6 +3,7 @@
     "Knowledge_Subject": "GCP ACE Exam",
     "Knowledge_Topic": "Google Cloud Fundamentals",
     "Knowledge_Section": "Storage and Database Options",
+    "IsPrioritySection": true,
     "Questions": [
         {
             "Question_1": 

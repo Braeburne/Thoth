@@ -13,6 +13,15 @@ def load_questions(filename):
         questions = data.get("Questions", [])
     return questions
 
+def load_section_file(filename):
+    """Load a section file and return its content excluding 'Questions'."""
+    with open(filename, 'r') as file:
+        data = json.load(file)
+        # Exclude 'Questions' from the loaded data
+        section_data = {key: value for key, value in data.items() if key != 'Questions'}
+    return section_data
+
+
 def get_unique_items(data, key):
     """Extract unique items from a list of dictionaries based on a specific key."""
     return sorted(set(item[key] for item in data))
@@ -107,6 +116,15 @@ def assign_letter_grade(grade_percent):
     else:
         return "F"
 
+def determine_pass_fail(letter_grade, is_priority_section):
+    """Determine pass or fail based on letter grade and section priority."""
+    if is_priority_section:
+        # Critical sections pass with C- or higher
+        return letter_grade in {"A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-"}
+    else:
+        # Non-critical sections pass with D- or higher
+        return letter_grade in {"A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-"}
+
 def main():
     # Load directory of knowledge bases
     directory = 'directory.json'
@@ -117,7 +135,7 @@ def main():
         print(f"Error: 'Knowledge_Bases' key not found in {directory}.")
         return
 
-    while True: 
+    while True:
         print("\n")
         print("|||||||||")
         print("T.H.O.T.H")
@@ -171,6 +189,11 @@ def main():
         else:
             print(f"Loaded {len(questions)} questions.")
 
+        section_data = load_section_file(filename)
+        # print(section_data)
+        is_priority_section = section_data.get('IsPrioritySection', False)  # Check if section is critical
+        # print(f"This is the priority section boolean: {is_priority_section}")
+
         # Review questions
         question_count = len(questions)
         while True:
@@ -207,6 +230,14 @@ def main():
                 print(f"Grade Percentage: {grade_percent:.2f}%")
                 print(f"Letter Grade: {letter_grade}")
 
+                # Determine pass or fail
+                pass_fail_status = "Pass" if determine_pass_fail(letter_grade, is_priority_section) else "Fail"
+                print(f"Pass / Fail: {pass_fail_status}")
+
+                # Display priority section status
+                priority_section_status = "Yes" if is_priority_section == True else "No"
+                print(f"Priority Section: {priority_section_status}")
+
             # Prompt for next action
             print("\nWhat would you like to do next?")
             print("[1] Try Again")
@@ -223,8 +254,7 @@ def main():
                 print("\nThank you for using Thoth!")
                 return  # Exit the program
             else:
-                print("\nInvalid choice. Exiting.")
-                return
+                print("\nInvalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()
