@@ -1,6 +1,8 @@
 {
-    "June_Data_Logs": [
+    "Data_Logs": [
         {
+            "Data_Log:": "01 | 2024-06-21T12:00:00Z",
+            "Timestamp": "2024-06-21T12:00:00Z",
             "Knowledge_Domain": "IT",
             "Knowledge_Subject": "GCP ACE Exam",
             "Knowledge_Topic": "Google Cloud Fundamentals",
@@ -58,8 +60,7 @@
             "Improvement_Areas": ["Relational databases", "Remembering specific service names"],
             "Environment": "Desktop browser",
             "Context": "Timed practice session",
-            "Session_ID": "67890",
-            "Timestamp": "2024-06-21T12:00:00Z"
+            "Session_ID": "67890"
         }
     ]
 }
