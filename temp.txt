@@ -1,27 +1,7 @@
-# Example data for logging (replace with actual session data)
+# Experimental data log properties (future ideas)
     log_entry = {
-        "Data_Log": f"{log_entry_number} | {start_time}",
-        "Timestamp": start_time,
-        "Knowledge_Domain": "IT",
-        "Knowledge_Subject": "GCP ACE Exam",
-        "Knowledge_Topic": "Google Cloud Fundamentals",
-        "Knowledge_Section": "Storage and Database Options",
-        "Filename": "cloud_and_storage_options.json",
-        "Date": datetime.date.today().strftime("%m-%d-%Y"),
-        "Score": f"{correct_count / question_amount * 100:.2f}%",
-        "Letter_Grade": assign_letter_grade(correct_count / question_amount * 100),
-        "IsPrioritySection": True,  # Replace with actual logic
-        "PassFail": "Pass" if determine_pass_fail(assign_letter_grade(correct_count / question_amount * 100), True) else "Fail",
-        "Total_Questions": question_amount,
-        "Correct_Count": correct_count,
-        "Incorrect_Count": question_amount - correct_count,
-        "Questions_Detailed": generate_detailed_questions(incorrect_answers),
-        "Time_Elapsed": time_elapsed,
-        "Average_Time_Per_Question": calculate_average_time_per_question(time_elapsed, question_amount),
         "Review_Type": "Practice",  # Replace with actual review type
         "Feedback": "Need to review relational database options more thoroughly.",  # Replace with actual feedback
         "Improvement_Areas": ["Relational databases", "Remembering specific service names"],  # Replace with actual improvement areas
         "Environment": "Desktop browser",  # Replace with actual environment
-        "Context": "Timed practice session",  # Replace with actual context
-        "Session_ID": "67890"  # Replace with actual session ID
     }

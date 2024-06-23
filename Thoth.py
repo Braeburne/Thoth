@@ -2,6 +2,7 @@ import json
 import datetime
 import os
 import uuid
+import pytz  # Import pytz for time zone support
 
 # List of time zones for user selection
 TIME_ZONES = [
@@ -127,7 +128,6 @@ def calculate_time_elapsed(start_time, end_time):
     elapsed = end - start
     return str(elapsed)
 
-
 def generate_questions_breakdown(incorrect_answers):
     # Generate detailed questions data for logging.
     detailed_questions = []
@@ -145,11 +145,39 @@ def generate_questions_breakdown(incorrect_answers):
     return detailed_questions
 
 def calculate_average_time_per_question(time_elapsed, question_amount):
-    # Calculate average time per question.
-    total_time = datetime.timedelta(seconds=time_elapsed.total_seconds())
-    average_time = total_time / question_amount
-    return str(average_time)
+    # print("This is the time_elapsed variable: " + time_elapsed)
+    
+    try:
+        # Splitting time_elapsed into hours, minutes, seconds, and microseconds
+        times = time_elapsed.split(':')
+        # print("This is the content of the times variable:")
+        # print(times)
+        hours = times[0]
+        # print("This is the content of the hours variable: " + hours)
+        minutes = times[1]
+        # print("This is the content of the minutes variable: " + minutes)
+        total_seconds = times[2]
+        seconds, microseconds = total_seconds.split('.')
+        # print("This is the content of the seconds variable: " + seconds)
+        # print("This is the content of the microseconds variable: " + microseconds)
+        
+        # Convert parts into integers
+        hours = int(hours)
+        minutes = int(minutes)
+        seconds = int(seconds)
+        microseconds = int(microseconds)
 
+        # Create timedelta object
+        time_elapsed = datetime.timedelta(hours=hours, minutes=minutes, seconds=seconds, microseconds=microseconds)
+    except ValueError:
+        # Handle if the string format does not match expected format
+        raise ValueError("Invalid time duration format for time_elapsed")
+
+    # Calculate average time per question
+    average_time_per_question = time_elapsed / question_amount
+    atpq_string = str(average_time_per_question)
+    
+    return atpq_string
 
 # Calculate the grade percentage based on correct answers.
 def calculate_grade_percentage(correct_count, question_amount):
@@ -241,13 +269,13 @@ def get_current_month_log_file():
 
     if not os.path.exists(log_filename):
         with open(log_filename, 'w') as file:
-            json.dump({"DataLogs": []}, file)  # Initialize with empty array
+            json.dump({"Data_Logs": []}, file)  # Initialize with empty array
         print(f"Created new data log file: {log_filename}")
 
     return log_filename
 
 # Function to start a review session
-def initialize_review_session(session_id):
+def initialize_review_session(selected_iana, selected_utc, session_id):
     directory_data = load_directory('directory.json')
     filename, domain, subject, topic, section = find_knowledge_base(directory_data)
     print(f"\nLoading questions from {filename}...")
@@ -292,7 +320,9 @@ def initialize_review_session(session_id):
             continue
 
     log_entry = {
-            "Data_Log_ID:": "",
+            "Data_Log_ID": "",
+            "IANA_Time_Zone": selected_iana,
+            "UTC_Time_Zone": selected_utc,
             "Knowledge_Domain": domain,
             "Knowledge_Subject": subject,
             "Knowledge_Topic": topic,
@@ -306,17 +336,20 @@ def initialize_review_session(session_id):
             "Total_Questions": question_amount,
             "Correct_Count": "",
             "Incorrect_Count": "",
-            "Questions_Detailed": [],
+            "Questions_Breakdown": [],
             "Start_Time": "",
             "End_Time": "",
             "Time_Elapsed": "",
             "Average_Time_Per_Question": "",
-            "Session_ID": session_id
+            "ISO_8601_Local_Timestamp": "",
+            "ISO_8601_UTC_Timestamp": "",
+            "HTTP_Date_Timestamp": "",
+            "UUID4_Session_ID": session_id
         }
     
     return questions, question_amount, log_entry
 
-def track_review_session(log_entry):
+def track_review_session(selected_iana, selected_utc, log_entry):
     data_logs_filename = get_current_month_log_file()
 
     # Load existing logs or initialize if not exists
@@ -324,18 +357,29 @@ def track_review_session(log_entry):
         with open(data_logs_filename, 'r') as file:
             data_logs = json.load(file)
     else:
-        data_logs = {"DataLogs": []}
+        data_logs = {"Data_Logs": []}
     
     # Determine the numerical indicator for the new log entry
-    log_position = len(data_logs["DataLogs"]) + 1
+    log_position = len(data_logs["Data_Logs"]) + 1
     log_entry_number = f"{log_position:02}"  # Zero-padded to two digits
 
     # Gather information about the review session
     start_time = datetime.datetime.now().isoformat()
 
-    log_entry["Data_Log_ID"] = f"{log_entry_number} | {start_time}",
-    log_entry["Timestamp"] = start_time,
-    log_entry["Date"] = datetime.date.today().strftime("%m-%d-%Y"),
+    # Get UTC time
+    utc_start_time = datetime.datetime.now(datetime.UTC).replace(microsecond=0).isoformat() + 'Z'
+
+    # Get HTTP Date timestamp (RFC 1123 format)
+    http_date_time = datetime.datetime.now(pytz.timezone(selected_iana)).strftime('%a, %d %b %Y %H:%M:%S %Z')
+
+    # Format the Data Log ID for the log_entry
+    data_log_id = (f"{log_entry_number} | {http_date_time}")
+
+    log_entry["Data_Log_ID"] = data_log_id
+    log_entry["ISO_8601_Local_Timestamp"] = start_time
+    log_entry["ISO_8601_UTC_Timestamp"] = utc_start_time
+    log_entry["HTTP_Date_Timestamp"] = http_date_time
+    log_entry["Date"] = datetime.date.today().strftime("%m-%d-%Y")
     log_entry["Start_Time"] = start_time
 
     return data_logs_filename, data_logs
@@ -345,6 +389,7 @@ def review_session(questions, question_amount, log_entry):
     correct_count = 0
     score = ""
     letter_grade = ""
+    pass_fail_status = ""
     incorrect_answers = []
 
     print(f"\nStarting review of {question_amount} questions...\n")
@@ -395,30 +440,32 @@ def review_session(questions, question_amount, log_entry):
             print(f"Error: Question '{question_key}' not found in the knowledge base.")
 
     # Calculate and display score
-            if question_amount > 0:
-                grade_percent = calculate_grade_percentage(correct_count, question_amount)
-                score = f"grade_percent:.2f%"
-                letter_grade = assign_letter_grade(grade_percent)
-                print(f"\nReview complete. You answered {correct_count} out of {question_amount} questions correctly.")
-                print(f"Grade Percentage: " + score)
-                print(f"Letter Grade: {letter_grade}")
+    if question_amount > 0:
+        grade_percent = calculate_grade_percentage(correct_count, question_amount)
+        score = f"{grade_percent:.2f}%"
+        letter_grade = assign_letter_grade(grade_percent)
+        print(f"\nReview complete. You answered {correct_count} out of {question_amount} questions correctly.")
+        print(f"Grade Percentage: " + score)
+        print(f"Letter Grade: {letter_grade}")
 
-                # Determine pass or fail
-                pass_fail_status = "Pass" if determine_pass_fail(letter_grade, is_priority_section) else "Fail"
-                print(f"Pass / Fail: {pass_fail_status}")
+        # Acquire value of is_priority_section
+        is_priority_section = log_entry["IsPrioritySection"]
 
-                # Display priority section status
-                is_priority_section = log_entry["IsPrioritySection"]
-                priority_section_status = "Yes" if is_priority_section == True else "No"
-                print(f"Priority Section: {priority_section_status}")
+        # Determine pass or fail
+        pass_fail_status = "Pass" if determine_pass_fail(letter_grade, is_priority_section) else "Fail"
+        print(f"Pass / Fail: {pass_fail_status}")
 
-                # Display incorrect answers with correct answers
-                if incorrect_answers:
-                    print("\nPost Review Learning Session (based on the questions you got incorrect)")
-                    for answer in incorrect_answers:
-                        print(f"\nQuestion: {answer['Question']}")
-                        print(f"Your Answer: {answer['Your Answer']}")
-                        print(f"Correct Answer(s): {answer['Correct Answer(s)']}")
+        # Display priority section status
+        priority_section_status = "Yes" if is_priority_section == True else "No"
+        print(f"Priority Section: {priority_section_status}")
+
+        # Display incorrect answers with correct answers
+        if incorrect_answers:
+            print("\nPost Review Learning Session (based on the questions you got incorrect)")
+            for answer in incorrect_answers:
+                print(f"\nQuestion: {answer['Question']}")
+                print(f"Your Answer: {answer['Your Answer']}")
+                print(f"Correct Answer(s): {answer['Correct Answer(s)']}")
 
     # Calculate end time after the review session
     end_time = datetime.datetime.now().isoformat()
@@ -428,10 +475,10 @@ def review_session(questions, question_amount, log_entry):
     log_entry["Letter_Grade"] = letter_grade
     log_entry["PassFail"] = pass_fail_status
     log_entry["Correct_Count"] = correct_count
-    log_entry["Incorrect_Count"] = question_amount - correct_count,
-    log_entry["Questions_Breakdown"] = generate_questions_breakdown(incorrect_answers),
-    log_entry["End_Time"] = end_time,
-    log_entry["Time_Elapsed"] = time_elapsed,
+    log_entry["Incorrect_Count"] = question_amount - correct_count
+    log_entry["Questions_Breakdown"] = generate_questions_breakdown(incorrect_answers)
+    log_entry["End_Time"] = end_time
+    log_entry["Time_Elapsed"] = time_elapsed
     log_entry["Average_Time_Per_Question"] = calculate_average_time_per_question(time_elapsed, question_amount)
 
     return log_entry
@@ -489,8 +536,8 @@ def main():
     session_id = generate_session_id()
 
     # Begin Program Loop
-    questions, question_amount, log_entry = initialize_review_session(session_id)
-    data_logs_filename, data_logs = track_review_session(log_entry)
+    questions, question_amount, log_entry = initialize_review_session(selected_iana, selected_utc, session_id)
+    data_logs_filename, data_logs = track_review_session(selected_iana, selected_utc, log_entry)
     review_session(questions, question_amount, log_entry)
     log_review_session(data_logs_filename, data_logs, log_entry)
 

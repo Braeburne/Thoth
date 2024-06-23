@@ -1,0 +1,31 @@
+{
+    "Data_Logs": [
+        {
+            "Data_Log_ID": "01 | Sat, 22 Jun 2024 20:32:54 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "Filename": "cloud_and_storage_options.json",
+            "Date": "06-22-2024",
+            "Score": "100.00%",
+            "Letter_Grade": "A+",
+            "IsPrioritySection": true,
+            "PassFail": "Pass",
+            "Total_Questions": 5,
+            "Correct_Count": 5,
+            "Incorrect_Count": 0,
+            "Questions_Breakdown": [],
+            "Start_Time": "2024-06-22T20:32:54.621708",
+            "End_Time": "2024-06-22T20:34:47.428041",
+            "Time_Elapsed": "0:01:52.806333",
+            "Average_Time_Per_Question": "0:00:22.561267",
+            "ISO_8601_Local_Timestamp": "2024-06-22T20:32:54.621708",
+            "ISO_8601_UTC_Timestamp": "2024-06-23T00:32:54+00:00Z",
+            "HTTP_Date_Timestamp": "Sat, 22 Jun 2024 20:32:54 EDT",
+            "UUID4_Session_ID": "169c3f75-748e-4931-ad7f-d2223d1176f0"
+        }
+    ]
+}
