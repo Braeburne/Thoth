@@ -128,7 +128,7 @@ def calculate_time_elapsed(start_time, end_time):
     elapsed = end - start
     return str(elapsed)
 
-def generate_questions_breakdown(incorrect_answers):
+def generate_mistakes_breakdown(incorrect_answers):
     # Generate detailed questions data for logging.
     detailed_questions = []
     question_number = 1
@@ -281,7 +281,7 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
     print(f"\nLoading questions from {filename}...")
 
     section_data = load_section_file(filename)
-    is_priority_section = section_data.get('IsPrioritySection', False)
+    is_priority_section = section_data.get('Is_Priority_Section', False)
 
     # Load questions from the matching JSON file
     questions = load_questions(filename)
@@ -320,23 +320,23 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
             continue
 
     log_entry = {
-            "Data_Log_ID": "",
+            "Review_Instance_Data_Log_ID": "",
             "IANA_Time_Zone": selected_iana,
             "UTC_Time_Zone": selected_utc,
             "Knowledge_Domain": domain,
             "Knowledge_Subject": subject,
             "Knowledge_Topic": topic,
             "Knowledge_Section": section,
-            "Filename": filename,
+            "File_Name": filename,
             "Date": "",
             "Score": "",
             "Letter_Grade": "",
-            "IsPrioritySection": is_priority_section,
-            "PassFail": "",
+            "Is_Priority_Section": is_priority_section,
+            "Pass_Fail": "",
             "Total_Questions": question_amount,
             "Correct_Count": "",
             "Incorrect_Count": "",
-            "Questions_Breakdown": [],
+            "Mistakes_Breakdown": [],
             "Start_Time": "",
             "End_Time": "",
             "Time_Elapsed": "",
@@ -375,7 +375,7 @@ def track_review_session(selected_iana, selected_utc, log_entry):
     # Format the Data Log ID for the log_entry
     data_log_id = (f"{log_entry_number} | {http_date_time}")
 
-    log_entry["Data_Log_ID"] = data_log_id
+    log_entry["Review_Instance_Data_Log_ID"] = data_log_id
     log_entry["ISO_8601_Local_Timestamp"] = start_time
     log_entry["ISO_8601_UTC_Timestamp"] = utc_start_time
     log_entry["HTTP_Date_Timestamp"] = http_date_time
@@ -449,7 +449,7 @@ def review_session(questions, question_amount, log_entry):
         print(f"Letter Grade: {letter_grade}")
 
         # Acquire value of is_priority_section
-        is_priority_section = log_entry["IsPrioritySection"]
+        is_priority_section = log_entry["Is_Priority_Section"]
 
         # Determine pass or fail
         pass_fail_status = "Pass" if determine_pass_fail(letter_grade, is_priority_section) else "Fail"
@@ -473,10 +473,10 @@ def review_session(questions, question_amount, log_entry):
 
     log_entry["Score"] = score
     log_entry["Letter_Grade"] = letter_grade
-    log_entry["PassFail"] = pass_fail_status
+    log_entry["Pass_Fail"] = pass_fail_status
     log_entry["Correct_Count"] = correct_count
     log_entry["Incorrect_Count"] = question_amount - correct_count
-    log_entry["Questions_Breakdown"] = generate_questions_breakdown(incorrect_answers)
+    log_entry["Mistakes_Breakdown"] = generate_mistakes_breakdown(incorrect_answers)
     log_entry["End_Time"] = end_time
     log_entry["Time_Elapsed"] = time_elapsed
     log_entry["Average_Time_Per_Question"] = calculate_average_time_per_question(time_elapsed, question_amount)
@@ -495,17 +495,17 @@ def log_review_session(data_logs_filename, data_logs, log_entry):
 # Review questions interactively.
 def rerun_review_session(questions, question_amount, log_entry):
     new_log_entry = {
-            "Data_Log_ID:": "",
+            "Review_Instance_Data_Log_ID:": "",
             "Knowledge_Domain": log_entry["Knowledge_Domain"],
             "Knowledge_Subject": log_entry["Knowledge_Subject"],
             "Knowledge_Topic": log_entry["Knowledge_Topic"],
             "Knowledge_Section": log_entry["Knowledge_Section"],
-            "Filename": log_entry["Filename"],
+            "File_Name": log_entry["File_Name"],
             "Date": log_entry["Date"],
             "Score": "",
             "Letter_Grade": "",
-            "IsPrioritySection": log_entry["IsPrioritySection"],
-            "PassFail": "",
+            "Is_Priority_Section": log_entry["Is_Priority_Section"],
+            "Pass_Fail": "",
             "Total_Questions": log_entry["Total_Questions"],
             "Correct_Count": "",
             "Incorrect_Count": "",
