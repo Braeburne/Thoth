@@ -403,6 +403,15 @@ def review_session(questions, question_amount, log_entry):
 
         if question:
             print(f"Question {index}: {question['Question']}")
+
+            # Check if options are present
+            if question.get("HasOptions", False):
+                for i in range(1, 5):  # Assuming there are always four options
+                    option_key = f"Option_{i}"
+                    option = question.get(option_key, "")
+                    if option:
+                        print(f"{option}")
+
             user_answer = input("Your Answer: ")
 
             # Get correct answers and split user answer by commas

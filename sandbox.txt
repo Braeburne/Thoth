@@ -5,3 +5,5 @@
         "Improvement_Areas": ["Relational databases", "Remembering specific service names"],  # Replace with actual improvement areas
         "Environment": "Desktop browser",  # Replace with actual environment
     }
+
+# Future Ideas
