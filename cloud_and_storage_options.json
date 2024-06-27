@@ -3,10 +3,10 @@
     "Knowledge_Subject": "GCP ACE Exam",
     "Knowledge_Topic": "Google Cloud Fundamentals",
     "Knowledge_Section": "Storage and Database Options",
-    "IsPrioritySection": true,
+    "Is_Priority_Section": true,
     "Questions": [
         {
-            "Question_1": 
+            "Question": 
             {
                 "Question": "What are the names of the three storage options on Google Cloud Platform?",
                 "HasOptions": false,
@@ -21,7 +21,7 @@
             }
         },
         {
-            "Question_2": 
+            "Question": 
             {
                 "Question": "What are the names of the six database options on Google Cloud Platform?",
                 "HasOptions": false,
@@ -39,7 +39,7 @@
             }
         },
         {
-            "Question_3": 
+            "Question": 
             {
                 "Question": "Of the six database options on Google Cloud Platform, which four are NoSQL?",
                 "HasOptions": false,
@@ -55,7 +55,7 @@
             }
         },
         {
-            "Question_4": 
+            "Question": 
             {
                 "Question": "Of the six database options on Google Cloud Platform, which option is SQL-based and which is relational (in that respective order)?",
                 "HasOptions": false,
@@ -69,7 +69,7 @@
             }
         },
         {
-            "Question_5": 
+            "Question": 
             {
                 "Question": "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform.",
                 "HasOptions": false,
@@ -90,11 +90,11 @@
             }
         },
         {
-            "Question_6": 
+            "Question": 
             {
                 "Question": "What is Cloud Storage?",
                 "HasOptions": true,
-                "Option_1": "[1] Consistent, scalable, large capacity, highly durable object storage",
+                "Option_1": "[1] Consistent, scalable, large-capacity, highly durable object storage",
                 "Option_2": "[2] Virtualized storage pools with unlimited capacity",
                 "Option_3": "[3] Hierarchical file system for distributed data",
                 "Option_4": "[4] High-performance block storage optimized for databases",
@@ -110,11 +110,11 @@
             }
         },
         {
-            "Question_7": 
+            "Question": 
             {
                 "Question": "What is the difference between Cloud Storage and Block Storage?",
                 "HasOptions": true,
-                "Option_1": "[1] Block Storage manages data at a more granular level and is what you would attach to your instance to store your OS, whereas Cloud Storage manages data as objects, such as documents or pictures",
+                "Option_1": "[1] Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures",
                 "Option_2": "[2] Cloud Storage is optimized for high-performance databases, while Block Storage manages data as objects",
                 "Option_3": "[3] Block Storage is highly durable and scalable, while Cloud Storage is more suited for virtualized storage pools",
                 "Option_4": "[4] Cloud Storage is cost-effective and suitable for long-term data storage, while Block Storage manages data at a more granular level",
@@ -122,12 +122,12 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Block Storage manages data at a more granular level and is what you would attach to your instance to store your OS, whereas Cloud Storage manages data as objects, such as documents or pictures."
+                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures"
                 ]
             }
         },
         {
-            "Question_8": 
+            "Question": 
             {
                 "Question": "Which of the following is a beneficial feature of Cloud Storage?",
                 "HasOptions": true,
@@ -144,24 +144,24 @@
             }
         },
         {
-            "Question_9": 
+            "Question": 
             {
                 "Question": "Cloud Storage has how many 9's of Durability?",
                 "HasOptions": true,
-                "Option_1": "[1] 6",
-                "Option_2": "[2] 7",
-                "Option_3": "[3] 8",
-                "Option_4": "[4] 9",
+                "Option_1": "[1] 10",
+                "Option_2": "[2] 11",
+                "Option_3": "[3] 12",
+                "Option_4": "[4] 13",
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "9"
+                    "11"
                 ]
             }
         },
         {
-            "Question_10": 
+            "Question": 
             {
                 "Question": "11 9's Durability (99.99999999999%) addresses loss of files, where if you store 1 million files on Google Cloud Storage - statistically Google would lose one file every 659,000 thousand years [T/F]?",
                 "HasOptions": false,
@@ -174,7 +174,7 @@
             }
         },
         {
-            "Question_11": 
+            "Question": 
             {
                 "Question": "Which storage option would you attach to your instance to store your OS?",
                 "HasOptions": true,

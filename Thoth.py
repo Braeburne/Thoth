@@ -1,4 +1,5 @@
 import json
+import random
 import datetime
 import os
 import uuid
@@ -292,6 +293,16 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
     else:
         print(f"Loaded {len(questions)} questions.")
     
+    # Determine the review session mode, i.e. does the user want questions to be randomized or not
+    while True:
+        print("\nSelect your review session mode:\n[1] Random\n[2] Sequence\n")
+        mode = input("Enter Answer: ")
+        if mode in ['1', '2']:
+            randomize = True if mode == '1' else False
+            break
+        else:
+            print("Invalid input. Please enter '1' for Random or '2' for Sequence.")
+
     # Determine number of questions to run for given review session
     question_count = len(questions)
     while True:
@@ -347,7 +358,7 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
             "UUID4_Session_ID": session_id
         }
     
-    return questions, question_amount, log_entry
+    return questions, question_amount, log_entry, randomize
 
 def track_review_session(selected_iana, selected_utc, log_entry):
     data_logs_filename = get_current_month_log_file()
@@ -385,7 +396,7 @@ def track_review_session(selected_iana, selected_utc, log_entry):
     return data_logs_filename, data_logs
 
 # Review questions interactively.
-def review_session(questions, question_amount, log_entry):
+def review_session(questions, question_amount, log_entry, randomize):
     correct_count = 0
     score = ""
     letter_grade = ""
@@ -393,13 +404,16 @@ def review_session(questions, question_amount, log_entry):
     incorrect_answers = []
 
     print(f"\nStarting review of {question_amount} questions...\n")
+    
+    # Shuffle questions if randomize is True
+    if randomize:
+        random.shuffle(questions)
 
     for index, question_data in enumerate(questions, start=1):
         if index > question_amount:
             break
         
-        question_key = f"Question_{index}"
-        question = question_data.get(question_key)
+        question = question_data['Question']
 
         if question:
             print(f"Question {index}: {question['Question']}")
@@ -446,7 +460,7 @@ def review_session(questions, question_amount, log_entry):
                         'Correct Answer(s)': ', '.join(correct_answers)
                     })
         else:
-            print(f"Error: Question '{question_key}' not found in the knowledge base.")
+            print(f"Error: `Question {index}' not found in the knowledge base.")
 
     # Calculate and display score
     if question_amount > 0:
@@ -545,9 +559,9 @@ def main():
     session_id = generate_session_id()
 
     # Begin Program Loop
-    questions, question_amount, log_entry = initialize_review_session(selected_iana, selected_utc, session_id)
+    questions, question_amount, log_entry, randomize = initialize_review_session(selected_iana, selected_utc, session_id)
     data_logs_filename, data_logs = track_review_session(selected_iana, selected_utc, log_entry)
-    review_session(questions, question_amount, log_entry)
+    review_session(questions, question_amount, log_entry, randomize)
     log_review_session(data_logs_filename, data_logs, log_entry)
 
     while True:
