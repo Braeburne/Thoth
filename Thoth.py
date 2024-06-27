@@ -420,17 +420,27 @@ def review_session(questions, question_amount, log_entry, randomize):
 
             # Check if options are present
             if question.get("HasOptions", False):
-                for i in range(1, 5):  # Assuming there are always four options
-                    option_key = f"Option_{i}"
-                    option = question.get(option_key, "")
-                    if option:
-                        print(f"{option}")
+                # Retrieve options and shuffle them if randomize is True
+                options = question.get("Options", [])
+                if randomize:
+                    random.shuffle(options)
+                
+                # Print options dynamically with enumeration
+                for option_index, option_text in enumerate(options, start=1):
+                    if option_text:
+                        print(f"[{option_index}] {option_text}")
 
-            user_answer = input("Your Answer: ")
+            user_answer = input("Enter Answer: ")
 
             # Get correct answers and split user answer by commas
             correct_answers = question.get('Answers', [])
             order_agnostic = question.get('OrderAgnostic', False)
+
+            # Handle correct answers containing commas
+            if ',' in ', '.join(correct_answers):
+                correct_answer_single = ', '.join(correct_answers)
+            else:
+                correct_answer_single = ', '.join(correct_answers).replace(", ", ",")
 
             # Process answers based on order-agnostic flag
             if order_agnostic:

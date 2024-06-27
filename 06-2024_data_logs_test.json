@@ -1,0 +1,206 @@
+{
+    "Data_Logs": [
+        {
+            "Review_Instance_Data_Log_ID": "01 | Thu, 27 Jun 2024 14:02:21 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "06-27-2024",
+            "Score": "60.00%",
+            "Letter_Grade": "D-",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Fail",
+            "Total_Questions": 5,
+            "Correct_Count": 3,
+            "Incorrect_Count": 2,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What are the characteristics of the Coldline storage class in Google Cloud Storage?",
+                    "User_Answer": "Even lower-cost archival sotrage, accessed < 1 / qtr",
+                    "Correct_Answer": "Even Lower-cost Archival Storage, Accessed < 1 / qtr",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 2,
+                    "Question": "What is Google Cloud Storage?",
+                    "User_Answer": "consistent, scalable, large-capcity, highly durable object storage",
+                    "Correct_Answer": "Consistent, scalable, large-capacity, highly durable object storage",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-06-27T14:02:20.871268",
+            "End_Time": "2024-06-27T14:03:27.507737",
+            "Time_Elapsed": "0:01:06.636469",
+            "Average_Time_Per_Question": "0:00:13.327294",
+            "ISO_8601_Local_Timestamp": "2024-06-27T14:02:20.871268",
+            "ISO_8601_UTC_Timestamp": "2024-06-27T18:02:20+00:00Z",
+            "HTTP_Date_Timestamp": "Thu, 27 Jun 2024 14:02:21 EDT",
+            "UUID4_Session_ID": "61a60650-7912-4838-b7ad-e1eab82cda67"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "02 | Thu, 27 Jun 2024 14:05:01 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "06-27-2024",
+            "Score": "80.00%",
+            "Letter_Grade": "B-",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Pass",
+            "Total_Questions": 5,
+            "Correct_Count": 4,
+            "Incorrect_Count": 1,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What is Google Cloud Storage?",
+                    "User_Answer": "consistent, scalable, large-capacity highly durable object storage",
+                    "Correct_Answer": "Consistent, scalable, large-capacity, highly durable object storage",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-06-27T14:05:01.823420",
+            "End_Time": "2024-06-27T14:06:08.633257",
+            "Time_Elapsed": "0:01:06.809837",
+            "Average_Time_Per_Question": "0:00:13.361967",
+            "ISO_8601_Local_Timestamp": "2024-06-27T14:05:01.823420",
+            "ISO_8601_UTC_Timestamp": "2024-06-27T18:05:01+00:00Z",
+            "HTTP_Date_Timestamp": "Thu, 27 Jun 2024 14:05:01 EDT",
+            "UUID4_Session_ID": "fb0be91a-eb18-4e90-8d7e-ebffe4a3bbfe"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "03 | Thu, 27 Jun 2024 14:07:34 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "06-27-2024",
+            "Score": "100.00%",
+            "Letter_Grade": "A+",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Pass",
+            "Total_Questions": 5,
+            "Correct_Count": 5,
+            "Incorrect_Count": 0,
+            "Mistakes_Breakdown": [],
+            "Start_Time": "2024-06-27T14:07:34.857842",
+            "End_Time": "2024-06-27T14:09:11.018760",
+            "Time_Elapsed": "0:01:36.160918",
+            "Average_Time_Per_Question": "0:00:19.232184",
+            "ISO_8601_Local_Timestamp": "2024-06-27T14:07:34.857842",
+            "ISO_8601_UTC_Timestamp": "2024-06-27T18:07:34+00:00Z",
+            "HTTP_Date_Timestamp": "Thu, 27 Jun 2024 14:07:34 EDT",
+            "UUID4_Session_ID": "e84de647-fc0e-4f0e-9759-755531d87dcd"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "04 | Thu, 27 Jun 2024 14:09:21 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "06-27-2024",
+            "Score": "40.00%",
+            "Letter_Grade": "F",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Fail",
+            "Total_Questions": 5,
+            "Correct_Count": 2,
+            "Incorrect_Count": 3,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What is the use case for Google Cloud Platform's Filestore service?",
+                    "User_Answer": "accessing data from an instance group, where multiple instances need to access the same data",
+                    "Correct_Answer": "Accessing data from an instance group, where multiple instances need to access the same data",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 2,
+                    "Question": "Of the six database options on Google Cloud Platform, which option is SQL-based and which is relational (in that respective order)?",
+                    "User_Answer": "could sql, cloud spanner",
+                    "Correct_Answer": "Cloud SQL, Cloud Spanner",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 3,
+                    "Question": "What are the characteristics of the Standard storage class in Google Cloud Storage?",
+                    "User_Answer": "maximum availability, no limitations",
+                    "Correct_Answer": "Maximum availability, Designed for frequently accessed data, No Limitations",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-06-27T14:09:20.878860",
+            "End_Time": "2024-06-27T14:11:11.247830",
+            "Time_Elapsed": "0:01:50.368970",
+            "Average_Time_Per_Question": "0:00:22.073794",
+            "ISO_8601_Local_Timestamp": "2024-06-27T14:09:20.878860",
+            "ISO_8601_UTC_Timestamp": "2024-06-27T18:09:20+00:00Z",
+            "HTTP_Date_Timestamp": "Thu, 27 Jun 2024 14:09:21 EDT",
+            "UUID4_Session_ID": "d3fc4cb4-a1e9-49ae-9dd6-e455f839410d"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "05 | Thu, 27 Jun 2024 14:35:50 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "06-27-2024",
+            "Score": "40.00%",
+            "Letter_Grade": "F",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Fail",
+            "Total_Questions": 5,
+            "Correct_Count": 2,
+            "Incorrect_Count": 3,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What is the difference between Cloud Storage and Block Storage on the Google Cloud Platform?",
+                    "User_Answer": "block storage manages data at a more granular level, whereas cloud storage manages data as objects, such as documents or pictures",
+                    "Correct_Answer": "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 2,
+                    "Question": "What are the characteristics of the Standard storage class in Google Cloud Storage?",
+                    "User_Answer": "maximum availability, no limitations",
+                    "Correct_Answer": "Maximum availability, Designed for frequently accessed data, No Limitations",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 3,
+                    "Question": "What is Google Cloud Storage?",
+                    "User_Answer": "consistent, scalable, large-capcity, highly durable object storage",
+                    "Correct_Answer": "Consistent, scalable, large-capacity, highly durable object storage",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-06-27T14:35:50.591927",
+            "End_Time": "2024-06-27T14:37:53.316926",
+            "Time_Elapsed": "0:02:02.724999",
+            "Average_Time_Per_Question": "0:00:24.545000",
+            "ISO_8601_Local_Timestamp": "2024-06-27T14:35:50.591927",
+            "ISO_8601_UTC_Timestamp": "2024-06-27T18:35:50+00:00Z",
+            "HTTP_Date_Timestamp": "Thu, 27 Jun 2024 14:35:50 EDT",
+            "UUID4_Session_ID": "5dc03ff7-cead-40be-8f2a-06c3dd785024"
+        }
+    ]
+}

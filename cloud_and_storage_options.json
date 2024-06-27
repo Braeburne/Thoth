@@ -71,7 +71,7 @@
         {
             "Question": 
             {
-                "Question": "Given this graphic, identify the names of the storage or database service that each icon represents on Google Cloud Platform.",
+                "Question": "Given this graphic, identify the names of the storage or database services that each icon represents on Google Cloud Platform.",
                 "HasOptions": false,
                 "HasGraphic": true,
                 "Graphic": "[Insert URL]",
@@ -92,12 +92,14 @@
         {
             "Question": 
             {
-                "Question": "What is Cloud Storage?",
+                "Question": "What is Google Cloud Storage?",
                 "HasOptions": true,
-                "Option_1": "[1] Consistent, scalable, large-capacity, highly durable object storage",
-                "Option_2": "[2] Virtualized storage pools with unlimited capacity",
-                "Option_3": "[3] Hierarchical file system for distributed data",
-                "Option_4": "[4] High-performance block storage optimized for databases",
+                "Options": [
+                    "Consistent, scalable, large-capacity, highly durable object storage",
+                    "Virtualized storage pools with unlimited capacity",
+                    "Hierarchical file system for distributed data",
+                    "High-performance block storage optimized for databases"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
@@ -112,12 +114,14 @@
         {
             "Question": 
             {
-                "Question": "What is the difference between Cloud Storage and Block Storage?",
+                "Question": "What is the difference between Cloud Storage and Block Storage on the Google Cloud Platform?",
                 "HasOptions": true,
-                "Option_1": "[1] Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures",
-                "Option_2": "[2] Cloud Storage is optimized for high-performance databases, while Block Storage manages data as objects",
-                "Option_3": "[3] Block Storage is highly durable and scalable, while Cloud Storage is more suited for virtualized storage pools",
-                "Option_4": "[4] Cloud Storage is cost-effective and suitable for long-term data storage, while Block Storage manages data at a more granular level",
+                "Options": [
+                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures",
+                    "Cloud Storage is optimized for high-performance databases, while Block Storage manages data as objects",
+                    "Block Storage is highly durable and scalable, while Cloud Storage is more suited for virtualized storage pools",
+                    "Cloud Storage is cost-effective and suitable for long-term data storage, while Block Storage manages data at a more granular level"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
@@ -129,12 +133,14 @@
         {
             "Question": 
             {
-                "Question": "Which of the following is a beneficial feature of Cloud Storage?",
+                "Question": "Which of the following is a beneficial feature of Google Cloud Storage?",
                 "HasOptions": true,
-                "Option_1": "[1] Limited storage with a maximum object size",
-                "Option_2": "[2] Unlimited storage with a minimum object size",
-                "Option_3": "[3] Unlimited storage with no maximum object size",
-                "Option_4": "[4] Unlimited storage with no minimum object size",
+                "Options": [
+                    "Limited storage with a maximum object size",
+                    "Unlimited storage with a minimum object size",
+                    "Unlimited storage with no maximum object size",
+                    "Unlimited storage with no minimum object size"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
@@ -146,12 +152,14 @@
         {
             "Question": 
             {
-                "Question": "Cloud Storage has how many 9's of Durability?",
+                "Question": "Google Cloud Storage has how many 9's of Durability?",
                 "HasOptions": true,
-                "Option_1": "[1] 10",
-                "Option_2": "[2] 11",
-                "Option_3": "[3] 12",
-                "Option_4": "[4] 13",
+                "Options": [
+                    "10",
+                    "11",
+                    "12",
+                    "13"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
@@ -163,7 +171,7 @@
         {
             "Question": 
             {
-                "Question": "11 9's Durability (99.99999999999%) addresses loss of files, where if you store 1 million files on Google Cloud Storage - statistically Google would lose one file every 659,000 thousand years [T/F]?",
+                "Question": "The 11 9's Durability (99.99999999999%) quality addresses loss of files, where if you store 1 million files on Google Cloud Storage - statistically Google would lose one file every 659,000 thousand years [T/F]?",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -176,15 +184,227 @@
         {
             "Question": 
             {
-                "Question": "Which storage option would you attach to your instance to store your OS?",
+                "Question": "Which Google storage option would you attach to your instance to store your OS?",
                 "HasOptions": true,
-                "Option_1": "[1] Block Storage",
-                "Option_2": "[2] Cloud Storage",
+                "Options": [
+                    "Block Storage",
+                    "Cloud Storage"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
                     "Block Storage"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the best use cases for Google Cloud Storage?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "content delivery",
+                    "data lakes",
+                    "backups"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the four storage classes available in Google Cloud Storage?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Standard",
+                    "Nearline",
+                    "Coldline",
+                    "Archive"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the characteristics of the Standard storage class in Google Cloud Storage?",
+                "HasOptions": true,
+                "Options": [
+                    "Maximum availability",
+                    "Low-cost",
+                    "Designed for frequently accessed data",
+                    "No Limitations"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Maximum availability",
+                    "Designed for frequently accessed data",
+                    "No Limitations"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the characteristics of the Nearline storage class in Google Cloud Storage?",
+                "HasOptions": true,
+                "Options": [
+                    "Even Lower-cost Archival Storage",
+                    "Low-cost Archival Storage",
+                    "Accessed < 1 / qtr",
+                    "Accessed < 1 / mo"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Low-cost Archival Storage",
+                    "Accessed < 1 / mo"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the characteristics of the Coldline storage class in Google Cloud Storage?",
+                "HasOptions": true,
+                "Options": [
+                    "Even Lower-cost Archival Storage",
+                    "Lowest-cost Archival Storage",
+                    "Accessed < 1 / qtr",
+                    "Accessed < 1 / yr"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Even Lower-cost Archival Storage",
+                    "Accessed < 1 / qtr"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the characteristics of the Archive storage class in Google Cloud Storage?",
+                "HasOptions": true,
+                "Options": [
+                    "Even Lower-cost Archival Storage",
+                    "Lowest-cost Archival Storage",
+                    "Accessed < 1 / qtr",
+                    "Accessed < 1 / yr"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Lowest-cost Archival Storage",
+                    "Accessed < 1 / yr"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the three availability options in Google Cloud Storage?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Region",
+                    "Dual-region",
+                    "Multi-region"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is Filestore on the Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed NFS file server",
+                    "A fully managed SMB file server",
+                    "A distributed NoSQL database service",
+                    "An object storage service for multimedia files"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A fully managed NFS file server"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Filestore is not NFSv3 compliant on the Google Cloud Platform. [T/F]",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "F"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What does Google Cloud Platform's Filestore service do?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Allows you to store data from running applications, originating from multiple VM instances and Kubernetes clusters that are all accessing the data at the same time."
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the use case for Google Cloud Platform's Filestore service?",
+                "HasOptions": true,
+                "Options": [
+                    "Accessing data from an instance group, where multiple instances need to access the same data",
+                    "Storing large-scale multimedia files with high availability requirements",
+                    "Hosting static websites with minimal traffic",
+                    "Managing relational databases for transaction processing"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Accessing data from an instance group, where multiple instances need to access the same data"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the Persistent Disks storage service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A highly scalable NoSQL database service",
+                    "Durable block storage for instances",
+                    "A distributed file storage service for large datasets",
+                    "A service for managing object storage on Google Cloud"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Durable block storage for instances"
                 ]
             }
         }
