@@ -7,3 +7,182 @@
     }
 
 # Future Ideas
+
+# GCP ACE Exam Pro Sections
+
+☁️ Cloud Computing Fundamentals
+[] What Is Cloud Computing
+[] Cloud Deployment Models
+[] Cloud Service Models
+
+☁️ Google Cloud Fundamentals
+[] Google Cloud Global Infrastructure
+[] Compute Service Options
+[X] Storage and Database Options
+[] Networking Services
+
+☁️ Account Setup
+[] Resource Hierarchy
+[] Create Free Tier Account
+[] Securing Your Account
+[] GCP Console Overview
+[] Cloud Billing
+[] Controlling Costs and Budget Alerts
+[] Controlling Costs and Budget Alerts Follow Along
+[] Billing Export
+[] Cloud APIs
+[] Adding an Admin User
+[] Cloud SDK and CLI
+[] Cloud SDK and CLI Follow Along
+[] Managing Cloud SDK
+[] Cloud Shell and Editor
+[] Creating and managing projects
+[] Limits and Quotas
+
+☁️ Identity and Access Management
+[] Cloud IAM
+[] Policies and Conditions
+[] Cloud IAM
+[] Service Accounts
+[] Service Accounts
+[] Cloud Identity
+[] Cloud IAM Best Practices
+
+☁️ Networking Services
+[] Networking Refresher PART 1
+[] Networking Refresher PART 2
+[] Virtual Private Cloud
+[] VPC Network Subnets
+[] Routing and Private Google Access
+[] IP Addressing
+[] Creating Internal and External Static IP Addresses PART 1
+[] Creating Internal and External Static IP Addresses PART 2
+[] Firewall and Firewall Rules
+[] Custom VPC Part 1
+[] Custom VPC Part 2
+[] VPC Network Peering
+[] VPC Network Peering
+[] Shared VPC
+[] VPC Flow Logs
+[] DNS Fundamentals
+[] DNS Record Types
+[] Network Address Translation PART 1
+[] Network Address Translation PART 2
+[] Cloud DNS
+
+☁️ Compute Engine
+[] Virtualization Fundamentals
+[] Compute Engine Overview
+[] Creating a VM Instance
+[] Compute Engine Machine Types
+[] Managing Instances
+[] Connecting to Your Instances
+[] Metadata and Startup Scripts
+[] Compute Engine Billing
+[] Storage Fundamentals
+[] Persistent Disk and Local SSDs
+[] Managing disks on Compute Engine
+[] Snapshots
+[] Creating Snapshots and Snaphot Schedules
+[] Deployment Manager
+[] Deployment Manager
+
+☁️ High Availability and Autoscaling
+[] Cloud Load Balancers PART 1
+[] Cloud Load Balancers PART 2
+[] Instance Groups and Instance Templates
+[] Managing Bowties PART 1
+[] Managing Bowties PART 2
+
+☁️ Kubernetes Engine Containers
+[] Introduction to Containers
+[] GKE and Kubernetes Concepts
+[] Cluster and Node Management
+[] Pods and Object Management
+[] Kubernetes Services
+[] Ingress for GKE
+[] GKE Storage Options
+[] Creating a GKE Cluster
+
+☁️ Hybrid Connectivity
+[] Cloud VPN
+[] Cloud Interconnect
+
+☁️ Serverless Services
+[] App Engine Overview
+[] Deploying Serverless Bowties to App Engine
+[] Introduction to Cloud Functions
+[] Deploying a Cloud Function
+
+☁️ Storage Services
+[] Cloud Storage Storage Types
+[] Object Lifecycle Management and Versioning
+[] Managing Cloud Storage Access
+[] Object Lifecycle Management and Versioning
+[] Cloud SQL
+[] Cloud Spanner
+[] NoSQL Databases
+
+☁️ Big Data and Machine Learning
+[] Big Data Services
+[] Machine Learning Services
+
+☁️ Operations Suite
+[] Operations Suite
+
+# JSON Questions
+Section: cloud_and_storage_options.json
+
+Question: What are the two storage options in the Google Persistent Disks storage service?
+Answer: Standard, Solid State (SSD)
+
+Question: What is the difference between the Standard and Solid State (SSD) options in the Google Persistent Disks storage service?
+Answer: Solid state has lower latency and higher iops than standard.
+
+Question: Both the the Standard and Solid State (SSD) options in the Google Persistent Disks storage service are available in what two deployment options?
+Answer: Zonal, Regional
+
+What is Cloud SQL on Google Cloud Platform?
+Answer: A fully managed database service.
+
+What three SQL deployment types are available in the Cloud SQL database service?
+Answer: PostgreSQL, MySQL, SQL server
+
+Cloud SQL experiences high availability only across:
+Answer: Zones
+
+What is Cloud Spanner on Google Cloud Platform?
+Answer: A scalable relational database service.
+
+At a high level, what is the Cloud Spanner database service designed to support?
+Answer: Transactions, strong consistency, synchronous replication
+
+Cloud Spanner experiences high availability across:
+Answer: Zones, Regions, Globally
+
+What is BigTable on Google Cloud Platform?
+Answer: A fully managed, scalable NoSQL database
+
+What are the strengths of the BigTable database service on Google Cloud Platform?
+Answer: High throughput with low latency, Cluster resizing without downtime
+
+What is Datastore on Google Cloud Platform?
+Answer: A fast, fully managed, serverless, NoSQL document database
+
+What domains of application is the Datastore database service designed for?
+Answer: Mobile, Web, IoT Apps
+
+What activities does the Datastore database service support on Google Cloud Platform?
+Answer: Multi-region replication, ACID transactions
+
+What is Firestore on Google Cloud Platform?
+Answer: A NoSQL, real-time database
+
+What are the strengths of the Firestore database service on Google Cloud Platform?
+Answer: Optimized for offline use, Cluster resizing without downtime
+
+What is the use case for the Firestore database service on Google Cloud Platform?
+Answer: Storing data in a database in real time.
+
+What is Memorystore on Google Cloud Platform?
+Answer: A fully managed, highly available in-memory service for Redis and Memcached

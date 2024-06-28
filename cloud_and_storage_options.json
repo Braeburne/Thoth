@@ -313,7 +313,7 @@
         {
             "Question": 
             {
-                "Question": "What are the three availability options in Google Cloud Storage?",
+                "Question": "What are the three availability options for Google Cloud Storage?",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -407,6 +407,321 @@
                     "Durable block storage for instances"
                 ]
             }
-        }
+        },
+        {
+            "Question": {
+                "Question": "What are the two storage options in the Google Persistent Disks storage service?",
+                "HasOptions": false,
+                "Options": null,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Standard",
+                    "Solid State (SSD)"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is the difference between the Standard and Solid State (SSD) options in the Google Persistent Disks storage service?",
+                "HasOptions": false,
+                "Options": null,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Solid state has lower latency and higher iops than standard"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Both the Standard and Solid State (SSD) options in the Google Persistent Disks storage service are available in what two deployment options?",
+                "HasOptions": true,
+                "Options": [
+                    "Zonal",
+                    "Regional",
+                    "Global",
+                    "National"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Zonal",
+                    "Regional"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is Cloud SQL on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed SQL database service",
+                    "A distributed ledger service",
+                    "A content delivery network",
+                    "A cloud-based NoSQL storage service"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A fully managed SQL database service"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What three SQL deployment types are available in the Cloud SQL database service?",
+                "HasOptions": true,
+                "Options": [
+                    "PostgreSQL",
+                    "MySQL",
+                    "SQL server",
+                    "MongoDB"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "PostgreSQL",
+                    "MySQL",
+                    "SQL server"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Cloud SQL experiences high availability only across:",
+                "HasOptions": false,
+                "Options": null,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Zones"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is Cloud Spanner on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A scalable relational database service",
+                    "A distributed file storage service",
+                    "A SQL database service",
+                    "A document-oriented database"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A scalable relational database service"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "At a high level, what is the Cloud Spanner database service designed to support?",
+                "HasOptions": true,
+                "Options": [
+                    "Transactions", 
+                    "strong consistency", 
+                    "synchronous replication",
+                    "Real-time data streaming"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Transactions, strong consistency, synchronous replication"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Cloud Spanner experiences high availability across:",
+                "HasOptions": true,
+                "Options": [
+                    "Zones",
+                    "Regions",
+                    "Continents",
+                    "Globe"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Zones",
+                    "Regions",
+                    "Globe"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is BigTable on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed, scalable NoSQL database",
+                    "A relational database with ACID compliance",
+                    "An object-oriented database",
+                    "A distributed file storage service"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A fully managed, scalable NoSQL database"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What are the strengths of the BigTable database service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "High throughput with low latency",
+                    "Cluster resizing without downtime",
+                    "Automatic schema migration",
+                    "Built-in machine learning models"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "High throughput with low latency",
+                    "Cluster resizing without downtime"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is Datastore on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fast, fully managed, serverless, NoSQL document database",
+                    "A relational database with ACID compliance",
+                    "A distributed file storage system",
+                    "A content delivery network"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A fast, fully managed, serverless, NoSQL document database"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What domains of application is the Datastore database service designed for?",
+                "HasOptions": true,
+                "Options": [
+                    "Mobile",
+                    "Web",
+                    "IoT Apps",
+                    "Desktop"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Mobile",
+                    "Web",
+                    "IoT Apps"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What activities does the Datastore database service support on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Multi-region replication",
+                    "ACID transactions",
+                    "Real-time analytics",
+                    "Batch processing"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Multi-region replication",
+                    "ACID transactions"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is Firestore on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A NoSQL, real-time database",
+                    "A relational database management system",
+                    "A file storage service",
+                    "An object-oriented database"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A NoSQL, real-time database"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What are the strengths of the Firestore database service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Optimized for offline use",
+                    "Cluster resizing without downtime",
+                    "Built-in AI capabilities",
+                    "Advanced querying features"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Optimized for offline use",
+                    "Cluster resizing without downtime"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is the use case for the Firestore database service on Google Cloud Platform?",
+                "HasOptions": false,
+                "Options": null,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Storing data in a database in real time"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is Memorystore on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed, highly available in-memory service for Redis and Memcached",
+                    "A distributed file storage service",
+                    "A machine learning service",
+                    "A managed Kubernetes service"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A fully managed, highly available in-memory service for Redis and Memcached"
+                ]
+            }
+        }        
     ]
 }

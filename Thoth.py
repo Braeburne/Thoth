@@ -310,6 +310,9 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
 
         # Generate options based on the number of questions available
         options = [(i, f"[-] {i}") for i in range(5, question_count + 1, 5)]
+    
+        # Add option for reviewing all available questions instead
+        options.append((question_count, f"[-] All"))
 
         # Display options to the user
         for option, description in options:
@@ -318,18 +321,24 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
         answer = input("\nEnter Answer: ")
 
         try:
-            question_amount = int(answer)
-            if question_amount > question_count:
-                print(f"Invalid input. Maximum number of questions is {question_count}.")
-                continue
-            elif question_amount % 5 != 0 or question_amount < 5:
-                print("Invalid input. Please select a number in increments of 5.")
-                continue
-            break
+            if answer.lower() == "all":
+                print(answer)
+                question_amount = question_count
+                break
+            else:
+                question_amount = int(answer)
+                if question_amount > question_count:
+                    print(f"Invalid input. Maximum number of questions is {question_count}.")
+                    continue
+                elif question_amount % 5 != 0 or question_amount < 5:
+                    print("Invalid input. Please select a number in increments of 5.")
+                    continue
+                break
         except ValueError:
-            print("Invalid input. Please enter a number.")
+            print("Invalid input. Please enter a number or the word 'All'.")
             continue
 
+    # Initializing data log with all known information thus far
     log_entry = {
             "Review_Instance_Data_Log_ID": "",
             "IANA_Time_Zone": selected_iana,
