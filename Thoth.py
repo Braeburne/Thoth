@@ -306,7 +306,7 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
     # Determine number of questions to run for given review session
     question_count = len(questions)
     while True:
-        print("Select the number of questions you want to review (in increments of 5, up to the total number):")
+        print("\nSelect the number of questions you want to review (in increments of 5, up to the total number):")
 
         # Generate options based on the number of questions available
         options = [(i, f"[-] {i}") for i in range(5, question_count + 1, 5)]
@@ -396,7 +396,7 @@ def track_review_session(selected_iana, selected_utc, log_entry):
     return data_logs_filename, data_logs
 
 # Review questions interactively.
-def review_session(questions, question_amount, log_entry, randomize):
+def review_session(questions, question_amount, log_entry, randomize=False):
     correct_count = 0
     score = ""
     letter_grade = ""
@@ -436,16 +436,30 @@ def review_session(questions, question_amount, log_entry, randomize):
             correct_answers = question.get('Answers', [])
             order_agnostic = question.get('OrderAgnostic', False)
 
+            print("PRINT DEBUGGING ACTIVATED.")
+            print("user_answer:")
+            print(user_answer)
+
+            print("correct_answers:")
+            print(correct_answers)
+
             # Handle correct answers containing commas
             if ',' in ', '.join(correct_answers):
                 correct_answer_single = ', '.join(correct_answers)
             else:
                 correct_answer_single = ', '.join(correct_answers).replace(", ", ",")
 
+            print("correct_answers_single:")
+            print(correct_answers)
+
             # Process answers based on order-agnostic flag
             if order_agnostic:
                 correct_answers_set = set(ans.lower().replace(" ", "") for ans in correct_answers)
                 user_answers_set = set(ans.strip().lower().replace(" ", "") for ans in user_answer.split(','))
+                print("user_answers_set:")
+                print(user_answers_set)
+                print("correct_answers_set:")
+                print(correct_answers_set)
                 if correct_answers_set == user_answers_set:
                     print("Correct!")
                     correct_count += 1
@@ -459,6 +473,10 @@ def review_session(questions, question_amount, log_entry, randomize):
             else:
                 user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
                 correct_answers_lower = [ans.lower() for ans in correct_answers]
+                print("user_answers:")
+                print(user_answers)
+                print("correct_answers_lower:")
+                print(correct_answers_lower)
                 if user_answers == correct_answers_lower:
                     print("Correct!")
                     correct_count += 1
@@ -526,9 +544,14 @@ def log_review_session(data_logs_filename, data_logs, log_entry):
     print("Review session logged successfully.")
 
 # Review questions interactively.
-def rerun_review_session(questions, question_amount, log_entry):
+def rerun_review_session(questions, question_amount, log_entry, randomize=False):
+    
+    print("Log Entry: ", log_entry)
+    
     new_log_entry = {
-            "Review_Instance_Data_Log_ID:": "",
+            "Review_Instance_Data_Log_ID": "",
+            "IANA_Time_Zone": log_entry["IANA_Time_Zone"],
+            "UTC_Time_Zone": log_entry["UTC_Time_Zone"],
             "Knowledge_Domain": log_entry["Knowledge_Domain"],
             "Knowledge_Subject": log_entry["Knowledge_Subject"],
             "Knowledge_Topic": log_entry["Knowledge_Topic"],
@@ -542,14 +565,21 @@ def rerun_review_session(questions, question_amount, log_entry):
             "Total_Questions": log_entry["Total_Questions"],
             "Correct_Count": "",
             "Incorrect_Count": "",
-            "Questions_Detailed": [],
+            "Mistakes_Breakdown": [],
             "Start_Time": "",
             "End_Time": "",
             "Time_Elapsed": "",
             "Average_Time_Per_Question": "",
-            "Session_ID": log_entry["Session_ID"]
+            "ISO_8601_Local_Timestamp": "",
+            "ISO_8601_UTC_Timestamp": "",
+            "HTTP_Date_Timestamp": "",
+            "UUID4_Session_ID": log_entry["UUID4_Session_ID"]
     }
-    data_logs_filename, data_logs = track_review_session(new_log_entry)
+
+    selected_iana = log_entry["IANA_Time_Zone"]
+    selected_utc = log_entry["UTC_Time_Zone"]
+
+    data_logs_filename, data_logs = track_review_session(selected_iana, selected_utc, new_log_entry)
     review_session(questions, question_amount, new_log_entry)
     log_review_session(data_logs_filename, data_logs, new_log_entry)
 

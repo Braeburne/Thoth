@@ -366,7 +366,7 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Allows you to store data from running applications, originating from multiple VM instances and Kubernetes clusters that are all accessing the data at the same time."
+                    "Allows you to store data from running applications, originating from multiple VM instances and Kubernetes clusters that are all accessing the data at the same time"
                 ]
             }
         },
