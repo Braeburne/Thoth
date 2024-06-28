@@ -436,30 +436,25 @@ def review_session(questions, question_amount, log_entry, randomize=False):
             correct_answers = question.get('Answers', [])
             order_agnostic = question.get('OrderAgnostic', False)
 
-            print("PRINT DEBUGGING ACTIVATED.")
-            print("user_answer:")
-            print(user_answer)
+            # Check if any correct answer contains a comma
+            correct_answer_contains_comma = any(',' in ans for ans in correct_answers)
 
-            print("correct_answers:")
-            print(correct_answers)
-
-            # Handle correct answers containing commas
-            if ',' in ', '.join(correct_answers):
-                correct_answer_single = ', '.join(correct_answers)
-            else:
-                correct_answer_single = ', '.join(correct_answers).replace(", ", ",")
-
-            print("correct_answers_single:")
-            print(correct_answers)
-
-            # Process answers based on order-agnostic flag
-            if order_agnostic:
+            # Process answers based on correct answer structure
+            if correct_answer_contains_comma:
+                # Compare user answer directly to correct answers
+                if user_answer.strip().lower() in [ans.strip().lower() for ans in correct_answers]:
+                    print("Correct!")
+                    correct_count += 1
+                else:
+                    print("Incorrect.")
+                    incorrect_answers.append({
+                        'Question': question['Question'],
+                        'Your Answer': user_answer,
+                        'Correct Answer(s)': ', '.join(correct_answers)
+                    })
+            elif order_agnostic: # Process answers based on order-agnostic flag
                 correct_answers_set = set(ans.lower().replace(" ", "") for ans in correct_answers)
                 user_answers_set = set(ans.strip().lower().replace(" ", "") for ans in user_answer.split(','))
-                print("user_answers_set:")
-                print(user_answers_set)
-                print("correct_answers_set:")
-                print(correct_answers_set)
                 if correct_answers_set == user_answers_set:
                     print("Correct!")
                     correct_count += 1
@@ -470,13 +465,9 @@ def review_session(questions, question_amount, log_entry, randomize=False):
                         'Your Answer': user_answer,
                         'Correct Answer(s)': ', '.join(correct_answers)
                     })
-            else:
+            else: # Default comparison for non-order-agnostic questions
                 user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
                 correct_answers_lower = [ans.lower() for ans in correct_answers]
-                print("user_answers:")
-                print(user_answers)
-                print("correct_answers_lower:")
-                print(correct_answers_lower)
                 if user_answers == correct_answers_lower:
                     print("Correct!")
                     correct_count += 1
@@ -534,6 +525,7 @@ def review_session(questions, question_amount, log_entry, randomize=False):
 
     return log_entry
 
+# Finish and add data log to the data_logs.json file.
 def log_review_session(data_logs_filename, data_logs, log_entry):
     # Append log entry to DataLogs
     data_logs["Data_Logs"].append(log_entry)
@@ -543,10 +535,8 @@ def log_review_session(data_logs_filename, data_logs, log_entry):
 
     print("Review session logged successfully.")
 
-# Review questions interactively.
+# Review the same set of questions that were just recently reviewed.
 def rerun_review_session(questions, question_amount, log_entry, randomize=False):
-    
-    print("Log Entry: ", log_entry)
     
     new_log_entry = {
             "Review_Instance_Data_Log_ID": "",
