@@ -1,0 +1,237 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Google Cloud Fundamentals",
+    "Knowledge_Section": "Google Cloud Global Infrastructure",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question": 
+            {
+                "Question": "How many subsea cables has Google laid to connect various continents around the Globe?",
+                "HasOptions": true,
+                "Options": [
+                    "11",
+                    "12",
+                    "13",
+                    "14"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "13"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "How many regions does Google Cloud Platform span?",
+                "HasOptions": true,
+                "Options": [
+                    "22",
+                    "23",
+                    "24",
+                    "25"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "24"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "How many zones does Google Cloud Platform span?",
+                "HasOptions": true,
+                "Options": [
+                    "67",
+                    "70",
+                    "73",
+                    "76"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "73"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is a zone on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A deployment area for Google Cloud resources within a region",
+                    "A single failure domain within a region",
+                    "A separate physical data center located outside of regions",
+                    "A network configuration setting for Google Cloud resources"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "A deployment area for Google Cloud resources within a region",
+                    "A single failure domain within a region"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is a best practice for deploying resources in GCP zones that will ensure optimal latency for users?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Deploying in zones closest to the user"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is a region on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Independent geographic areas that are sub-divided into zones",
+                    "A single data center located in a specific geographic area",
+                    "A type of virtual machine instance in Google Cloud Platform",
+                    "A storage solution provided by Google Cloud Platform"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Independent geographic areas that are sub-divided into zones"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What are the benefits of sub-dividing a region into multiple zones?",
+                "HasOptions": true,
+                "Options": [
+                    "Fault Tolerance",
+                    "High Availability",
+                    "Cost Savings",
+                    "Reduced Network Latency"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Fault Tolerance",
+                    "High Availability"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is the typical intercommunication speed between the zones of a region?",
+                "HasOptions": true,
+                "Options": [
+                    "< 1000 ms",
+                    "< 500 ms",
+                    "< 50 ms",
+                    "< 5 ms"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "< 5 ms"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is a multi-region on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Large, geographic areas, that contain two or more regions",
+                    "A backup data center for disaster recovery",
+                    "A global network for content delivery",
+                    "A network of interconnected regions managed by different cloud providers"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Large, geographic areas, that contain two or more regions"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Multi-regions allow Google services to maximize what within and across regions?",
+                "HasOptions": true,
+                "Options": [
+                    "Redundancy and distribution",
+                    "Cost efficiency and reduced latency",
+                    "Global scalability and workload balancing",
+                    "Data privacy and regulatory compliance"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Redundancy and distribution"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "What is the strength of the multi-region entity on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "High Availability (Geo-redundancy)",
+                    "Low cost and operational efficiency",
+                    "Resource isolation and performance optimization",
+                    "On-demand scalability and resource elasticity"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "High Availability (Geo-redundancy)"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Geo-redundancy in multi-regions means that your data is spread across multiple regions and ensures that the data is always available, even if a region goes down. [T/F]",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Rank each entity of Google's global infrastructure from smallest to largest.",
+                "HasOptions": true,
+                "Options": [
+                    "Zone",
+                    "Region",
+                    "Multi-Region"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Zone",
+                    "Region",
+                    "Multi-Region"
+                ]
+            }
+        }
+    ]
+}

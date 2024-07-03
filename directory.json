@@ -3,9 +3,37 @@
         {
             "Knowledge_Domain": "IT",
             "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Cloud Computing Fundamentals",
+            "Knowledge_Section": "Cloud Service Models",
+            "Filename": "cloud_service_models.json"
+        },
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Google Cloud Global Infrastructure",
+            "Filename": "google_cloud_global_infrastructure.json"
+        },
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Compute Service Options",
+            "Filename": "compute_service_options.json"
+        },
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
             "Knowledge_Topic": "Google Cloud Fundamentals",
             "Knowledge_Section": "Storage and Database Options",
             "Filename": "cloud_and_storage_options.json"
+        },
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Networking Services",
+            "Filename": "networking_services.json"
         }
     ]
 }

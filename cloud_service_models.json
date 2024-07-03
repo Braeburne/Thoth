@@ -1,0 +1,524 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Cloud Computing Fundamentals",
+    "Knowledge_Section": "Cloud Service Models",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question": 
+            {
+                "Question": "What are cloud service models commonly referred to as?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "XaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What does XaaS stand for?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "Answers": [
+                    "Anything as a Service"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Select the descriptions that best describe an infrastructure stack.",
+                "HasOptions": true,
+                "Options": [
+                    "A collection of needed infrastructure that the application needs to run on",
+                    "It is layered",
+                    "Each layer builds on top of the previous layer to create the fully functioning stack",
+                    "A virtualized environment that simulates physical infrastructure"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A collection of needed infrastructure that the application needs to run on",
+                    "It is layered",
+                    "Each layer builds on top of the previous layer to create the fully functioning stack"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of a traditional on-premises infrastructure stack (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application",
+                    "Data",
+                    "Runtime",
+                    "Container",
+                    "Operating System",
+                    "Virtualization",
+                    "Physical Servers",
+                    "Network / Storage",
+                    "Data Center"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "In the traditional on-premises infrastructure stack, who manages the components?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Customer"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the advantages of the traditional on-premises infrastructure stack?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Major flexibility"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the disadvantages of the traditional on-premises infrastructure stack?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Huge costs"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the key concepts of the cloud service model concepts?",
+                "HasOptions": true,
+                "Options": [
+                    "Some parts are managed by you",
+                    "Other parts are managed by the vendor",
+                    "Vendor services priced by unit of consumption",
+                    "Full control over all aspects of service management"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Some parts are managed by you",
+                    "Other parts are managed by the vendor",
+                    "Vendor services priced by unit of consumption"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Before cloud took over the market, what was the name of the infrastructure stack model where the data center was hosted for you (by a vendor)?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "DC Hosted"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What was the unit of consumption for the DC Hosted infrastructure stack model?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "The data rack space within the data center"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of DC infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application",
+                    "Data",
+                    "Runtime",
+                    "Container",
+                    "Operating System",
+                    "Virtualization",
+                    "Physical Servers",
+                    "Network / Storage"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of IaaS infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application",
+                    "Data",
+                    "Runtime",
+                    "Container",
+                    "Operating System"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of PaaS infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application",
+                    "Data"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of SaaS infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center",
+                    "Nothing"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Nothing"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is typically the correct make-up of SaaS infrastructure stack that is in-fact managed by an external vendor (from top to bottom)?",
+                "HasOptions": true,
+                "Options": [
+                    "Virtualization",
+                    "Application",
+                    "Physical Servers",
+                    "Runtime",
+                    "Network / Storage",
+                    "Container",
+                    "Operating System",
+                    "Data",
+                    "Data Center"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application",
+                    "Data",
+                    "Runtime",
+                    "Container",
+                    "Operating System",
+                    "Virtualization",
+                    "Physical Servers",
+                    "Network / Storage",
+                    "Data Center"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Rank the cloud service models, from most flexible to least flexible.",
+                "HasOptions": true,
+                "Options": [
+                    "Traditional On-premises",
+                    "DC Hosted",
+                    "IaaS",
+                    "PaaS",
+                    "SaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Traditional On-premises",
+                    "DC Hosted",
+                    "IaaS",
+                    "PaaS",
+                    "SaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Using Antoni Tzavelas' 'Pizza as a Service` analogy, which description would map on the traditional on-premises infrastructure stack?",
+                "HasOptions": true,
+                "Options": [
+                    "Buy everything and make the pizza at home",
+                    "You pick up the pizza and you cook it at home",
+                    "The pizza is delivered to your home",
+                    "Eat the pizza at a restaurant"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Buy everything and make the pizza at home"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Using Antoni Tzavelas' 'Pizza as a Service` analogy, which description would map on the IaaS infrastructure stack?",
+                "HasOptions": true,
+                "Options": [
+                    "Buy everything and make the pizza at home",
+                    "You pick up the pizza and you cook it at home",
+                    "The pizza is delivered to your home",
+                    "Eat the pizza at a restaurant"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "You pick up the pizza and you cook it at home"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Using Antoni Tzavelas' 'Pizza as a Service` analogy, which description would map on the PaaS infrastructure stack?",
+                "HasOptions": true,
+                "Options": [
+                    "Buy everything and make the pizza at home",
+                    "You pick up the pizza and you cook it at home",
+                    "The pizza is delivered to your home",
+                    "Eat the pizza at a restaurant"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "The pizza is delivered to your home"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Using Antoni Tzavelas' 'Pizza as a Service` analogy, which description would map on the SaaS infrastructure stack?",
+                "HasOptions": true,
+                "Options": [
+                    "Buy everything and make the pizza at home",
+                    "You pick up the pizza and you cook it at home",
+                    "The pizza is delivered to your home",
+                    "Eat the pizza at a restaurant"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Eat the pizza at a restaurant"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the unit of consumption for the SaaS infrastructure stack model?",
+                "HasOptions": true,
+                "Options": [
+                    "Operating System",
+                    "Runtime",
+                    "Application",
+                    "Data"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Application"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What was the unit of consumption for the PaaS infrastructure stack model?",
+                "HasOptions": true,
+                "Options": [
+                    "Operating System",
+                    "Runtime",
+                    "Application",
+                    "Data"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Runtime"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What was the unit of consumption for the IaaS infrastructure stack model?",
+                "HasOptions": true,
+                "Options": [
+                    "Operating System",
+                    "Runtime",
+                    "Application",
+                    "Data"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Operating System"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Considering cloud service models as a spectrum, why is it the case that the further away from traditional on-premises you move - the less flexibility you have?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Because the further along the spectrum you go, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor."
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Considering cloud service models as a spectrum, what are the advantages of moving further along the spectrum (away from trad. on-prem.)?",
+                "HasOptions": true,
+                "Options": [
+                    "Less overhead",
+                    "Greater focus on core business functions",
+                    "Increased control over physical hardware",
+                    "More complex infrastructure management"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Less overhead",
+                    "Greater focus on core business functions"
+                ]
+            }
+        },
+        {
+            "Question": {
+                "Question": "Considering cloud service models as a spectrum, what are the disadvantages of moving further along the spectrum (away from trad. on-prem.)?",
+                "HasOptions": true,
+                "Options": [
+                    "Less flexibility over infrastructure stack",
+                    "Potential for vendor lock-in",
+                    "Higher costs due to on-premise hardware requirements",
+                    "Greater need for in-house IT staff"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Less flexibility over infrastructure stack",
+                    "Potential for vendor lock-in"
+                ]
+            }
+        }        
+    ]
+}

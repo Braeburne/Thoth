@@ -1,0 +1,518 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Google Cloud Fundamentals",
+    "Knowledge_Section": "Compute Service Options",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question": 
+            {
+                "Question": "Identify the compute service options in terms of flexibility, from most flexible to least flexible.",
+                "HasOptions": true,
+                "Options": [
+                    "Compute Engine",
+                    "Google Kubernetes Engine",
+                    "App Engine",
+                    "Cloud Functions",
+                    "Cloud Run"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Compute Engine",
+                    "Google Kubernetes Engine",
+                    "App Engine",
+                    "Cloud Functions",
+                    "Cloud Run"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What infrastructure stack type does Compute Engine exist in?",
+                "HasOptions": true,
+                "Options": [
+                    "IaaS",
+                    "CaaS",
+                    "PaaS",
+                    "FaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "IaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What infrastructure stack type does Google Kubernetes Engine exist in?",
+                "HasOptions": true,
+                "Options": [
+                    "IaaS",
+                    "CaaS",
+                    "PaaS",
+                    "FaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "CaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What infrastructure stack type does App Engine exist in?",
+                "HasOptions": true,
+                "Options": [
+                    "IaaS",
+                    "CaaS",
+                    "PaaS",
+                    "FaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "PaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What infrastructure stack type does Cloud Functions exist in?",
+                "HasOptions": true,
+                "Options": [
+                    "IaaS",
+                    "CaaS",
+                    "PaaS",
+                    "FaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "FaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What infrastructure stack type does Cloud Run exist in?",
+                "HasOptions": true,
+                "Options": [
+                    "IaaS",
+                    "CaaS",
+                    "PaaS",
+                    "FaaS"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "FaaS"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the Google Kubernetes Engine (GKE) service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A Container-orchestration system for automating deploying, scaling, and managing containers",
+                    "A serverless execution environment for building and connecting cloud services",
+                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A fully managed compute platform for deploying and scaling containerized applications quickly and securely"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the App Engine service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
+                    "A serverless execution environment for building and connecting cloud services",
+                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the Cloud Functions service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
+                    "A serverless execution environment for building and connecting cloud services",
+                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A serverless execution environment for building and connecting cloud services"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the Cloud Run service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
+                    "A serverless execution environment for building and connecting cloud services",
+                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A fully managed compute platform for deploying and scaling containerized applications quickly and securely"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Compute Engine lets you create Virtual Machines (VMs) called instances. [T/F]",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Which of the following are characteristics of the Google Compute Engine service?",
+                "HasOptions": true,
+                "Options": [
+                    "Deployable in any region / zone of your choice",
+                    "Automated scaling and load balancing capabilities",
+                    "Public or private images usable to create instances",
+                    "Pre-configured images and software packages are available in Google Cloud Marketplace"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Deployable in any region / zone of your choice",
+                    "Both public or private images usable to create instances",
+                    "Pre-configured images and software packages are available in Google Cloud Marketplace"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "With the Google Compute Engine service, you can't decide what operating system and software to put on the Engine. It's locked to a Unix environment and a standard set of Google-supported software. [T/F]?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "F"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "How are multiple instances managed in Google Compute Engine service?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "using instance groups"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is the recommended solution for adding and removing capacity for instances automatically in Google Compute Engine service?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "using autoscaling with instance groups"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Google Compute Engine service does not allow you to attach/detach disks as needed. [T/F]?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "F"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Google Cloud Storage can be used as a storage option for the Google Compute Engine service. [T/F]?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What tool does Google allow you to use to securely connect to your Google Compute Engine service?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "SSH"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Google Kubernetes Engine (GKE) is built on the same open-source Kubernetes project that was introduced by Google to the public in 2014. [T/F]?",
+                "HasOptions": true,
+                "Options": [
+                    "Container-orchestration system for automating deploying, scaling, and managing containers"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "To accommodate all customers who may already have existing Kubernetes clusters in their on-premesis data centers, Google Kubernetes Engine (GKE) offers flexibility to integrate with any on-premesis Kubernetes deployments. [T/F]?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Under the hood (to funtion), Google Kubernetes Engine (GKE) uses Compute Engine instances as nodes in a cluster. [T/F]?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "T"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What is a cluster in context to Google Kubernetes Engine (GKE)?",
+                "HasOptions": true,
+                "Options": [
+                    "A group of nodes or Compute Engine instances",
+                    "A collection of storage volumes used for persistent data",
+                    "A virtual network segment for isolating container traffic",
+                    "A set of predefined templates for deploying applications"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "A group of nodes or Compute Engine instances"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are characteristics of the Google App Engine service?",
+                "HasOptions": true,
+                "Options": [
+                    "Provisions servers and scales your appp instances based on demand",
+                    "Connects with other Google services seamlessly",
+                    "Integrates with Google's Web Security Scanner to identify threats",
+                    "Use pre-configured or custom run-times to write the app in any language, like Go, Java, .NET, etc."
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Provisions servers and scales your appp instances based on demand",
+                    "Connects with other Google services seamlessly",
+                    "Integrates with Google's Web Security Scanner to identify threats",
+                    "Use pre-configured or custom run-times to write the app in any language, like Go, Java, .NET, etc."
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Which of the following are true about the functions in the Cloud Functions service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Simple, single-purpose functions that are attached to events",
+                    "Triggered when an event being watched is fired",
+                    "Manual functions require explicit invocation for execution",
+                    "The functions can only interact with other Google Cloud services"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Simple, single-purpose functions that are attached to events",
+                    "Triggered when an event being watched is fired"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "Which of the following are true about the process once a function fires in the Cloud Functions service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Your code executes in a fully managed environment",
+                    "There is no need to provision any infrastructure or servers",
+                    "You can define the exact server configuration for optimal performance",
+                    "Functions are executed in a local development environment"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Your code executes in a fully managed environment",
+                    "There is no need to provision any infrastructure or servers"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "The Cloud Functions service on Google Cloud Platform allows you to write functions using which runtimes?",
+                "HasOptions": true,
+                "Options": [
+                    "Java",
+                    "JavaScript",
+                    "Python 3",
+                    "Go"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Java",
+                    "JavaScript",
+                    "Python 3",
+                    "Go"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are the uses cases for the Cloud Functions service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Data processing or ETL operations (video transcoding)",
+                    "Webhooks to respond to HTTP triggers",
+                    "APIs that compose loosely coupled logic",
+                    "Mobile backend functions"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Data processing or ETL operations (video transcoding)",
+                    "Webhooks to respond to HTTP triggers",
+                    "APIs that compose loosely coupled logic",
+                    "Mobile backend functions"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What open standard was Cloud Run built upon, enabling portability of any applications that were built on it?",
+                "HasOptions": false,
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Knative"
+                ]
+            }
+        },
+        {
+            "Question": 
+            {
+                "Question": "What are characteristics of the Cloud Run service on Google Cloud Platform?",
+                "HasOptions": true,
+                "Options": [
+                    "Abstracts away all infrastructure management",
+                    "Known as serverless for containers",
+                    "Can write in any language, library, and/or binary",
+                    "Automatically scales up and down depending on the traffic / incoming requests"
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "Answers": [
+                    "Abstracts away all infrastructure management",
+                    "Known as serverless for containers",
+                    "Can write in any language, library, and/or binary",
+                    "Automatically scales up and down depending on the traffic / incoming requests"
+                ]
+            }
+        }
+    ]
+}

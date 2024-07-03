@@ -13,13 +13,13 @@
 ☁️ Cloud Computing Fundamentals
 [] What Is Cloud Computing
 [] Cloud Deployment Models
-[] Cloud Service Models
+[X] Cloud Service Models
 
 ☁️ Google Cloud Fundamentals
-[] Google Cloud Global Infrastructure
-[] Compute Service Options
+[X] Google Cloud Global Infrastructure
+[X] Compute Service Options
 [X] Storage and Database Options
-[] Networking Services
+[X] Networking Services
 
 ☁️ Account Setup
 [] Resource Hierarchy
@@ -131,58 +131,4 @@
 [] Operations Suite
 
 # JSON Questions
-Section: cloud_and_storage_options.json
-
-Question: What are the two storage options in the Google Persistent Disks storage service?
-Answer: Standard, Solid State (SSD)
-
-Question: What is the difference between the Standard and Solid State (SSD) options in the Google Persistent Disks storage service?
-Answer: Solid state has lower latency and higher iops than standard.
-
-Question: Both the the Standard and Solid State (SSD) options in the Google Persistent Disks storage service are available in what two deployment options?
-Answer: Zonal, Regional
-
-What is Cloud SQL on Google Cloud Platform?
-Answer: A fully managed database service.
-
-What three SQL deployment types are available in the Cloud SQL database service?
-Answer: PostgreSQL, MySQL, SQL server
-
-Cloud SQL experiences high availability only across:
-Answer: Zones
-
-What is Cloud Spanner on Google Cloud Platform?
-Answer: A scalable relational database service.
-
-At a high level, what is the Cloud Spanner database service designed to support?
-Answer: Transactions, strong consistency, synchronous replication
-
-Cloud Spanner experiences high availability across:
-Answer: Zones, Regions, Globally
-
-What is BigTable on Google Cloud Platform?
-Answer: A fully managed, scalable NoSQL database
-
-What are the strengths of the BigTable database service on Google Cloud Platform?
-Answer: High throughput with low latency, Cluster resizing without downtime
-
-What is Datastore on Google Cloud Platform?
-Answer: A fast, fully managed, serverless, NoSQL document database
-
-What domains of application is the Datastore database service designed for?
-Answer: Mobile, Web, IoT Apps
-
-What activities does the Datastore database service support on Google Cloud Platform?
-Answer: Multi-region replication, ACID transactions
-
-What is Firestore on Google Cloud Platform?
-Answer: A NoSQL, real-time database
-
-What are the strengths of the Firestore database service on Google Cloud Platform?
-Answer: Optimized for offline use, Cluster resizing without downtime
-
-What is the use case for the Firestore database service on Google Cloud Platform?
-Answer: Storing data in a database in real time.
-
-What is Memorystore on Google Cloud Platform?
-Answer: A fully managed, highly available in-memory service for Redis and Memcached
+Section: compute_service_options.json
