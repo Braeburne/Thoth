@@ -24,7 +24,7 @@
                 "Question": "What is the Virtual Private Cloud (VPC) on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Virtualized network within Google Cloud",
+                    "A virtualized network within Google Cloud",
                     "A global resource",
                     "A dedicated physical network exclusive to one region",
                     "A dedicated physical network exclusive to one zone"
@@ -33,7 +33,7 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Virtual Private Cloud"
+                    "A virtualized network within Google Cloud"
                 ]
             }
         },
@@ -60,7 +60,7 @@
         {
             "Question": 
             {
-                "Question": "What are two other networking services available on Google Cloud Platform?",
+                "Question": "What are two other networking services available aside from VPC on Google Cloud Platform?",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -119,7 +119,7 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "F"
+                    "T"
                 ]
             }
         },
@@ -203,7 +203,7 @@
                 "HasOptions": true,
                 "Options": [
                     "Distribute traffic based on content type",
-                    "Distribute traffic across regions to ensure that requests are routed to the closest region, or in the event of a failure or over-capacity, to a healthy instance in the next closest region",
+                    "Distribute traffic across regions to ensure that requests are routed to the closest region or to a healthy instance in the next closest region in the event of a failure or over-capacity",
                     "Limited to regional traffic distribution",
                     "Cannot route traffic based on content type"
                 ],
@@ -212,13 +212,13 @@
                 "OrderAgnostic": false,
                 "Answers": [
                     "Distribute traffic based on content type",
-                    "Distribute traffic across regions to ensure that requests are routed to the closest region, or in the event of a failure or over-capacity, to a healthy instance in the next closest region"
+                    "Distribute traffic across regions to ensure that requests are routed to the closest region or to a healthy instance in the next closest region in the event of a failure or over-capacity"
                 ]
             }
         },
         {
             "Question": {
-                "Question": "What is Google Cloud DNS do on Google Cloud Platform?",
+                "Question": "What does Google Cloud DNS do on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
                     "Publish and maintain DNS records by using the same infrastructure that Google uses",
@@ -278,9 +278,9 @@
                 "HasOptions": true,
                 "Options": [
                     "All data moving through the VPN is encrypted",
-                    "Provides high availability for applications.",
-                    "Offers load balancing capabilities.",
-                    "Automates the deployment of applications."
+                    "Provides high availability for applications",
+                    "Offers load balancing capabilities",
+                    "Automates the deployment of applications"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
@@ -295,7 +295,7 @@
                 "Question": "What is Direct Interconnect used for on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Connecting an existing network to your VPC using a highly available, low-latency, enterprise-grade connection",
+                    "Connecting an existing network to your VPC using a highly available, low latency, enterprise grade connection",
                     "Providing a VPN connection for remote users",
                 "Monitoring application performance",
                 "Managing DNS records for domains"
@@ -304,7 +304,7 @@
                 "Graphic": null,
                 "OrderAgnostic": false,
                 "Answers": [
-                    "Connecting an existing network to your VPC using a highly available, low-latency, enterprise-grade connection"
+                    "Connecting an existing network to your VPC using a highly available, low latency, enterprise grade connection" 
                 ]
             }
         },
@@ -315,7 +315,7 @@
                 "Options": [
                     "Cloud VPN allows the connection to traverse the open internet, whereas Direct Interconnect connects to Google's private Internet back-bone",
                     "Cloud VPN provides higher latency than Direct Interconnect",
-                    "Direct Interconnect is limited to a single region, whereas Cloud VPN can span multiple regions",
+                    "Cloud VPN can span multiple regions, whereas Direct Interconnect is limited to a single region",
                     "Cloud VPN requires manual configuration, while Direct Interconnect is fully automated"
                 ],
                 "HasGraphic": false,
@@ -331,7 +331,7 @@
                 "Question": "What is the Direct Peering connectivity option on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Exchange internet traffic between your business network and Google at one of Google's broad-reaching edge network locations",
+                    "Exchange internet traffic between your business network and Google at one of Google's broad reaching edge network locations",
                     "Monitor network traffic for security threats",
                     "Provide DNS services for your domain",
                     "Enable multi-factor authentication for users"
@@ -340,7 +340,7 @@
                 "Graphic": null,
                 "OrderAgnostic": false,
                 "Answers": [
-                    "Exchange internet traffic between your business network and Google at one of Google's broad-reaching edge network locations"
+                    "Exchange internet traffic between your business network and Google at one of Google's broad reaching edge network locations"
                 ]
             }
         },
@@ -349,7 +349,7 @@
                 "Question": "What is the Carrier Peering connectivity option on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Connect your infrastructure to Google's network edge through highly available, lower-latency connections by using service providers",
+                    "Connect your infrastructure to Google's network edge through highly available, lower latency connections by using service providers",
                     "Provide load balancing for your applications",
                     "Manage DNS records for your domains",
                     "Monitor application performance"
@@ -358,7 +358,7 @@
                 "Graphic": null,
                 "OrderAgnostic": false,
                 "Answers": [
-                    "Connect your infrastructure to Google's network edge through highly available, lower-latency connections by using service providers"
+                    "Connect your infrastructure to Google's network edge through highly available, lower latency connections by using service providers"
                 ]
             }
         }

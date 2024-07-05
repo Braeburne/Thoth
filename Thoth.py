@@ -597,13 +597,13 @@ def main():
     # whenever the program is run.
     session_id = generate_session_id()
 
-    # Begin Program Loop
-    questions, question_amount, log_entry, randomize = initialize_review_session(selected_iana, selected_utc, session_id)
-    data_logs_filename, data_logs = track_review_session(selected_iana, selected_utc, log_entry)
-    review_session(questions, question_amount, log_entry, randomize)
-    log_review_session(data_logs_filename, data_logs, log_entry)
-
     while True:
+        # Begin Program Loop
+        questions, question_amount, log_entry, randomize = initialize_review_session(selected_iana, selected_utc, session_id)
+        data_logs_filename, data_logs = track_review_session(selected_iana, selected_utc, log_entry)
+        review_session(questions, question_amount, log_entry, randomize)
+        log_review_session(data_logs_filename, data_logs, log_entry)
+
         # Prompt for next action
         print("\nWhat would you like to do next?")
         print("[1] Try Again")
@@ -615,7 +615,7 @@ def main():
         if choice == '1':
             rerun_review_session(questions, question_amount, log_entry)
         elif choice == '2':
-            break  # Go back to select a different section
+            continue  # Go back to select a different section
         elif choice == '3':
             print("\nThank you for using Thoth!")
             return  # Exit the program

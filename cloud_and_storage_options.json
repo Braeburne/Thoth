@@ -71,7 +71,7 @@
         {
             "Question": 
             {
-                "Question": "Given this graphic, identify the names of the storage or database services that each icon represents on Google Cloud Platform.",
+                "Question": "Given this graphic, identify the names of all 9 storage or database services that each icon represents on Google Cloud Platform.",
                 "HasOptions": false,
                 "HasGraphic": true,
                 "Graphic": "[Insert URL]",
@@ -95,7 +95,7 @@
                 "Question": "What is Google Cloud Storage?",
                 "HasOptions": true,
                 "Options": [
-                    "Consistent, scalable, large-capacity, highly durable object storage",
+                    "Consistent, scalable, large capacity, highly durable object storage",
                     "Virtualized storage pools with unlimited capacity",
                     "Hierarchical file system for distributed data",
                     "High-performance block storage optimized for databases"
@@ -106,7 +106,7 @@
                 "Answers": [
                     "Consistent",
                     "scalable",
-                    "large-capacity",
+                    "large capacity",
                     "highly durable object storage"
                 ]
             }
@@ -117,16 +117,16 @@
                 "Question": "What is the difference between Cloud Storage and Block Storage on the Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures",
-                    "Cloud Storage is optimized for high-performance databases, while Block Storage manages data as objects",
-                    "Block Storage is highly durable and scalable, while Cloud Storage is more suited for virtualized storage pools",
-                    "Cloud Storage is cost-effective and suitable for long-term data storage, while Block Storage manages data at a more granular level"
+                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects (e.g. documents, pictures, etc.)",
+                    "Cloud Storage is optimized for high-performance databases, whereas Block Storage manages data as objects (e.g. documents, pictures, etc.)",
+                    "Block Storage is highly durable and scalable, whereas Cloud Storage is more suited for virtualized storage pools",
+                    "Cloud Storage is cost-effective and suitable for long-term data storage, whereas Block Storage manages data at a more granular level"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects, such as documents or pictures"
+                    "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects (e.g. documents, pictures, etc.)"
                 ]
             }
         },
@@ -201,7 +201,7 @@
         {
             "Question": 
             {
-                "Question": "What are the best use cases for Google Cloud Storage?",
+                "Question": "What are the best use cases for Google Cloud Storage? (hint: 3 answers)",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -313,7 +313,7 @@
         {
             "Question": 
             {
-                "Question": "What are the three availability options for Google Cloud Storage?",
+                "Question": "What are the three availability options for Google Cloud Storage? (hint: deployment options, geography)",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -361,12 +361,19 @@
             "Question": 
             {
                 "Question": "What does Google Cloud Platform's Filestore service do?",
-                "HasOptions": false,
+                "HasOptions": true,
+                "Options": [
+                    "Store data from running applications that are all accessing the data at the same time",
+                    "Store data originating from multiple VM instances and Kubernetes clusters",
+                    "Provide a fully managed MySQL and PostgreSQL database service",
+                    "Offer object storage for unstructured data"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Allows you to store data from running applications, originating from multiple VM instances and Kubernetes clusters that are all accessing the data at the same time"
+                    "Store data from running applications that are all accessing the data at the same time",
+                    "Store data originating from multiple VM instances and Kubernetes clusters"
                 ]
             }
         },
@@ -425,13 +432,18 @@
         {
             "Question": {
                 "Question": "What is the difference between the Standard and Solid State (SSD) options in the Google Persistent Disks storage service?",
-                "HasOptions": false,
-                "Options": null,
+                "HasOptions": true,
+                "Options": [
+                    "SSDs have lower latency and higher iops than Standard Disks",
+                    "Standard disks have higher performance than SSDs",
+                    "SSD options are only available for archival storage",
+                    "Standard disks provide better data redundancy than SSDs"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Solid state has lower latency and higher iops than standard"
+                    "SSDs have lower latency and higher iops than Standard Disks"
                 ]
             }
         },
@@ -529,8 +541,8 @@
                 "HasOptions": true,
                 "Options": [
                     "Transactions", 
-                    "strong consistency", 
-                    "synchronous replication",
+                    "Strong consistency", 
+                    "Synchronous replication",
                     "Real-time data streaming"
                 ],
                 "HasGraphic": false,
@@ -695,8 +707,13 @@
         {
             "Question": {
                 "Question": "What is the use case for the Firestore database service on Google Cloud Platform?",
-                "HasOptions": false,
-                "Options": null,
+                "HasOptions": true,
+                "Options": [
+                    "Storing data in a database in real time",
+                    "Running batch processing tasks",
+                    "Hosting virtual machines",
+                    "Serving static websites"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,

@@ -1,0 +1,364 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Hybrid Connectivity",
+    "Knowledge_Section": "Cloud VPN",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question": "What does Cloud VPN do on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Connects your peer network to your GCP VPC network through an IPsec VPN connection",
+                "Connects your VPC network to a private cloud through a direct link",
+                "Provides a dedicated high-speed link to your on-premises network",
+                "Offers a secure gateway for accessing GCP services without the public internet"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Connects your peer network to your GCP VPC network through an IPsec VPN connection"
+            ]
+        },
+        {
+            "Question": "What is a Peer Network in context to the Cloud VPN service on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "An on-premises VPN device or service",
+                "A VPN gateway hosted by another cloud provider such as AWS or Azure",
+                "Another Google Cloud VPN Gateway",
+                "A private network within the same region as your VPC"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "An on-premises VPN device or service",
+                "A VPN gateway hosted by another cloud provider such as AWS or Azure",
+                "Another Google Cloud VPN Gateway"
+            ]
+        },
+        {
+            "Question": "How does the Cloud VPN operate transport data on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "An IPsec encryption tunnel from your peer network to the VPC network over the public internet",
+                "A direct fiber connection from your on-premises network to the VPC",
+                "A secure HTTP tunnel from your web applications to the VPC",
+                "A private network link that bypasses the public internet entirely"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "An IPsec encryption tunnel from your peer network to the VPC network over the public internet"
+            ]
+        },
+        {
+            "Question": "What should be understood about IPsec in context to the Cloud VPN service on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "A set of protocols using algorithms to facilitate secure transport of data over an IP network",
+                "Operates at the network layer (Layer 3 of OSI model)",
+                "Runs independent of any applications",
+                "Requires dedicated hardware to function"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "A set of protocols using algorithms to facilitate secure transport of data over an IP network",
+                "Operates at the network layer (Layer 3 of OSI model)",
+                "Runs independent of any applications"
+            ]
+        },
+        {
+            "Question": "How do the security mechanisms work in the Cloud VPN service on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Data is encrypted by one VPN gateway, and then decrypted by the other VPN gateway",
+                "Data is encrypted and decrypted on-the-fly by a firewall",
+                "Data remains encrypted throughout its entire transit without decryption",
+                "Data is only encrypted if it passes through a specified security zone"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Data is encrypted by one VPN gateway, and then decrypted by the other VPN gateway"
+            ]
+        },
+        {
+            "Question": "What are the implications of Cloud VPN being a 'regional service' on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "If the region your VPN was established on went down, you would lose your connection until the region is back online",
+                "Picking the region closest to your on-premises location when connecting to GCP is critical to ensure the lowest latency",
+                "The VPN connection is automatically distributed across multiple regions for redundancy",
+                "The VPN service can dynamically switch regions based on load"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "If the region your VPN was established on went down, you would lose your connection until the region is back online",
+                "Picking the region closest to your on-premises location when connecting to GCP is critical to ensure the lowest latency"
+            ]
+        },
+        {
+            "Question": "What connection options does Cloud VPN provide on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Site to Site VPN",
+                "Site to Client VPN",
+                "Direct Connect",
+                "Multi-region VPN"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Site to Site VPN",
+                "Site to Client VPN"
+            ]
+        },
+        {
+            "Question": "What speeds can each Cloud VPN tunnel support on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "3Gbps total for ingress and egress",
+                "5Gbps total for ingress and egress",
+                "10Gbps total for ingress and egress",
+                "1Gbps total for ingress and egress"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "3Gbps total for ingress and egress"
+            ]
+        },
+        {
+            "Question": "What benefit(s) can Cloud VPN provide for on-premises hosts on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Allows you to extend Private Google Access to your on-premises data center",
+                "Enables faster data transfer rates compared to local network connections",
+                "Offers built-in DDoS protection for on-premises hosts",
+                "Provides automatic data backups to the cloud"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Allows you to extend Private Google Access to your on-premises data center"
+            ]
+        },
+        {
+            "Question": "What two routing options are available for Cloud VPN tunnels on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Dynamic and Static",
+                "Manual and Automated",
+                "Priority and Standard",
+                "Primary and Secondary"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Dynamic and Static"
+            ]
+        },
+        {
+            "Question": "When are the two routing options available for Cloud VPN tunnels on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Static is only available for Classic VPN",
+                "Dynamic is available for both Classic and HA VPN",
+                "Static is only available for HA VPN",
+                "Dynamic is only available for Classic VPN"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Static is only available for Classic VPN",
+                "Dynamic is available for both Classic and HA VPN"
+            ]
+        },
+        {
+            "Question": "What does Cloud VPN support for Shared Secret cryptography on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "IKEv1",
+                "IKEv2",
+                "SSL",
+                "TLS"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "IKEv1",
+                "IKEv2"
+            ]
+        },
+        {
+            "Question": "What are the two types of Cloud VPN available on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Classic",
+                "HA",
+                "Premium",
+                "Enterprise"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Classic",
+                "HA"
+            ]
+        },
+        {
+            "Question": "How many 9's of Durability do Classic VPN and HA VPN promise respectively?",
+            "HasOptions": true,
+            "Options": [
+                "Three 9's (99.9% SLA)",
+                "Four 9's (99.99% SLA)",
+                "Five 9's (99.999% SLA)",
+                "Two 9's (99.99% SLA)"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Three 9's (99.9% SLA)",
+                "Four 9's (99.99% SLA)"
+            ]
+        },
+        {
+            "Question": "What are the routing options for the Classic Cloud VPN on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Dynamic",
+                "Static",
+                "Automated",
+                "Manual"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Dynamic",
+                "Static"
+            ]
+        },
+        {
+            "Question": "What are the routing options for the HA Cloud VPN on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Dynamic",
+                "Static",
+                "Automated",
+                "Manual"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Dynamic"
+            ]
+        },
+        {
+            "Question": "How many IP addresses and Interfaces can Classic Cloud VPN support on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "1 external IP address",
+                "1 single interface",
+                "2 external IP addresses",
+                "2 interfaces"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "1 external IP address",
+                "1 single interface"
+            ]
+        },
+        {
+            "Question": "How many IP addresses and Interfaces can HA Cloud VPN support on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "2 external IP addresses",
+                "2 interfaces",
+                "1 external IP address",
+                "1 single interface"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "2 external IP addresses",
+                "2 interfaces"
+            ]
+        },
+        {
+            "Question": "What year was Classic Cloud VPN declared to be entering EOL and deprecated by, whereby all customers would from then move on to HA Cloud VPN?",
+            "HasOptions": true,
+            "Options": [
+                "2021",
+                "2022",
+                "2020",
+                "2019"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "2021"
+            ]
+        },
+        {
+            "Question": "HA Cloud VPN is the new default VPN following the announcement of Classic Cloud VPN's deprecation by Google?",
+            "HasOptions": true,
+            "Options": [
+                "True",
+                "False",
+                "Maybe",
+                "Not applicable"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "True"
+            ]
+        },
+        {
+            "Question": "What are the use cases for Cloud VPN on Google Cloud Platform?",
+            "HasOptions": true,
+            "Options": [
+                "Public internet access is needed for operations",
+                "Peering location is not available",
+                "Budget constraints",
+                "High speeds / low latency not needed",
+                "Outgoing traffic (egress) from GCP",
+                "High availability and low latency requirements"
+            ],
+            "HasGraphic": false,
+            "Graphic": null,
+            "OrderAgnostic": true,
+            "Answers": [
+                "Public internet access is needed for operations",
+                "Peering location is not available",
+                "Budget constraints",
+                "High speeds / low latency not needed",
+                "Outgoing traffic (egress) from GCP"
+            ]
+        }
+    ]
+}

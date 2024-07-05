@@ -42,7 +42,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "IaaS"
                 ]
@@ -61,7 +61,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "CaaS"
                 ]
@@ -80,7 +80,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "PaaS"
                 ]
@@ -99,7 +99,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "FaaS"
                 ]
@@ -118,7 +118,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "FaaS"
                 ]
@@ -130,16 +130,16 @@
                 "Question": "What is the Google Kubernetes Engine (GKE) service on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "A Container-orchestration system for automating deploying, scaling, and managing containers",
+                    "A Container-orchestration system for automating deploying, scaling and managing containers",
                     "A serverless execution environment for building and connecting cloud services",
-                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A fully managed serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
                     "A fully managed compute platform for deploying and scaling containerized applications quickly and securely"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                    "A Container-orchestration system for automating deploying, scaling and managing containers"
                 ]
             }
         },
@@ -151,14 +151,14 @@
                 "Options": [
                     "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
                     "A serverless execution environment for building and connecting cloud services",
-                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
-                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                    "A fully managed serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling and managing containers"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform"
+                    "A fully managed serverless platform for developing and hosting web applications at scale on Google Cloud Platform"
                 ]
             }
         },
@@ -170,12 +170,12 @@
                 "Options": [
                     "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
                     "A serverless execution environment for building and connecting cloud services",
-                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
-                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                    "A fully managed serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling and managing containers"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "A serverless execution environment for building and connecting cloud services"
                 ]
@@ -189,12 +189,12 @@
                 "Options": [
                     "A fully managed compute platform for deploying and scaling containerized applications quickly and securely",
                     "A serverless execution environment for building and connecting cloud services",
-                    "A fully managed, serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
-                    "A Container-orchestration system for automating deploying, scaling, and managing containers"
+                    "A fully managed serverless platform for developing and hosting web applications at scale on Google Cloud Platform",
+                    "A Container-orchestration system for automating deploying, scaling and managing containers"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "A fully managed compute platform for deploying and scaling containerized applications quickly and securely"
                 ]
@@ -207,7 +207,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "T"
                 ]
@@ -226,10 +226,10 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Deployable in any region / zone of your choice",
-                    "Both public or private images usable to create instances",
+                    "Public or private images usable to create instances",
                     "Pre-configured images and software packages are available in Google Cloud Marketplace"
                 ]
             }
@@ -241,7 +241,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "F"
                 ]
@@ -250,26 +250,26 @@
         {
             "Question": 
             {
-                "Question": "How are multiple instances managed in Google Compute Engine service?",
+                "Question": "How are multiple instances managed in Google Compute Engine service? (hint: two words)",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "using instance groups"
+                    "instance groups"
                 ]
             }
         },
         {
             "Question": 
             {
-                "Question": "What is the recommended solution for adding and removing capacity for instances automatically in Google Compute Engine service?",
+                "Question": "What is the recommended solution for adding and removing capacity for instances automatically in Google Compute Engine service? (hint: instances are likely grouped)",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "using autoscaling with instance groups"
+                    "Autoscaling with instance groups"
                 ]
             }
         },
@@ -280,7 +280,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "F"
                 ]
@@ -293,7 +293,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "T"
                 ]
@@ -306,7 +306,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "SSH"
                 ]
@@ -316,13 +316,10 @@
             "Question": 
             {
                 "Question": "Google Kubernetes Engine (GKE) is built on the same open-source Kubernetes project that was introduced by Google to the public in 2014. [T/F]?",
-                "HasOptions": true,
-                "Options": [
-                    "Container-orchestration system for automating deploying, scaling, and managing containers"
-                ],
+                "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "T"
                 ]
@@ -335,7 +332,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "T"
                 ]
@@ -348,7 +345,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "T"
                 ]
@@ -367,7 +364,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "A group of nodes or Compute Engine instances"
                 ]
@@ -379,19 +376,19 @@
                 "Question": "What are characteristics of the Google App Engine service?",
                 "HasOptions": true,
                 "Options": [
-                    "Provisions servers and scales your appp instances based on demand",
+                    "Provisions servers and scales your app instances based on demand",
                     "Connects with other Google services seamlessly",
                     "Integrates with Google's Web Security Scanner to identify threats",
-                    "Use pre-configured or custom run-times to write the app in any language, like Go, Java, .NET, etc."
+                    "Use pre-configured or custom run-times to write the app in any language"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "Provisions servers and scales your appp instances based on demand",
+                    "Provisions servers and scales your app instances based on demand",
                     "Connects with other Google services seamlessly",
                     "Integrates with Google's Web Security Scanner to identify threats",
-                    "Use pre-configured or custom run-times to write the app in any language, like Go, Java, .NET, etc."
+                    "Use pre-configured or custom run-times to write the app in any language"
                 ]
             }
         },
@@ -401,16 +398,16 @@
                 "Question": "Which of the following are true about the functions in the Cloud Functions service on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Simple, single-purpose functions that are attached to events",
+                    "Simple single-purpose functions that are attached to events",
                     "Triggered when an event being watched is fired",
                     "Manual functions require explicit invocation for execution",
                     "The functions can only interact with other Google Cloud services"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
-                    "Simple, single-purpose functions that are attached to events",
+                    "Simple single-purpose functions that are attached to events",
                     "Triggered when an event being watched is fired"
                 ]
             }
@@ -428,7 +425,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Your code executes in a fully managed environment",
                     "There is no need to provision any infrastructure or servers"
@@ -448,7 +445,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Java",
                     "JavaScript",
@@ -470,7 +467,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Data processing or ETL operations (video transcoding)",
                     "Webhooks to respond to HTTP triggers",
@@ -486,7 +483,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Knative"
                 ]
@@ -500,16 +497,16 @@
                 "Options": [
                     "Abstracts away all infrastructure management",
                     "Known as serverless for containers",
-                    "Can write in any language, library, and/or binary",
+                    "Can write in any language / library / binary",
                     "Automatically scales up and down depending on the traffic / incoming requests"
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Abstracts away all infrastructure management",
                     "Known as serverless for containers",
-                    "Can write in any language, library, and/or binary",
+                    "Can write in any language / library / binary",
                     "Automatically scales up and down depending on the traffic / incoming requests"
                 ]
             }

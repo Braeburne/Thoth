@@ -8,7 +8,7 @@
         {
             "Question": 
             {
-                "Question": "What are cloud service models commonly referred to as?",
+                "Question": "What are cloud service models commonly referred to as (hint: an acroynm)?",
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
@@ -101,7 +101,13 @@
             "Question": 
             {
                 "Question": "What are the advantages of the traditional on-premises infrastructure stack?",
-                "HasOptions": false,
+                "HasOptions": true,
+                "Options": [
+                    "Major flexibility",
+                    "Automatic scaling",
+                    "Lower initial costs",
+                    "Global reach"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": false,
@@ -114,7 +120,13 @@
             "Question": 
             {
                 "Question": "What are the disadvantages of the traditional on-premises infrastructure stack?",
-                "HasOptions": false,
+                "HasOptions": true,
+                "Options": [
+                    "Huge costs",
+                    "Weaker scalability",
+                    "Slower deployment times",
+                    "Higher maintenance needs"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": false,
@@ -160,13 +172,19 @@
         {
             "Question": 
             {
-                "Question": "What was the unit of consumption for the DC Hosted infrastructure stack model?",
-                "HasOptions": false,
+                "Question": "What is the unit of consumption for the DC Hosted infrastructure stack model?",
+                "HasOptions": true,
+                "Options": [
+                    "Data rack space within data center",
+                    "Number of virtual machines",
+                    "Amount of data transferred",
+                    "CPU usage per hour"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": false,
                 "Answers": [
-                    "The data rack space within the data center"
+                    "Data rack space within data center"
                 ]
             }
         },
@@ -433,7 +451,7 @@
         {
             "Question": 
             {
-                "Question": "What was the unit of consumption for the PaaS infrastructure stack model?",
+                "Question": "What is the unit of consumption for the PaaS infrastructure stack model?",
                 "HasOptions": true,
                 "Options": [
                     "Operating System",
@@ -452,7 +470,7 @@
         {
             "Question": 
             {
-                "Question": "What was the unit of consumption for the IaaS infrastructure stack model?",
+                "Question": "What is the unit of consumption for the IaaS infrastructure stack model?",
                 "HasOptions": true,
                 "Options": [
                     "Operating System",
@@ -472,12 +490,18 @@
             "Question": 
             {
                 "Question": "Considering cloud service models as a spectrum, why is it the case that the further away from traditional on-premises you move - the less flexibility you have?",
-                "HasOptions": false,
+                "HasOptions": true,
+                "Options": [
+                    "Because the further you move, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor",
+                    "Because cloud services impose more restrictions on the types of applications you can run",
+                    "Because traditional on-premises infrastructure offers more modern features",
+                    "Because the further you move, the more control you have over hardware customization"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": false,
                 "Answers": [
-                    "Because the further along the spectrum you go, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor."
+                    "Because the further you move, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor"
                 ]
             }
         },

@@ -84,7 +84,13 @@
         {
             "Question": {
                 "Question": "What is a best practice for deploying resources in GCP zones that will ensure optimal latency for users?",
-                "HasOptions": false,
+                "HasOptions": true,
+                "Options": [
+                    "Deploying in zones closest to the user",
+                    "Deploying in zones with the highest available resources",
+                    "Deploying in zones with the lowest cost",
+                    "Deploying in a diversified selection of zones"
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
@@ -98,7 +104,7 @@
                 "Question": "What is a region on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Independent geographic areas that are sub-divided into zones",
+                    "A independent geographic area that is sub-divided into zones",
                     "A single data center located in a specific geographic area",
                     "A type of virtual machine instance in Google Cloud Platform",
                     "A storage solution provided by Google Cloud Platform"
@@ -153,7 +159,7 @@
                 "Question": "What is a multi-region on Google Cloud Platform?",
                 "HasOptions": true,
                 "Options": [
-                    "Large, geographic areas, that contain two or more regions",
+                    "Large, geographic area, that contain two or more regions",
                     "A backup data center for disaster recovery",
                     "A global network for content delivery",
                     "A network of interconnected regions managed by different cloud providers"
@@ -162,7 +168,7 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "Answers": [
-                    "Large, geographic areas, that contain two or more regions"
+                    "Large, geographic area, that contain two or more regions"
                 ]
             }
         },
