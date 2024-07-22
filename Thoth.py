@@ -61,6 +61,17 @@ def get_time_zone():
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+def print_thoth_logo():
+    print("""
+_______ _    _  ____  _______ _    _ 
+|__   __| |  | |/ __ \|__   __| |  | |
+   | |  | |__| | |  | |  | |  | |__| |
+   | |  |  __  | |  | |  | |  |  __  |
+   | |  | |  | | |__| |  | |  | |  | |
+   |_|  |_|  |_|\____/   |_|  |_|  |_|
+    """)
+
+
 # Load the directory of knowledge bases from a JSON file.
 def load_directory(filename):
     with open(filename, 'r') as file:
@@ -583,10 +594,7 @@ def rerun_review_session(questions, question_amount, log_entry, randomize=False)
     log_review_session(data_logs_filename, data_logs, new_log_entry)
 
 def main():
-    print("\n")
-    print("|||||||||||||||")
-    print("|| T.H.O.T.H ||")
-    print("|||||||||||||||")
+    print_thoth_logo()
 
     # Ask user to select time zone
     selected_iana, selected_utc = get_time_zone()

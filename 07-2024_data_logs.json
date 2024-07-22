@@ -1,0 +1,136 @@
+{
+    "Data_Logs": [
+        {
+            "Review_Instance_Data_Log_ID": "01 | Fri, 05 Jul 2024 10:06:17 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Cloud Computing Fundamentals",
+            "Knowledge_Section": "Cloud Service Models",
+            "File_Name": "cloud_service_models.json",
+            "Date": "07-05-2024",
+            "Score": "100.00%",
+            "Letter_Grade": "A+",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Pass",
+            "Total_Questions": 10,
+            "Correct_Count": 10,
+            "Incorrect_Count": 0,
+            "Mistakes_Breakdown": [],
+            "Start_Time": "2024-07-05T10:06:17.125721",
+            "End_Time": "2024-07-05T10:08:49.435639",
+            "Time_Elapsed": "0:02:32.309918",
+            "Average_Time_Per_Question": "0:00:15.230992",
+            "ISO_8601_Local_Timestamp": "2024-07-05T10:06:17.125721",
+            "ISO_8601_UTC_Timestamp": "2024-07-05T14:06:17+00:00Z",
+            "HTTP_Date_Timestamp": "Fri, 05 Jul 2024 10:06:17 EDT",
+            "UUID4_Session_ID": "724d2410-a2c1-42bd-8ffb-ac0a8f5b0e20"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "02 | Fri, 05 Jul 2024 21:54:10 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Cloud Computing Fundamentals",
+            "Knowledge_Section": "Cloud Service Models",
+            "File_Name": "cloud_service_models.json",
+            "Date": "07-05-2024",
+            "Score": "92.31%",
+            "Letter_Grade": "A-",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Pass",
+            "Total_Questions": 26,
+            "Correct_Count": 24,
+            "Incorrect_Count": 2,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What is typically the correct make-up of SaaS infrastructure stack that is in-fact managed by an external vendor (from top to bottom)?",
+                    "User_Answer": "Application, Data, Runtime, Contianer, Operating System, Virtualization, Physical Servers, Network / Storage, Data Center",
+                    "Correct_Answer": "Application, Data, Runtime, Container, Operating System, Virtualization, Physical Servers, Network / Storage, Data Center",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 2,
+                    "Question": "Considering cloud service models as a spectrum, why is it the case that the further away from traditional on-premises you move - the less flexibility you have?",
+                    "User_Answer": "Because the further you move, the more layers of the infrastructure stack that will be abstracted from you and managed insteaad by a vendor",
+                    "Correct_Answer": "Because the further you move, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-07-05T21:54:07.452345",
+            "End_Time": "2024-07-05T22:04:53.542351",
+            "Time_Elapsed": "0:10:46.090006",
+            "Average_Time_Per_Question": "0:00:24.849616",
+            "ISO_8601_Local_Timestamp": "2024-07-05T21:54:07.452345",
+            "ISO_8601_UTC_Timestamp": "2024-07-06T01:54:07+00:00Z",
+            "HTTP_Date_Timestamp": "Fri, 05 Jul 2024 21:54:10 EDT",
+            "UUID4_Session_ID": "7b77954d-36b1-498f-a5c9-a734ceba3eb3"
+        },
+        {
+            "Review_Instance_Data_Log_ID": "03 | Sun, 07 Jul 2024 12:26:08 EDT",
+            "IANA_Time_Zone": "America/New_York",
+            "UTC_Time_Zone": "UTC-05:00",
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "GCP ACE Exam",
+            "Knowledge_Topic": "Google Cloud Fundamentals",
+            "Knowledge_Section": "Storage and Database Options",
+            "File_Name": "cloud_and_storage_options.json",
+            "Date": "07-07-2024",
+            "Score": "87.80%",
+            "Letter_Grade": "B+",
+            "Is_Priority_Section": true,
+            "Pass_Fail": "Pass",
+            "Total_Questions": 41,
+            "Correct_Count": 36,
+            "Incorrect_Count": 5,
+            "Mistakes_Breakdown": [
+                {
+                    "Question_Number": 1,
+                    "Question": "What are the names of the six database options on Google Cloud Platform?",
+                    "User_Answer": "Cloud SQL, cloud spanner, firestore, datastore, memorystore, big tabel",
+                    "Correct_Answer": "Cloud SQL, Cloud Spanner, BigTable, Datastore, Firestore, Memorystore",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 2,
+                    "Question": "What is the Persistent Disks storage service on Google Cloud Platform?",
+                    "User_Answer": "Durable blocks storage for instances",
+                    "Correct_Answer": "Durable block storage for instances",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 3,
+                    "Question": "Given this graphic, identify the names of all 9 storage or database services that each icon represents on Google Cloud Platform.",
+                    "User_Answer": "Cloud storage, filestore, persistent disks, datastore, firestore, memorystore, big table, cloud sql, cloud spanenr",
+                    "Correct_Answer": "Cloud Storage, Filestore, Persistent Disks, Cloud SQL, Cloud Spanner, BigTable, Datastore, Firestore, Memorystore",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 4,
+                    "Question": "What are the characteristics of the Standard storage class in Google Cloud Storage?",
+                    "User_Answer": "no limitations, maximum availability",
+                    "Correct_Answer": "Maximum availability, Designed for frequently accessed data, No Limitations",
+                    "Is_Correct": false
+                },
+                {
+                    "Question_Number": 5,
+                    "Question": "At a high level, what is the Cloud Spanner database service designed to support?",
+                    "User_Answer": "synchronous replication, transactions, strong consistency",
+                    "Correct_Answer": "Transactions, strong consistency, synchronous replication",
+                    "Is_Correct": false
+                }
+            ],
+            "Start_Time": "2024-07-07T12:26:04.231588",
+            "End_Time": "2024-07-07T12:45:59.653784",
+            "Time_Elapsed": "0:19:55.422196",
+            "Average_Time_Per_Question": "0:00:29.156639",
+            "ISO_8601_Local_Timestamp": "2024-07-07T12:26:04.231588",
+            "ISO_8601_UTC_Timestamp": "2024-07-07T16:26:04+00:00Z",
+            "HTTP_Date_Timestamp": "Sun, 07 Jul 2024 12:26:08 EDT",
+            "UUID4_Session_ID": "298c4c2a-5b2f-434e-b318-3bc3074ae901"
+        }
+    ]
+}

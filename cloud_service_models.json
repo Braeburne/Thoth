@@ -44,7 +44,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "A collection of needed infrastructure that the application needs to run on",
                     "It is layered",
@@ -91,7 +91,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Customer"
                 ]
@@ -110,7 +110,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Major flexibility"
                 ]
@@ -129,7 +129,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Huge costs"
                 ]
@@ -148,7 +148,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Some parts are managed by you",
                     "Other parts are managed by the vendor",
@@ -163,7 +163,7 @@
                 "HasOptions": false,
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "DC Hosted"
                 ]
@@ -182,7 +182,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Data rack space within data center"
                 ]
@@ -191,7 +191,7 @@
         {
             "Question": 
             {
-                "Question": "What is typically the correct make-up of DC infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
+                "Question": "What is typically the correct make-up of DC Hosted infrastructure stack that isn't managed by an external vendor (from top to bottom)?",
                 "HasOptions": true,
                 "Options": [
                     "Virtualization",
@@ -291,7 +291,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Nothing"
                 ]
@@ -366,7 +366,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Buy everything and make the pizza at home"
                 ]
@@ -385,7 +385,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "You pick up the pizza and you cook it at home"
                 ]
@@ -404,7 +404,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "The pizza is delivered to your home"
                 ]
@@ -423,7 +423,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Eat the pizza at a restaurant"
                 ]
@@ -442,7 +442,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Application"
                 ]
@@ -461,7 +461,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Runtime"
                 ]
@@ -480,7 +480,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Operating System"
                 ]
@@ -499,7 +499,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Because the further you move, the more layers of the infrastructure stack that will be abstracted from you and managed instead by a vendor"
                 ]
@@ -518,7 +518,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Less overhead",
                     "Greater focus on core business functions"
@@ -537,7 +537,7 @@
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
-                "OrderAgnostic": false,
+                "OrderAgnostic": true,
                 "Answers": [
                     "Less flexibility over infrastructure stack",
                     "Potential for vendor lock-in"
