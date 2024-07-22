@@ -73,7 +73,6 @@ def print_thoth_logo():
    ▄████▀     ███    █▀     ▀██████▀     ▄████▀     ███    █▀    
 """)
 
-
 # Load the directory of knowledge bases from a JSON file.
 def load_directory(filename):
     with open(filename, 'r') as file:
@@ -151,28 +150,25 @@ def select_multiple_options(options, message):
         except (ValueError, IndexError):
             print("Invalid input. Please enter comma-separated numbers.")
 
-def ask_question(question_data, question_number):
+def ask_question(question_data, question_number, missed_questions):
     question_content = list(question_data.values())[0]  # Extract the question data from the nested structure
-    # print(f"This is the contents of question_content: {question_content}")
-    
+    user_answers = []
+
     print(f"\nQuestion {question_number}")
     print(question_content['Prompt'])
     answers_text = [answer['text'] for answer in question_content['Answers']]
-    # print(f"This is the contents of question_data: {question_data}")
-    # print(f"This is the contents of question_data['Question_1']: {question_data['Question_1']}")
-    # print(f"This is the contents of question_data['Answers']: {question_data['Answers']}")
-    
+    correct_answer_ids = question_content['CorrectAnswerIDs'] if isinstance(question_content['CorrectAnswerIDs'], list) else [question_content['CorrectAnswerIDs']]
+    correct_answers_text = [answer['text'] for answer in question_content['Answers'] if answer['id'] in correct_answer_ids]
+
     if question_content['MultipleCorrectAnswers']:
-        user_answers = []
         indices = select_multiple_options(answers_text, "Select all correct answers (separated by commas):")
         for index in indices:
             user_answers.append(question_content['Answers'][index]['id'])
-            # print(user_answers)
     else:
         index = select_option(answers_text, "Select an answer:")
         user_answers = [question_content['Answers'][index]['id']]
-    
-    correct_answer_ids = question_content['CorrectAnswerIDs'] if isinstance(question_content['CorrectAnswerIDs'], list) else [question_content['CorrectAnswerIDs']]
+
+    selected_answers_text = [answer['text'] for answer in question_content['Answers'] if answer['id'] in user_answers]
     
     input("Type the answer(s) for practice: ")
 
@@ -182,8 +178,11 @@ def ask_question(question_data, question_number):
             return True
         else:
                 print("Incorrect.")
-                # correct_answers_text = ', '.join(answer['text'] for answer in question_content['Answers'] if answer['id'] in correct_answer_ids)
-                # print(f"Incorrect. The correct answer(s) were: {correct_answers_text}\n")
+                missed_questions.append({
+                        'Question': question_content['Prompt'],
+                        'Your Answer(s)': ', '.join(selected_answers_text),
+                        'Correct Answer(s)': ', '.join(correct_answers_text)
+                    })
                 return False
     else:
         if set(user_answers) == set(correct_answer_ids):
@@ -191,8 +190,11 @@ def ask_question(question_data, question_number):
             return True
         else:
                 print("Incorrect.")
-                # correct_answers_text = ', '.join(answer['text'] for answer in question_content['Answers'] if answer['id'] in correct_answer_ids)
-                # print(f"Incorrect. The correct answer(s) were: {correct_answers_text}\n")
+                missed_questions.append({
+                        'Question': question_content['Prompt'],
+                        'Your Answer(s)': ', '.join(selected_answers_text),
+                        'Correct Answer(s)': ', '.join(correct_answers_text)
+                    })
                 return False
 
 # Function to calculate time elapsed
@@ -210,7 +212,7 @@ def generate_mistakes_breakdown(incorrect_answers):
         detailed_question = {
             "Question_Number": question_number,
             "Question": answer['Question'],
-            "User_Answer": answer['Your Answer'],
+            "User_Answer": answer['Your Answer(s)'],
             "Correct_Answer": answer['Correct Answer(s)'],
             "Is_Correct": False
         }
@@ -437,7 +439,8 @@ def initialize_review_session(selected_iana, selected_utc, session_id):
             "ISO_8601_Local_Timestamp": "",
             "ISO_8601_UTC_Timestamp": "",
             "HTTP_Date_Timestamp": "",
-            "UUID4_Session_ID": session_id
+            "UUID4_Session_ID": session_id,
+            "Session_Notes": ""
         }
     
     return questions, question_amount, log_entry, randomize
@@ -484,20 +487,30 @@ def review_session(questions, question_amount, log_entry, randomize=False):
     score = ""
     letter_grade = ""
     pass_fail_status = ""
-    incorrect_answers = []
+    missed_questions = []
 
     print(f"\nStarting review of {question_amount} questions...")
 
+    # Shuffle questions if randomize is True
+    if randomize:
+        random.shuffle(questions)
+
     for question in questions:
-    # print(f"This is the contents of questions: {questions}")
-    # print(f"This is the contents of question: {question}")
         if (question_index < question_amount):
             question_index += 1
-            correct = ask_question(question, question_index)
+            correct = ask_question(question, question_index, missed_questions)
             if correct:
                 correct_count += 1
         else:
             break
+
+    print("Would you like to add notes to the session? [Y/N]")
+    notes = input("Enter Answer: ")
+    
+    if notes == "Y":
+        notes = input("Notes: ")
+    else:
+        notes = "N/A"
 
     # Calculate and display score
     if question_amount > 0:
@@ -520,23 +533,24 @@ def review_session(questions, question_amount, log_entry, randomize=False):
         print(f"Priority Section: {priority_section_status}")
 
         # Display incorrect answers with correct answers
-        if incorrect_answers:
+        if missed_questions:
             print("\nPost Review Learning Session (based on the questions you got incorrect)")
-            for answer in incorrect_answers:
-                print(f"\nQuestion: {answer['Question']}")
-                print(f"Your Answer: {answer['Your Answer']}")
-                print(f"Correct Answer(s): {answer['Correct Answer(s)']}")
+            for question in missed_questions:
+                print(f"\nQuestion: {question['Question']}")
+                print(f"Your Answer: {question['Your Answer(s)']}")
+                print(f"Correct Answer(s): {question['Correct Answer(s)']}")
 
     # Calculate end time after the review session
     end_time = datetime.datetime.now().isoformat()
     time_elapsed = calculate_time_elapsed(log_entry["Start_Time"], end_time)
 
+    log_entry["Session_Notes"] = notes
     log_entry["Score"] = score
     log_entry["Letter_Grade"] = letter_grade
     log_entry["Pass_Fail"] = pass_fail_status
     log_entry["Correct_Count"] = correct_count
     log_entry["Incorrect_Count"] = question_amount - correct_count
-    log_entry["Mistakes_Breakdown"] = generate_mistakes_breakdown(incorrect_answers)
+    log_entry["Mistakes_Breakdown"] = generate_mistakes_breakdown(missed_questions)
     log_entry["End_Time"] = end_time
     log_entry["Time_Elapsed"] = time_elapsed
     log_entry["Average_Time_Per_Question"] = calculate_average_time_per_question(time_elapsed, question_amount)
@@ -581,7 +595,8 @@ def rerun_review_session(questions, question_amount, log_entry, randomize=False)
             "ISO_8601_Local_Timestamp": "",
             "ISO_8601_UTC_Timestamp": "",
             "HTTP_Date_Timestamp": "",
-            "UUID4_Session_ID": log_entry["UUID4_Session_ID"]
+            "UUID4_Session_ID": log_entry["UUID4_Session_ID"],
+            "Session_Notes": ""
     }
 
     selected_iana = log_entry["IANA_Time_Zone"]
@@ -616,17 +631,18 @@ def main():
         print("[2] Practice Different Section")
         print("[3] Exit")
 
-        choice = input("\nEnter your choice (1-3): ")
+        while True:
+            choice = input("\nEnter your choice (1-3): ")
 
-        if choice == '1':
-            rerun_review_session(questions, question_amount, log_entry)
-        elif choice == '2':
-            continue  # Go back to select a different section
-        elif choice == '3':
-            print("\nThank you for using Thoth!")
-            return  # Exit the program
-        else:
-            print("\nInvalid choice. Please select a valid option.")
+            if choice == '1':
+                rerun_review_session(questions, question_amount, log_entry)
+            elif choice == '2':
+                break  # Go back to select a different section
+            elif choice == '3':
+                print("\nThank you for using Thoth!")
+                return  # Exit the program
+            else:
+                print("\nInvalid choice. Please select a valid option.")
 
 if __name__ == "__main__":
     main()  
