@@ -63,13 +63,15 @@ def get_time_zone():
 
 def print_thoth_logo():
     print("""
-_______ _    _  ____  _______ _    _ 
-|__   __| |  | |/ __ \|__   __| |  | |
-   | |  | |__| | |  | |  | |  | |__| |
-   | |  |  __  | |  | |  | |  |  __  |
-   | |  | |  | | |__| |  | |  | |  | |
-   |_|  |_|  |_|\____/   |_|  |_|  |_|
-    """)
+    ███        ▄█    █▄     ▄██████▄      ███        ▄█    █▄    
+▀█████████▄   ███    ███   ███    ███ ▀█████████▄   ███    ███   
+   ▀███▀▀██   ███    ███   ███    ███    ▀███▀▀██   ███    ███   
+    ███   ▀  ▄███▄▄▄▄███▄▄ ███    ███     ███   ▀  ▄███▄▄▄▄███▄▄ 
+    ███     ▀▀███▀▀▀▀███▀  ███    ███     ███     ▀▀███▀▀▀▀███▀  
+    ███       ███    ███   ███    ███     ███       ███    ███   
+    ███       ███    ███   ███    ███     ███       ███    ███   
+   ▄████▀     ███    █▀     ▀██████▀     ▄████▀     ███    █▀    
+""")
 
 
 # Load the directory of knowledge bases from a JSON file.
@@ -132,6 +134,66 @@ def select_option(options, message):
     except ValueError:
         print("Invalid input. Please enter a number.")
         return select_option(options, message)
+
+# Select an option from a list and return the indices.
+def select_multiple_options(options, message):
+    print(message)
+    print_numbered_options(options)
+
+    while True:
+        try:
+            choices = input(f"\nEnter your choices (comma-separated numbers between 1-{len(options)}): ")
+            indices = [int(choice) - 1 for choice in choices.split(',') if choice.strip()]
+            if all(0 <= index < len(options) for index in indices):
+                return indices
+            else:
+                print("Invalid choice. Please select valid options within the given range.")
+        except (ValueError, IndexError):
+            print("Invalid input. Please enter comma-separated numbers.")
+
+def ask_question(question_data, question_number):
+    question_content = list(question_data.values())[0]  # Extract the question data from the nested structure
+    # print(f"This is the contents of question_content: {question_content}")
+    
+    print(f"\nQuestion {question_number}")
+    print(question_content['Prompt'])
+    answers_text = [answer['text'] for answer in question_content['Answers']]
+    # print(f"This is the contents of question_data: {question_data}")
+    # print(f"This is the contents of question_data['Question_1']: {question_data['Question_1']}")
+    # print(f"This is the contents of question_data['Answers']: {question_data['Answers']}")
+    
+    if question_content['MultipleCorrectAnswers']:
+        user_answers = []
+        indices = select_multiple_options(answers_text, "Select all correct answers (separated by commas):")
+        for index in indices:
+            user_answers.append(question_content['Answers'][index]['id'])
+            # print(user_answers)
+    else:
+        index = select_option(answers_text, "Select an answer:")
+        user_answers = [question_content['Answers'][index]['id']]
+    
+    correct_answer_ids = question_content['CorrectAnswerIDs'] if isinstance(question_content['CorrectAnswerIDs'], list) else [question_content['CorrectAnswerIDs']]
+    
+    input("Type the answer(s) for practice: ")
+
+    if not question_content['OrderAgnostic']:
+        if user_answers == correct_answer_ids:
+            print("Correct!")
+            return True
+        else:
+                print("Incorrect.")
+                # correct_answers_text = ', '.join(answer['text'] for answer in question_content['Answers'] if answer['id'] in correct_answer_ids)
+                # print(f"Incorrect. The correct answer(s) were: {correct_answers_text}\n")
+                return False
+    else:
+        if set(user_answers) == set(correct_answer_ids):
+            print("Correct!")
+            return True
+        else:
+                print("Incorrect.")
+                # correct_answers_text = ', '.join(answer['text'] for answer in question_content['Answers'] if answer['id'] in correct_answer_ids)
+                # print(f"Incorrect. The correct answer(s) were: {correct_answers_text}\n")
+                return False
 
 # Function to calculate time elapsed
 def calculate_time_elapsed(start_time, end_time):
@@ -418,88 +480,24 @@ def track_review_session(selected_iana, selected_utc, log_entry):
 # Review questions interactively.
 def review_session(questions, question_amount, log_entry, randomize=False):
     correct_count = 0
+    question_index = 0
     score = ""
     letter_grade = ""
     pass_fail_status = ""
     incorrect_answers = []
 
-    print(f"\nStarting review of {question_amount} questions...\n")
-    
-    # Shuffle questions if randomize is True
-    if randomize:
-        random.shuffle(questions)
+    print(f"\nStarting review of {question_amount} questions...")
 
-    for index, question_data in enumerate(questions, start=1):
-        if index > question_amount:
-            break
-        
-        question = question_data['Question']
-
-        if question:
-            print(f"Question {index}: {question['Question']}")
-
-            # Check if options are present
-            if question.get("HasOptions", False):
-                # Retrieve options and shuffle them if randomize is True
-                options = question.get("Options", [])
-                if randomize:
-                    random.shuffle(options)
-                
-                # Print options dynamically with enumeration
-                for option_index, option_text in enumerate(options, start=1):
-                    if option_text:
-                        print(f"[{option_index}] {option_text}")
-
-            user_answer = input("Enter Answer: ")
-
-            # Get correct answers and split user answer by commas
-            correct_answers = question.get('Answers', [])
-            order_agnostic = question.get('OrderAgnostic', False)
-
-            # Check if any correct answer contains a comma
-            correct_answer_contains_comma = any(',' in ans for ans in correct_answers)
-
-            # Process answers based on correct answer structure
-            if correct_answer_contains_comma:
-                # Compare user answer directly to correct answers
-                if user_answer.strip().lower() in [ans.strip().lower() for ans in correct_answers]:
-                    print("Correct!")
-                    correct_count += 1
-                else:
-                    print("Incorrect.")
-                    incorrect_answers.append({
-                        'Question': question['Question'],
-                        'Your Answer': user_answer,
-                        'Correct Answer(s)': ', '.join(correct_answers)
-                    })
-            elif order_agnostic: # Process answers based on order-agnostic flag
-                correct_answers_set = set(ans.lower().replace(" ", "") for ans in correct_answers)
-                user_answers_set = set(ans.strip().lower().replace(" ", "") for ans in user_answer.split(','))
-                if correct_answers_set == user_answers_set:
-                    print("Correct!")
-                    correct_count += 1
-                else:
-                    print("Incorrect.")
-                    incorrect_answers.append({
-                        'Question': question['Question'],
-                        'Your Answer': user_answer,
-                        'Correct Answer(s)': ', '.join(correct_answers)
-                    })
-            else: # Default comparison for non-order-agnostic questions
-                user_answers = [ans.strip().lower() for ans in user_answer.split(',')]
-                correct_answers_lower = [ans.lower() for ans in correct_answers]
-                if user_answers == correct_answers_lower:
-                    print("Correct!")
-                    correct_count += 1
-                else:
-                    print("Incorrect.")
-                    incorrect_answers.append({
-                        'Question': question['Question'],
-                        'Your Answer': user_answer,
-                        'Correct Answer(s)': ', '.join(correct_answers)
-                    })
+    for question in questions:
+    # print(f"This is the contents of questions: {questions}")
+    # print(f"This is the contents of question: {question}")
+        if (question_index < question_amount):
+            question_index += 1
+            correct = ask_question(question, question_index)
+            if correct:
+                correct_count += 1
         else:
-            print(f"Error: `Question {index}' not found in the knowledge base.")
+            break
 
     # Calculate and display score
     if question_amount > 0:

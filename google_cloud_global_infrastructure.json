@@ -6,236 +6,220 @@
     "Is_Priority_Section": true,
     "Questions": [
         {
-            "Question": 
+            "Question_1": 
             {
-                "Question": "How many subsea cables has Google laid to connect various continents around the Globe?",
-                "HasOptions": true,
-                "Options": [
-                    "11",
-                    "12",
-                    "13",
-                    "14"
+                "Prompt": "How many subsea cables has Google laid to connect various continents around the Globe?",
+                "Answers": [
+                    {"id": 1, "text": "11"},
+                    {"id": 2, "text": "12"},
+                    {"id": 3, "text": "13"},
+                    {"id": 4, "text": "14"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "13"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 3
             }
         },
         {
-            "Question": 
+            "Question_2": 
             {
-                "Question": "How many regions does Google Cloud Platform span?",
-                "HasOptions": true,
-                "Options": [
-                    "22",
-                    "23",
-                    "24",
-                    "25"
+                "Prompt": "How many regions does Google Cloud Platform span?",
+                "Answers": [
+                    {"id": 1, "text": "22"},
+                    {"id": 2, "text": "23"},
+                    {"id": 3, "text": "24"},
+                    {"id": 4, "text": "25"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "24"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 3
             }
         },
         {
-            "Question": 
+            "Question_3": 
             {
-                "Question": "How many zones does Google Cloud Platform span?",
-                "HasOptions": true,
-                "Options": [
-                    "67",
-                    "70",
-                    "73",
-                    "76"
+                "Prompt": "How many zones does Google Cloud Platform span?",
+                "Answers": [
+                    {"id": 1, "text": "67"},
+                    {"id": 2, "text": "70"},
+                    {"id": 3, "text": "73"},
+                    {"id": 4, "text": "76"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "73"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 3
             }
         },
         {
-            "Question": {
-                "Question": "What is a zone on Google Cloud Platform?",
-                "HasOptions": true,
-                "Options": [
-                    "A deployment area for Google Cloud resources within a region",
-                    "A single failure domain within a region",
-                    "A separate physical data center located outside of regions",
-                    "A network configuration setting for Google Cloud resources"
+            "Question_4": {
+                "Prompt": "What is a zone on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "A deployment area for Google Cloud resources within a region"},
+                    {"id": 2, "text": "A single failure domain within a region"},
+                    {"id": 3, "text": "A separate physical data center located outside of regions"},
+                    {"id": 4, "text": "A network configuration setting for Google Cloud resources"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "A deployment area for Google Cloud resources within a region",
-                    "A single failure domain within a region"
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
                 ]
             }
         },
         {
-            "Question": {
-                "Question": "What is a best practice for deploying resources in GCP zones that will ensure optimal latency for users?",
-                "HasOptions": true,
-                "Options": [
-                    "Deploying in zones closest to the user",
-                    "Deploying in zones with the highest available resources",
-                    "Deploying in zones with the lowest cost",
-                    "Deploying in a diversified selection of zones"
+            "Question_5": {
+                "Prompt": "What is a best practice for deploying resources in GCP zones that will ensure optimal latency for users?",
+                "Answers": [
+                    {"id": 1, "text": "Deploying in zones closest to the user"},
+                    {"id": 2, "text": "Deploying in zones with the highest available resources"},
+                    {"id": 3, "text": "Deploying in zones with the lowest cost"},
+                    {"id": 4, "text": "Deploying in a diversified selection of zones"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "Deploying in zones closest to the user"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "What is a region on Google Cloud Platform?",
-                "HasOptions": true,
-                "Options": [
-                    "A independent geographic area that is sub-divided into zones",
-                    "A single data center located in a specific geographic area",
-                    "A type of virtual machine instance in Google Cloud Platform",
-                    "A storage solution provided by Google Cloud Platform"
+            "Question_6": {
+                "Prompt": "What is a region on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "A independent geographic area that is sub-divided into zones"},
+                    {"id": 2, "text": "A single data center located in a specific geographic area"},
+                    {"id": 3, "text": "A type of virtual machine instance in Google Cloud Platform"},
+                    {"id": 4, "text": "A storage solution provided by Google Cloud Platform"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "Independent geographic areas that are sub-divided into zones"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "What are the benefits of sub-dividing a region into multiple zones?",
-                "HasOptions": true,
-                "Options": [
-                    "Fault Tolerance",
-                    "High Availability",
-                    "Cost Savings",
-                    "Reduced Network Latency"
+            "Question_7": {
+                "Prompt": "What are the benefits of sub-dividing a region into multiple zones?",
+                "Answers": [
+                    {"id": 1, "text": "Fault Tolerance"},
+                    {"id": 2, "text": "High Availability"},
+                    {"id": 3, "text": "Cost Savings"},
+                    {"id": 4, "text": "Reduced Network Latency"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "Fault Tolerance",
-                    "High Availability"
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
                 ]
             }
         },
         {
-            "Question": {
-                "Question": "What is the typical intercommunication speed between the zones of a region?",
-                "HasOptions": true,
-                "Options": [
-                    "< 1000 ms",
-                    "< 500 ms",
-                    "< 50 ms",
-                    "< 5 ms"
+            "Question_8": {
+                "Prompt": "What is the typical intercommunication speed between the zones of a region?",
+                "Answers": [
+                    {"id": 1, "text": "< 1000 ms"},
+                    {"id": 2, "text": "< 500 ms"},
+                    {"id": 3, "text": "< 50 ms"},
+                    {"id": 4, "text": "< 5 ms"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "< 5 ms"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 4
             }
         },
         {
-            "Question": {
-                "Question": "What is a multi-region on Google Cloud Platform?",
-                "HasOptions": true,
-                "Options": [
-                    "Large, geographic area, that contain two or more regions",
-                    "A backup data center for disaster recovery",
-                    "A global network for content delivery",
-                    "A network of interconnected regions managed by different cloud providers"
+            "Question_9": {
+                "Prompt": "What is a multi-region on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "Large, geographic area, that contain two or more regions"},
+                    {"id": 2, "text": "A backup data center for disaster recovery"},
+                    {"id": 3, "text": "A global network for content delivery"},
+                    {"id": 4, "text": "A network of interconnected regions managed by different cloud providers"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "Large, geographic area, that contain two or more regions"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "Multi-regions allow Google services to maximize what within and across regions?",
-                "HasOptions": true,
-                "Options": [
-                    "Redundancy and distribution",
-                    "Cost efficiency and reduced latency",
-                    "Global scalability and workload balancing",
-                    "Data privacy and regulatory compliance"
+            "Question_10": {
+                "Prompt": "Multi-regions allow Google services to maximize what within and across regions?",
+                "Answers": [
+                    {"id": 1, "text": "Redundancy and distribution"},
+                    {"id": 2, "text": "Cost efficiency and reduced latency"},
+                    {"id": 3, "text": "Global scalability and workload balancing"},
+                    {"id": 4, "text": "Data privacy and regulatory compliance"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "Redundancy and distribution"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "What is the strength of the multi-region entity on Google Cloud Platform?",
-                "HasOptions": true,
-                "Options": [
-                    "High Availability (Geo-redundancy)",
-                    "Low cost and operational efficiency",
-                    "Resource isolation and performance optimization",
-                    "On-demand scalability and resource elasticity"
+            "Question_11": {
+                "Prompt": "What is the strength of the multi-region entity on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "High Availability (Geo-redundancy)"},
+                    {"id": 2, "text": "Low cost and operational efficiency"},
+                    {"id": 3, "text": "Resource isolation and performance optimization"},
+                    {"id": 4, "text": "On-demand scalability and resource elasticity"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "High Availability (Geo-redundancy)"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "Geo-redundancy in multi-regions means that your data is spread across multiple regions and ensures that the data is always available, even if a region goes down. [T/F]",
-                "HasOptions": false,
+            "Question_12": {
+                "Prompt": "Geo-redundancy in multi-regions means that your data is spread across multiple regions and ensures that the data is always available, even if a region goes down. [T/F]",
+                "Answers": [
+                    {"id": 1, "text": "T"},
+                    {"id": 2, "text": "F"}
+                ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": true,
-                "Answers": [
-                    "T"
-                ]
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
             }
         },
         {
-            "Question": {
-                "Question": "Rank each entity of Google's global infrastructure from smallest to largest.",
-                "HasOptions": true,
-                "Options": [
-                    "Zone",
-                    "Region",
-                    "Multi-Region"
+            "Question_13": {
+                "Prompt": "Rank each entity of Google's global infrastructure from smallest to largest.",
+                "Answers": [
+                    {"id": 1, "text": "Zone"},
+                    {"id": 2, "text": "Region"},
+                    {"id": 3, "text": "Multi-Region"}
                 ],
                 "HasGraphic": false,
                 "Graphic": null,
                 "OrderAgnostic": false,
-                "Answers": [
-                    "Zone",
-                    "Region",
-                    "Multi-Region"
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2,
+                    3
                 ]
             }
         }
