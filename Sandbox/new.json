@@ -1,0 +1,314 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Google Cloud Fundamentals",
+    "Knowledge_Section": "Storage and Database Options",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question_1": {
+                "Prompt": "What are the names of the three storage options on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "Cloud Storage"},
+                    {"id": 2, "text": "Filestore"},
+                    {"id": 3, "text": "Persistent Disks"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_2": {
+                "Prompt": "What are the names of the six database options on Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "Cloud SQL"},
+                    {"id": 2, "text": "Cloud Spanner"},
+                    {"id": 3, "text": "BigTable"},
+                    {"id": 4, "text": "Datastore"},
+                    {"id": 5, "text": "Firestore"},
+                    {"id": 6, "text": "Memorystore"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4, 5, 6]
+            }
+        },
+        {
+            "Question_3": {
+                "Prompt": "Of the six database options on Google Cloud Platform, which four are NoSQL?",
+                "Answers": [
+                    {"id": 1, "text": "BigTable"},
+                    {"id": 2, "text": "Datastore"},
+                    {"id": 3, "text": "Firestore"},
+                    {"id": 4, "text": "Memorystore"},
+                    {"id": 5, "text": "Cloud SQL"},
+                    {"id": 6, "text": "Cloud Spanner"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4]
+            }
+        },
+        {
+            "Question_4": {
+                "Prompt": "Of the six database options on Google Cloud Platform, which option is SQL-based and which is relational (in that respective order)?",
+                "Answers": [
+                    {"id": 1, "text": "Cloud SQL"},
+                    {"id": 2, "text": "Cloud Spanner"},
+                    {"id": 3, "text": "BigTable"},
+                    {"id": 4, "text": "Datastore"},
+                    {"id": 5, "text": "Firestore"},
+                    {"id": 6, "text": "Memorystore"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2]
+            }
+        },
+        {
+            "Question_5": {
+                "Prompt": "Given this graphic, identify the names of all 9 storage or database services that each icon represents on Google Cloud Platform.",
+                "Answers": [
+                    {"id": 1, "text": "Cloud Storage"},
+                    {"id": 2, "text": "Filestore"},
+                    {"id": 3, "text": "Persistent Disks"},
+                    {"id": 4, "text": "Cloud SQL"},
+                    {"id": 5, "text": "Cloud Spanner"},
+                    {"id": 6, "text": "BigTable"},
+                    {"id": 7, "text": "Datastore"},
+                    {"id": 8, "text": "Firestore"},
+                    {"id": 9, "text": "Memorystore"}
+                ],
+                "HasGraphic": true,
+                "Graphic": "[Insert URL]",
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            }
+        },
+        {
+            "Question_6": {
+                "Prompt": "What is Google Cloud Storage?",
+                "Answers": [
+                    {"id": 1, "text": "Consistent, scalable, large capacity, highly durable object storage"},
+                    {"id": 2, "text": "Virtualized storage pools with unlimited capacity"},
+                    {"id": 3, "text": "Hierarchical file system for distributed data"},
+                    {"id": 4, "text": "High-performance block storage optimized for databases"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
+            }
+        },
+        {
+            "Question_7": {
+                "Prompt": "What is the difference between Cloud Storage and Block Storage on the Google Cloud Platform?",
+                "Answers": [
+                    {"id": 1, "text": "Block Storage manages data at a more granular level, whereas Cloud Storage manages data as objects (e.g. documents, pictures, etc.)"},
+                    {"id": 2, "text": "Cloud Storage is optimized for high-performance databases, whereas Block Storage manages data as objects (e.g. documents, pictures, etc.)"},
+                    {"id": 3, "text": "Block Storage is highly durable and scalable, whereas Cloud Storage is more suited for virtualized storage pools"},
+                    {"id": 4, "text": "Cloud Storage is cost-effective and suitable for long-term data storage, whereas Block Storage manages data at a more granular level"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
+            }
+        },
+        {
+            "Question_8": {
+                "Prompt": "Which of the following is a beneficial feature of Google Cloud Storage?",
+                "Answers": [
+                    {"id": 1, "text": "Limited storage with a maximum object size"},
+                    {"id": 2, "text": "Unlimited storage with a minimum object size"},
+                    {"id": 3, "text": "Unlimited storage with no maximum object size"},
+                    {"id": 4, "text": "Unlimited storage with no minimum object size"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 4
+            }
+        },
+        {
+            "Question_9": {
+                "Prompt": "Google Cloud Storage has how many 9's of Durability?",
+                "Answers": [
+                    {"id": 1, "text": "10"},
+                    {"id": 2, "text": "11"},
+                    {"id": 3, "text": "12"},
+                    {"id": 4, "text": "13"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 2
+            }
+        },
+        {
+            "Question_10": {
+                "Prompt": "The 11 9's Durability (99.99999999999%) quality addresses loss of files, where if you store 1 million files on Google Cloud Storage - statistically Google would lose one file every 659,000 thousand years [T/F]?",
+                "Answers": [
+                    {"id": 1, "text": "T"},
+                    {"id": 2, "text": "F"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
+            }
+        },
+        {
+            "Question_11": {
+                "Prompt": "Which Google storage option would you attach to your instance to store your OS?",
+                "Answers": [
+                    {"id": 1, "text": "Block Storage"},
+                    {"id": 2, "text": "Cloud Storage"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
+            }
+        },
+        {
+            "Question_12": {
+                "Prompt": "What are the best use cases for Google Cloud Storage? (hint: 3 answers)",
+                "Answers": [
+                    {"id": 1, "text": "content delivery"},
+                    {"id": 2, "text": "data lakes"},
+                    {"id": 3, "text": "backups"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_13": {
+                "Prompt": "What are the four storage classes available in Google Cloud Storage?",
+                "Answers": [
+                    {"id": 1, "text": "Standard"},
+                    {"id": 2, "text": "Nearline"},
+                    {"id": 3, "text": "Coldline"},
+                    {"id": 4, "text": "Archive"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4]
+            }
+        },
+        {
+            "Question_14": {
+                "Prompt": "Match the best use case to each of the four Google Cloud Storage classes: Standard, Nearline, Coldline, Archive (in that respective order)",
+                "Answers": [
+                    {"id": 1, "text": "low latency, high frequency access (e.g. website content, streaming videos)"},
+                    {"id": 2, "text": "infrequent access (e.g. disaster recovery, backups)"},
+                    {"id": 3, "text": "archiving data (e.g. long-term backups, compliance)"},
+                    {"id": 4, "text": "access once a month (e.g. archive data, infrequently accessed data)"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 4, 2, 3]
+            }
+        },
+        {
+            "Question_15": {
+                "Prompt": "Google Cloud Storage buckets must have a globally unique name [T/F]?",
+                "Answers": [
+                    {"id": 1, "text": "T"},
+                    {"id": 2, "text": "F"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 1
+            }
+        },
+        {
+            "Question_16": {
+                "Prompt": "Google Cloud Storage buckets must have a unique name only within a given region [T/F]?",
+                "Answers": [
+                    {"id": 1, "text": "T"},
+                    {"id": 2, "text": "F"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 2
+            }
+        },
+        {
+            "Question_17": {
+                "Prompt": "Cloud Storage buckets are a hierarchical file system [T/F]?",
+                "Answers": [
+                    {"id": 1, "text": "T"},
+                    {"id": 2, "text": "F"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": 2
+            }
+        },
+        {
+            "Question_18": {
+                "Prompt": "Which of the following are benefits of Filestore?",
+                "Answers": [
+                    {"id": 1, "text": "Fully managed NAS"},
+                    {"id": 2, "text": "Can scale up to 1 PB"},
+                    {"id": 3, "text": "High performance, low latency"},
+                    {"id": 4, "text": "Integrates with GKE"},
+                    {"id": 5, "text": "Integrates with GCE"},
+                    {"id": 6, "text": "Mounts easily"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4, 5, 6]
+            }
+        },
+        {
+            "Question_19": {
+                "Prompt": "What are the benefits of persistent disks?",
+                "Answers": [
+                    {"id": 1, "text": "Zonal or regional storage options"},
+                    {"id": 2, "text": "Option of Standard and SSD persistent disks"},
+                    {"id": 3, "text": "Option of balanced persistent disks"},
+                    {"id": 4, "text": "High durability"}
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3, 4]
+            }
+        }
+    ]
+}

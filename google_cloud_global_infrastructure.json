@@ -146,7 +146,7 @@
             "Question_9": {
                 "Prompt": "What is a multi-region on Google Cloud Platform?",
                 "Answers": [
-                    {"id": 1, "text": "Large, geographic area, that contain two or more regions"},
+                    {"id": 1, "text": "A large geographic area that contain two or more regions"},
                     {"id": 2, "text": "A backup data center for disaster recovery"},
                     {"id": 3, "text": "A global network for content delivery"},
                     {"id": 4, "text": "A network of interconnected regions managed by different cloud providers"}
