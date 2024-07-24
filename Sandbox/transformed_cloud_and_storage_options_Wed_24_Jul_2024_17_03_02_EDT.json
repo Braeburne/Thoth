@@ -215,7 +215,9 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "MultipleCorrectAnswers": true,
-                "CorrectAnswerIDs": []
+                "CorrectAnswerIDs": [
+                    1
+                ]
             }
         },
         {
@@ -598,6 +600,10 @@
                 "Answers": [
                     {
                         "id": 1,
+                        "text": "T"
+                    },
+                    {
+                        "id": 2,
                         "text": "F"
                     }
                 ],
@@ -920,7 +926,9 @@
                 "Graphic": null,
                 "OrderAgnostic": true,
                 "MultipleCorrectAnswers": false,
-                "CorrectAnswerIDs": []
+                "CorrectAnswerIDs": [
+                    1, 2, 3
+                ]
             }
         },
         {

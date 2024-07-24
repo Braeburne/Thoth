@@ -41,8 +41,6 @@ TIME_ZONES = [
     ("Pacific/Auckland", "UTC+12:00"),  # Auckland, Wellington (NZST)
 ]
 
-
-
 def get_time_zone():
     # Prompt user to select a time zone and return both IANA and UTC formats.
     print("\nSelect your time zone:")
@@ -66,11 +64,9 @@ def redesign_json(selected_iana):
 
     # Get file that user wants converted
     file_name = input("Enter the name of the file you want re-designed (including file extension): ")
-    print(f"file_name: {file_name}")
 
     # Load the provided JSON file
     file_path = f'{file_name}'
-    print(f"file_path: {file_path}")
     with open(file_path, 'r') as file:
         data = json.load(file)
 
@@ -79,15 +75,13 @@ def redesign_json(selected_iana):
     for idx, question in enumerate(data['Questions']):
         key = list(question.keys())[0]  # Get the question key
         question_content = question[key]
-        print(f"question_content: {question_content}")
-        
+
         # Determine if there are multiple correct answers
         multiple_correct_answers = isinstance(question_content['Answers'], list) and len(question_content['Answers']) > 1
     
         if question_content['HasOptions']:
             # Determine the Answers List
             answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question_content.get('Options', question_content['Answers']))]
-            print(f"answer_list: {answer_list}")
             
             # Determine the correct answer IDs
             correct_answer_ids = [
@@ -109,7 +103,6 @@ def redesign_json(selected_iana):
         else:
             # Determine the Answers List
             answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question_content.get('Answers', question_content['Answers']))]
-            print(f"answer_list: {answer_list}")
             
             # Determine the correct answer IDs
             correct_answer_ids = [
@@ -139,31 +132,22 @@ def redesign_json(selected_iana):
         "Is_Priority_Section": data['Is_Priority_Section'],
         "Questions": transformed_questions
     }
-
+    # chopping off the file extension for use in a new file name
     file_name = file_name.removesuffix(".json")
-    print(f"file_name with suffixed removed: {file_name}")
-    print(f"http_date_time: {http_date_time}")
     # Apply all transformations in one go
     transformed_http_date_time = http_date_time .replace(" ", "_") \
                                                 .replace(":", "_") \
                                                 .replace(",", "")
-    print(f"transformed_http_date_time: {transformed_http_date_time}")
+    # Concatenating a new file name from various string literals and variables
     transformed_file_name = f"transformed_{file_name}_{transformed_http_date_time}.json"
-    print(f"transformed_file_name: {transformed_file_name}")
 
     # Save the transformed data to a new JSON file
     output_path = f'Sandbox/{transformed_file_name}'
     with open(output_path, 'w') as outfile:
         json.dump(transformed_data, outfile, indent=4)
     
+    # Confirmation of a successful outcome
     print(f"Transformed file saved to: {output_path}")
 
 selected_iana, selected_utc = get_time_zone()
 redesign_json(selected_iana)
-
-# def main():
-#     selected_iana, selected_utc = get_time_zone()
-#     redesign_json(selected_iana)
-
-# if __name__ == "__main__":
-#     main()  
