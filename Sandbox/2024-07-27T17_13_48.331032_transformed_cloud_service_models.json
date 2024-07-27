@@ -295,35 +295,35 @@
                 "Answers": [
                     {
                         "id": 1,
-                        "text": "Application"
-                    },
-                    {
-                        "id": 2,
-                        "text": "Data"
-                    },
-                    {
-                        "id": 3,
-                        "text": "Runtime"
-                    },
-                    {
-                        "id": 4,
-                        "text": "Container"
-                    },
-                    {
-                        "id": 5,
-                        "text": "Operating System"
-                    },
-                    {
-                        "id": 6,
                         "text": "Virtualization"
                     },
                     {
-                        "id": 7,
+                        "id": 2,
+                        "text": "Application"
+                    },
+                    {
+                        "id": 3,
                         "text": "Physical Servers"
                     },
                     {
-                        "id": 8,
+                        "id": 4,
+                        "text": "Runtime"
+                    },
+                    {
+                        "id": 5,
                         "text": "Network / Storage"
+                    },
+                    {
+                        "id": 6,
+                        "text": "Container"
+                    },
+                    {
+                        "id": 7,
+                        "text": "Operating System"
+                    },
+                    {
+                        "id": 8,
+                        "text": "Data"
                     },
                     {
                         "id": 9,
@@ -393,10 +393,10 @@
                 "MultipleCorrectAnswers": true,
                 "CorrectAnswerIDs": [
                     2,
-                    8,
                     4,
                     6,
-                    7
+                    7,
+                    8
                 ]
             }
         },

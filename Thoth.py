@@ -459,7 +459,7 @@ def track_review_session(selected_iana, selected_utc, log_entry):
     log_position = len(data_logs["Data_Logs"]) + 1
     log_entry_number = f"{log_position:02}"  # Zero-padded to two digits
 
-    # Gather information about the review session
+    # Get Local time
     start_time = datetime.datetime.now().isoformat()
 
     # Get UTC time

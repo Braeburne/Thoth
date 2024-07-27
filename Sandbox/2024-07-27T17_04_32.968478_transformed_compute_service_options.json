@@ -323,7 +323,7 @@
                     },
                     {
                         "id": 2,
-                        "text": "F"
+                        "text": "T"
                     }
                 ],
                 "HasGraphic": false,
@@ -373,10 +373,6 @@
                 "Answers": [
                     {
                         "id": 1,
-                        "text": "T"
-                    },
-                    {
-                        "id": 2,
                         "text": "F"
                     }
                 ],
@@ -385,7 +381,7 @@
                 "OrderAgnostic": true,
                 "MultipleCorrectAnswers": false,
                 "CorrectAnswerIDs": [
-                    2
+                    1
                 ]
             }
         },
@@ -431,10 +427,6 @@
                 "Answers": [
                     {
                         "id": 1,
-                        "text": "T"
-                    },
-                    {
-                        "id": 2,
                         "text": "F"
                     }
                 ],
@@ -443,7 +435,7 @@
                 "OrderAgnostic": true,
                 "MultipleCorrectAnswers": false,
                 "CorrectAnswerIDs": [
-                    2
+                    1
                 ]
             }
         },
@@ -454,10 +446,6 @@
                     {
                         "id": 1,
                         "text": "T"
-                    },
-                    {
-                        "id": 2,
-                        "text": "F"
                     }
                 ],
                 "HasGraphic": false,
@@ -494,10 +482,6 @@
                     {
                         "id": 1,
                         "text": "T"
-                    },
-                    {
-                        "id": 2,
-                        "text": "F"
                     }
                 ],
                 "HasGraphic": false,
@@ -516,10 +500,6 @@
                     {
                         "id": 1,
                         "text": "T"
-                    },
-                    {
-                        "id": 2,
-                        "text": "F"
                     }
                 ],
                 "HasGraphic": false,
@@ -538,10 +518,6 @@
                     {
                         "id": 1,
                         "text": "T"
-                    },
-                    {
-                        "id": 2,
-                        "text": "F"
                     }
                 ],
                 "HasGraphic": false,

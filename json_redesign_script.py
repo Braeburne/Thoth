@@ -59,8 +59,11 @@ def get_time_zone():
             print("Invalid input. Please enter a number.")
 
 def redesign_json(selected_iana):
+    # Get Local time
+    timestamp = datetime.datetime.now().isoformat()
+    
     # Get HTTP Date timestamp (RFC 1123 format)
-    http_date_time = datetime.datetime.now(pytz.timezone(selected_iana)).strftime('%a, %d %b %Y %H:%M:%S %Z')
+    # http_date_time = datetime.datetime.now(pytz.timezone(selected_iana)).strftime('%a, %d %b %Y %H:%M:%S %Z')
 
     # Get file that user wants converted
     file_name = input("Enter the name of the file you want re-designed (including file extension): ")
@@ -73,23 +76,23 @@ def redesign_json(selected_iana):
     # Transform the structure of each question to match the new format
     transformed_questions = []
     for idx, question in enumerate(data['Questions']):
-        print(f"Question Wrapper: ({type(question)}): {question}")
+        # print(f"Question Wrapper: ({type(question)}): {question}")
         wrapper_key = list(question.keys())[0]  # Get the question wrapper
-        print(f"wrapper_key List: {(list(question.keys()))}")
+        # print(f"wrapper_key List: {(list(question.keys()))}")
         
         # Print the number of keys in the question wrapper
-        print(f"Keys Count: {len(question.keys())}")
+        # print(f"Keys Count: {len(question.keys())}")
 
         # Iterate through the keys in the question wrapper
-        for key in question.keys():
-            print(f"Keys: ({type(key)}): {key}")
+        # for key in question.keys():
+        #     print(f"Keys: ({type(key)}): {key}")
         
         question_content = question[wrapper_key]
-        print(f"Question Content: {question_content}")
+        # print(f"Question Content: {question_content}")
 
         question_prompt = question_content['Question']
-        print(f"Question Prompt: ({type(question_prompt)}): {question_prompt}")
-        print(f"Question Answers ({type(question_content['Answers'])}): {question_content['Answers']}")
+        # print(f"Question Prompt: ({type(question_prompt)}): {question_prompt}")
+        # print(f"Question Answers ({type(question_content['Answers'])}): {question_content['Answers']}")
 
         # Determine if there are multiple correct answers
         multiple_correct_answers = isinstance(question_content['Answers'], list) and len(question_content['Answers']) > 1
@@ -149,12 +152,14 @@ def redesign_json(selected_iana):
     }
     # chopping off the file extension for use in a new file name
     file_name = file_name.removesuffix(".json")
+    
     # Apply all transformations in one go
-    transformed_http_date_time = http_date_time .replace(" ", "_") \
-                                                .replace(":", "_") \
-                                                .replace(",", "")
+    transformed_timestamp = timestamp   .replace(" ", "_") \
+                                        .replace(":", "_") \
+                                        .replace(",", "")
+
     # Concatenating a new file name from various string literals and variables
-    transformed_file_name = f"transformed_{file_name}_{transformed_http_date_time}.json"
+    transformed_file_name = f"{transformed_timestamp}_transformed_{file_name}.json"
 
     # Save the transformed data to a new JSON file
     output_path = f'Sandbox/{transformed_file_name}'
