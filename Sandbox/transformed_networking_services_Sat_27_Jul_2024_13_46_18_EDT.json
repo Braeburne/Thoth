@@ -1,0 +1,582 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "GCP ACE Exam",
+    "Knowledge_Topic": "Google Cloud Fundamentals",
+    "Knowledge_Section": "Networking Services",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question_1": {
+                "Prompt": "What is the core networking service provided by Google on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Virtual Private Cloud"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_2": {
+                "Prompt": "What is the Virtual Private Cloud (VPC) on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "A virtualized network within Google Cloud"
+                    },
+                    {
+                        "id": 2,
+                        "text": "A global resource"
+                    },
+                    {
+                        "id": 3,
+                        "text": "A dedicated physical network exclusive to one region"
+                    },
+                    {
+                        "id": 4,
+                        "text": "A dedicated physical network exclusive to one zone"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_3": {
+                "Prompt": "What are the characteristics of the Virtual Private Cloud (VPC) on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Each VPC contains a default network"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Additional networks can be created in your projects, but networks cannot be shared between projects"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Additional networks can be created in your projects and networks can be shared between projects"
+                    },
+                    {
+                        "id": 4,
+                        "text": "VPCs are limited to a single region"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "Question_4": {
+                "Prompt": "What are two other networking services available aside from VPC on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Firewall Rules"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Routes"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "Question_5": {
+                "Prompt": "What do Firewall Rules do on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Govern traffic coming into instances on a network"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Automatically encrypt all network traffic"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Backup data to Google Cloud Storage"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Monitor application performance"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_6": {
+                "Prompt": "What are the characteristics of Firewall Rules on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Default network has a default set of firewall rules"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Custom rules can be created"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Firewall rules cannot be modified once created"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Firewall rules only apply to outbound traffic"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "Question_7": {
+                "Prompt": "Routes on Google Cloud Platform specify how packets leaving an instance should be directed (i.e. defining which way your traffic is going to travel). [T/F]?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "T"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_8": {
+                "Prompt": "What are characteristics of Routes on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Advanced networking functions for your instances"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Define DNS settings for your instances"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Specify firewall rules for traffic filtering"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Allocate IP addresses to your instances"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_9": {
+                "Prompt": "What are the two load-balancing methods available on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "HTTP(S) Load Balancing"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Network Load Balancing"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "Question_10": {
+                "Prompt": "Which load balancing method is locked to a single region?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Network Load Balancing"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_11": {
+                "Prompt": "Which load balancing method is capable of world-wide autoscaling / load-balancing for more than 1 region?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "HTTP(S) Load Balancing"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_12": {
+                "Prompt": "How can HTTP(S) Load Balancing be used for a single region?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "By utilizing a single global IP"
+                    },
+                    {
+                        "id": 2,
+                        "text": "By using multiple regional IPs"
+                    },
+                    {
+                        "id": 3,
+                        "text": "By configuring a local load balancer"
+                    },
+                    {
+                        "id": 4,
+                        "text": "By enabling cross-region routing"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_13": {
+                "Prompt": "What are the characteristics of HTTP(S) Load Balancing on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Distribute traffic based on content type"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Distribute traffic across regions to ensure that requests are routed to the closest region or to a healthy instance in the next closest region in the event of a failure or over-capacity"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Limited to regional traffic distribution"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Cannot route traffic based on content type"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "Question_14": {
+                "Prompt": "What does Google Cloud DNS do on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Publish and maintain DNS records by using the same infrastructure that Google uses"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Manage IP addresses for virtual machines"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Provide DDoS protection for applications"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Enable load balancing for applications"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_15": {
+                "Prompt": "What are characteristics of Google Cloud DNS on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Work with managed zones and DNS records through the Cloud CLI"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Work with managed zones and DNS records through the Cloud API"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Work with managed zones and DNS records through the Cloud SDK"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Manage virtual machines through the Cloud DNS"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "Question_16": {
+                "Prompt": "At a high-level, what is Cloud VPN used for on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Connecting an existing network to your VPC through an IPsec connection"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Providing a private IP address to virtual machines"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Enabling multi-factor authentication for users"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Monitoring network traffic for anomalies"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_17": {
+                "Prompt": "How does Cloud VPN benefit the user on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "All data moving through the VPN is encrypted"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Provides high availability for applications"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Offers load balancing capabilities"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Automates the deployment of applications"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_18": {
+                "Prompt": "What is Direct Interconnect used for on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Connecting an existing network to your VPC using a highly available, low latency, enterprise grade connection"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Providing a VPN connection for remote users"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Monitoring application performance"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Managing DNS records for domains"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_19": {
+                "Prompt": "What are the differences between Cloud VPN and Direct Interconnect?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Cloud VPN allows the connection to traverse the open internet, whereas Direct Interconnect connects to Google's private Internet back-bone"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Cloud VPN provides higher latency than Direct Interconnect"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Cloud VPN can span multiple regions, whereas Direct Interconnect is limited to a single region"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Cloud VPN requires manual configuration, while Direct Interconnect is fully automated"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_20": {
+                "Prompt": "What is the Direct Peering connectivity option on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Exchange internet traffic between your business network and Google at one of Google's broad reaching edge network locations"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Monitor network traffic for security threats"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Provide DNS services for your domain"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Enable multi-factor authentication for users"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        },
+        {
+            "Question_21": {
+                "Prompt": "What is the Carrier Peering connectivity option on Google Cloud Platform?",
+                "Answers": [
+                    {
+                        "id": 1,
+                        "text": "Connect your infrastructure to Google's network edge through highly available, lower latency connections by using service providers"
+                    },
+                    {
+                        "id": 2,
+                        "text": "Provide load balancing for your applications"
+                    },
+                    {
+                        "id": 3,
+                        "text": "Manage DNS records for your domains"
+                    },
+                    {
+                        "id": 4,
+                        "text": "Monitor application performance"
+                    }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [
+                    1
+                ]
+            }
+        }
+    ]
+}

@@ -73,53 +73,65 @@ def redesign_json(selected_iana):
     # Transform the structure of each question to match the new format
     transformed_questions = []
     for idx, question in enumerate(data['Questions']):
-        key = list(question.keys())[0]  # Get the question key
-        question_prompt = question[key]
-        # print(f"Question: ({type(question)}): {question}")
-        # print(f"Question Content: ({type(question_prompt)}): {question_prompt}")
-        # print(f"Question Answers ({type(question['Answers'])}): {question['Answers']}")
+        print(f"Question Wrapper: ({type(question)}): {question}")
+        wrapper_key = list(question.keys())[0]  # Get the question wrapper
+        print(f"wrapper_key List: {(list(question.keys()))}")
+        
+        # Print the number of keys in the question wrapper
+        print(f"Keys Count: {len(question.keys())}")
+
+        # Iterate through the keys in the question wrapper
+        for key in question.keys():
+            print(f"Keys: ({type(key)}): {key}")
+        
+        question_content = question[wrapper_key]
+        print(f"Question Content: {question_content}")
+
+        question_prompt = question_content['Question']
+        print(f"Question Prompt: ({type(question_prompt)}): {question_prompt}")
+        print(f"Question Answers ({type(question_content['Answers'])}): {question_content['Answers']}")
 
         # Determine if there are multiple correct answers
-        multiple_correct_answers = isinstance(question['Answers'], list) and len(question['Answers']) > 1
+        multiple_correct_answers = isinstance(question_content['Answers'], list) and len(question_content['Answers']) > 1
     
-        if question['HasOptions']:
+        if question_content['HasOptions']:
             # Determine the Answers List
-            answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question.get('Options', question['Answers']))]
+            answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question_content.get('Options', question_content['Answers']))]
             
             # Determine the correct answer IDs
             correct_answer_ids = [
                 option['id'] for option in answer_list
-                if option['text'] in question['Answers']
+                if option['text'] in question_content['Answers']
             ]
 
             transformed_question = {
                 f"Question_{idx + 1}": {
-                    "Prompt": question['Question'],
+                    "Prompt": question_content['Question'],
                     "Answers": answer_list,
-                    "HasGraphic": question['HasGraphic'],
-                    "Graphic": question['Graphic'] if question['HasGraphic'] else None,
-                    "OrderAgnostic": question['OrderAgnostic'],
+                    "HasGraphic": question_content['HasGraphic'],
+                    "Graphic": question['Graphic'] if question_content['HasGraphic'] else None,
+                    "OrderAgnostic": question_content['OrderAgnostic'],
                     "MultipleCorrectAnswers": multiple_correct_answers,
                     "CorrectAnswerIDs": correct_answer_ids
                 }
             }
         else:
             # Determine the Answers List
-            answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question.get('Answers', question['Answers']))]
+            answer_list = [{"id": i + 1, "text": option} for i, option in enumerate(question_content.get('Answers', question_content['Answers']))]
             
             # Determine the correct answer IDs
             correct_answer_ids = [
                 option['id'] for option in answer_list
-                if option['text'] in question['Answers']
+                if option['text'] in question_content['Answers']
             ]
             
             transformed_question = {
                 f"Question_{idx + 1}": {
-                    "Prompt": question['Question'],
+                    "Prompt": question_content['Question'],
                     "Answers": answer_list,
-                    "HasGraphic": question['HasGraphic'],
-                    "Graphic": question['Graphic'] if question['HasGraphic'] else None,
-                    "OrderAgnostic": question['OrderAgnostic'],
+                    "HasGraphic": question_content['HasGraphic'],
+                    "Graphic": question_content['Graphic'] if question_content['HasGraphic'] else None,
+                    "OrderAgnostic": question_content['OrderAgnostic'],
                     "MultipleCorrectAnswers": multiple_correct_answers,
                     "CorrectAnswerIDs": correct_answer_ids
                 }
