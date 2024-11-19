@@ -1,0 +1,362 @@
+{
+    "Knowledge_Domain": "IT",
+    "Knowledge_Subject": "Computer Science",
+    "Knowledge_Topic": "Software Engineering",
+    "Knowledge_Section": "Interviewing Best Practices",
+    "Is_Priority_Section": true,
+    "Questions": [
+        {
+            "Question_1": {
+                "Prompt": "What are the actions one must take for 'Understand the Problem' step?",
+                "Answers": [
+                    { "id": 1, "text": "Ask clarifying questions to remove ambiguity" },
+                    { "id": 2, "text": "Restate the problem in your own words" },
+                    { "id": 3, "text": "Confirm the input and output formats" },
+                    { "id": 4, "text": "Jump straight to brainstorming" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_2": {
+                "Prompt": "What is an example of a statement one would make during the 'Understand the Problem' step?",
+                "Answers": [
+                    { "id": 1, "text": "Can we assume the input array will fit in memory?" },
+                    { "id": 2, "text": "So, we are given an array of integers, and we need to return the length of the longest increasing subsequence." },
+                    { "id": 3, "text": "What should the output be for an empty array?" },
+                    { "id": 4, "text": "Let's use dynamic programming to solve this." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [2]
+            }
+        },
+        {
+            "Question_3": {
+                "Prompt": "What are the actions one must take for 'Identify Constraints' step?",
+                "Answers": [
+                    { "id": 1, "text": "Ask about input size and type" },
+                    { "id": 2, "text": "Inquire about performance requirements" },
+                    { "id": 3, "text": "Check if certain methods are restricted" },
+                    { "id": 4, "text": "Discuss edge cases explicitly" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_4": {
+                "Prompt": "What is an example of a statement one would make during the 'Identify Constraints' step?",
+                "Answers": [
+                    { "id": 1, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 2, "text": "Can I assume the input array will fit in memory? Do we need an optimal solution?" },
+                    { "id": 3, "text": "A brute-force approach would involve checking all subsequences." },
+                    { "id": 4, "text": "I'll use a binary search tree to store the results dynamically." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [2]
+            }
+        },
+        {
+            "Question_5": {
+                "Prompt": "What are the actions one must take for 'Identify Edge Cases' step?",
+                "Answers": [
+                    { "id": 1, "text": "Discuss edge cases explicitly with the interviewer" },
+                    { "id": 2, "text": "Think of scenarios like empty input, single element, and duplicates" },
+                    { "id": 3, "text": "Restate the problem in your own words" },
+                    { "id": 4, "text": "Focus on optimizing the solution" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2]
+            }
+        },
+        {
+            "Question_6": {
+                "Prompt": "What is an example of a statement one would make during the 'Identify Edge Cases' step?",
+                "Answers": [
+                    { "id": 1, "text": "What should the output be if the input array is empty? How about if all numbers are the same?" },
+                    { "id": 2, "text": "If we use a Fenwick Tree, we can optimize further." },
+                    { "id": 3, "text": "I'll use a binary search tree to dynamically store results." },
+                    { "id": 4, "text": "I'll start by breaking the problem into sub-problems." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_7": {
+                "Prompt": "What are the actions one must take for 'Explore and Brainstorm Solutions' step?",
+                "Answers": [
+                    { "id": 1, "text": "Identify brute-force and optimized approaches" },
+                    { "id": 2, "text": "Discuss trade-offs for each approach" },
+                    { "id": 3, "text": "Explain your ideas using high-level pseudocode" },
+                    { "id": 4, "text": "Validate your solution with test cases" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_8": {
+                "Prompt": "What is an example of a statement one would make during the 'Explore and Brainstorm Solutions' step?",
+                "Answers": [
+                    { "id": 1, "text": "A brute-force approach would involve checking all subsequences." },
+                    { "id": 2, "text": "I'll use a binary search tree to dynamically store results." },
+                    { "id": 3, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 4, "text": "I'll start by breaking the problem into sub-problems." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_9": {
+                "Prompt": "What are the actions one must take for 'Plan Your Solution' step?",
+                "Answers": [
+                    { "id": 1, "text": "Break the problem into smaller sub-problems" },
+                    { "id": 2, "text": "Identify helper functions or reusable logic" },
+                    { "id": 3, "text": "Decide on the data structures you'll use" },
+                    { "id": 4, "text": "Optimize the solution after implementation" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_10": {
+                "Prompt": "What is an example of a statement one would make during the 'Plan Your Solution' step?",
+                "Answers": [
+                    { "id": 1, "text": "I'll use a binary search tree to store the results dynamically." },
+                    { "id": 2, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 3, "text": "Can I assume the input array will fit in memory?" },
+                    { "id": 4, "text": "A brute-force approach would involve checking all subsequences." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_11": {
+                "Prompt": "What are the actions one must take for 'Write Clean Code' step?",
+                "Answers": [
+                    { "id": 1, "text": "Code incrementally; test edge cases as you go" },
+                    { "id": 2, "text": "Use meaningful variable names and comments" },
+                    { "id": 3, "text": "Keep the code modular and avoid hardcoding values" },
+                    { "id": 4, "text": "Skip testing to save time" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_12": {
+                "Prompt": "What is an example of a statement one would make during the 'Write Clean Code' step?",
+                "Answers": [
+                    { "id": 1, "text": "Start with the helper function to handle edge cases, then build the main logic step-by-step." },
+                    { "id": 2, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 3, "text": "If we use a Fenwick Tree, we can optimize further." },
+                    { "id": 4, "text": "What should the output be for an empty array?" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_13": {
+                "Prompt": "What are the actions one must take for 'Test the Solution' step?",
+                "Answers": [
+                    { "id": 1, "text": "Write out several test cases (both simple and complex)" },
+                    { "id": 2, "text": "Walk through your code with these test cases, simulating execution" },
+                    { "id": 3, "text": "Fix bugs or inefficiencies as needed" },
+                    { "id": 4, "text": "Skip testing if the code runs without errors" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 3]
+            }
+        },
+        {
+            "Question_14": {
+                "Prompt": "What is an example of a statement one would make during the 'Test the Solution' step?",
+                "Answers": [
+                    { "id": 1, "text": "Test input like [10, 9, 2, 5, 3, 7, 101, 18], edge cases like [], and large inputs like an array of 10,000 integers." },
+                    { "id": 2, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 3, "text": "I'll start by breaking the problem into sub-problems." },
+                    { "id": 4, "text": "If we use a Fenwick Tree, we can optimize further." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_15": {
+                "Prompt": "What are the actions one must take for 'Optimize if Necessary' step?",
+                "Answers": [
+                    { "id": 1, "text": "Discuss potential optimizations with the interviewer" },
+                    { "id": 2, "text": "Simplify redundant logic or replace inefficient data structures" },
+                    { "id": 3, "text": "Ignore trade-offs between time and space complexity" },
+                    { "id": 4, "text": "Analyze the solution for further improvement" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 4]
+            }
+        },
+        {
+            "Question_16": {
+                "Prompt": "What is an example of a statement one would make during the 'Optimize if Necessary' step?",
+                "Answers": [
+                    { "id": 1, "text": "If we use a Fenwick Tree, we can further reduce the complexity from O(n^2) to O(n log n)." },
+                    { "id": 2, "text": "I'll use a binary search tree to dynamically store results." },
+                    { "id": 3, "text": "What should the output be for an empty array?" },
+                    { "id": 4, "text": "Let's start with brute force and then brainstorm alternatives." }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_17": {
+                "Prompt": "What are the actions one must take for 'Communicate Throughout' step?",
+                "Answers": [
+                    { "id": 1, "text": "Narrate each step as you think, brainstorm, plan, and code" },
+                    { "id": 2, "text": "Be explicit about assumptions, trade-offs, and limitations" },
+                    { "id": 3, "text": "Refrain from asking questions to avoid interruptions" },
+                    { "id": 4, "text": "Engage the interviewer with your thought process" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 4]
+            }
+        },
+        {
+            "Question_18": {
+                "Prompt": "What is an example of a statement one would make during the 'Communicate Throughout' step?",
+                "Answers": [
+                    { "id": 1, "text": "I'm assuming the input is sorted. If not, I'll add a sorting step at the beginning." },
+                    { "id": 2, "text": "What should the output be for an empty array?" },
+                    { "id": 3, "text": "Let's start with brute force and then brainstorm alternatives." },
+                    { "id": 4, "text": "Can I assume the input array will fit in memory?" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_19": {
+                "Prompt": "What are the actions one must take for 'Wrap Up and Reflect' step?",
+                "Answers": [
+                    { "id": 1, "text": "Recap the problem, solution, and complexities" },
+                    { "id": 2, "text": "Mention additional features or edge cases you'd handle with more time" },
+                    { "id": 3, "text": "Skip summarizing to save time" },
+                    { "id": 4, "text": "Acknowledge trade-offs made during the solution" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [1, 2, 4]
+            }
+        },
+        {
+            "Question_20": {
+                "Prompt": "What is an example of a statement one would make during the 'Wrap Up and Reflect' step?",
+                "Answers": [
+                    { "id": 1, "text": "The solution is O(n log n) in time and O(n) in space. If we had more time, I'd add robust error handling for invalid inputs." },
+                    { "id": 2, "text": "Let's discuss edge cases like empty inputs or duplicates." },
+                    { "id": 3, "text": "If we use a Fenwick Tree, we can optimize further." },
+                    { "id": 4, "text": "What should the output be for an empty array?" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": true,
+                "MultipleCorrectAnswers": false,
+                "CorrectAnswerIDs": [1]
+            }
+        },
+        {
+            "Question_21": {
+                "Prompt": "Assemble the following steps into what is the penultimate workflow to follow during a coding interview.",
+                "Answers": [
+                    { "id": 1, "text": "Understand the Problem" },
+                    { "id": 2, "text": "Identify Constraints" },
+                    { "id": 3, "text": "Identify Edge Cases" },
+                    { "id": 4, "text": "Explore and Brainstorm Solutions" },
+                    { "id": 5, "text": "Plan Your Solution" },
+                    { "id": 6, "text": "Write Clean Code" },
+                    { "id": 7, "text": "Test the Solution" },
+                    { "id": 8, "text": "Optimize if Necessary" },
+                    { "id": 9, "text": "Communicate Throughout" },
+                    { "id": 10, "text": "Wrap Up and Reflect" }
+                ],
+                "HasGraphic": false,
+                "Graphic": null,
+                "OrderAgnostic": false,
+                "MultipleCorrectAnswers": true,
+                "CorrectAnswerIDs": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        }
+    ]
+}

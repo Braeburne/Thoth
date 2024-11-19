@@ -41,6 +41,13 @@
             "Knowledge_Topic": "Hybrid Connectivity",
             "Knowledge_Section": "Cloud VPN",
             "Filename": "cloud_vpn.json"
+        },
+        {
+            "Knowledge_Domain": "IT",
+            "Knowledge_Subject": "Computer Science",
+            "Knowledge_Topic": "Software Engineering",
+            "Knowledge_Section": "Interviewing Best Practices",
+            "Filename": "interview_bp.json"
         }
     ]
 }
